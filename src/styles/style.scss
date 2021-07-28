@@ -1,26 +1,40 @@
 @import 'reset-style.css';
 
-@function adaptiv-font-func($pcSize, $mobSize, $maxWidth) {
+$maxWidth: 1440;
+@function adaptiv-font-func($pcSize, $mobSize, $x: 1) {
     $addSize: $pcSize - $mobSize;
     $maxWidth: $maxWidth - 320;
-    @return calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    @return calc((#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})) * #{$x});
 }
-@mixin adaptiv-font($pcSize, $mobSize, $maxWidth: 1440) {
+@mixin adaptiv-font($pcSize, $mobSize) {
     @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
-        font-size: adaptiv-font-func($pcSize, $mobSize, $maxWidth: 2000);
+        font-size: adaptiv-font-func($pcSize, $mobSize, 0.8);
     }
-    font-size: adaptiv-font-func($pcSize, $mobSize, $maxWidth: 1440);
+    @media all and (max-width: 779px) and (min-height: 844px) {
+        font-size: adaptiv-font-func($pcSize, $mobSize, 1.3);
+    }
+    @media all and (max-width: 600px) {
+        font-size: adaptiv-font-func($pcSize, $mobSize, 1);
+    }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+        font-size: adaptiv-font-func($pcSize, $mobSize, 0.7);
+    }
+    @media all and (max-width: 420px) {
+        font-size: adaptiv-font-func($pcSize, $mobSize, 0.7);
+    }
+    font-size: adaptiv-font-func($pcSize, $mobSize);
 }
 
 html,
 body {
     font-family: 'Consolas';
+    overflow-y: hidden;
 }
 header {
     width: 100vw;
     height: 100vh;
     background-color: #232831;
-    padding-bottom: 5vh;
+    padding-bottom: 7vh;
     padding-top: 10vh;
 }
 .header {
@@ -58,13 +72,17 @@ header {
         @include adaptiv-font(72, 42);
         font-weight: bold;
     }
-    &__button-down {
-        color: rgba($color: #f68e00, $alpha: 0.75);
-        width: 100%;
+    &__buttom-container {
+        height: 3vh;
+        width: 100vw;
+        position: absolute;
         text-align: center;
-        display: block;
-        @include adaptiv-font(22, 14);
-        font-style: italic;
+        bottom: 1.2vh;
+        a {
+            color: rgba($color: #f68e00, $alpha: 0.75);
+            @include adaptiv-font(22, 14);
+            font-style: italic;
+        }
     }
 }
 .navigation {
@@ -93,19 +111,68 @@ header {
         display: none;
     }
 }
-@media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+@media all and (max-width: 800px) {
+    header {
+        padding-top: 0;
+    }
     .header {
-        &__subtitle-1 {
-            @include adaptiv-font(25, 18);
-        }
+        &__subtitle-1,
         &__subtitle-2 {
-            @include adaptiv-font(25, 18);
+            display: none;
         }
-        &__title {
-            @include adaptiv-font(56, 42);
+    }
+    .navigation {
+        li {
+            padding: 2vh 0 2vh 0;
+            margin-left: 75px;
         }
-        &__button-down {
-            @include adaptiv-font(18, 14);
+        li:first-child {
+            margin-top: 3.5vh;
+        }
+        li:last-child {
+            margin-bottom: 3.5vh;
+        }
+    }
+}
+@media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+    header {
+        padding-top: 0;
+    }
+    .header {
+        &__subtitle-1,
+        &__subtitle-2,
+        &__title:last-child {
+            display: none;
+        }
+        &__buttom-container {
+            bottom: 5vh;
+        }
+    }
+    .navigation {
+        li {
+            padding: 3vh 0 3vh 0;
+            margin-left: 6vw;
+        }
+    }
+}
+@media all and (max-width: 480px) {
+    header {
+        padding-top: 0;
+    }
+    .header {
+        &__subtitle-1,
+        &__subtitle-2,
+        &__title:last-child {
+            display: none;
+        }
+        &__buttom-container {
+            bottom: 5vh;
+        }
+    }
+    .navigation {
+        li {
+            padding: 3vh 0 3vh 0;
+            margin-left: 6vw;
         }
     }
 }
