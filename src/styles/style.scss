@@ -1,0 +1,111 @@
+@import 'reset-style.css';
+
+@function adaptiv-font-func($pcSize, $mobSize, $maxWidth) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    @return calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin adaptiv-font($pcSize, $mobSize, $maxWidth: 1440) {
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+        font-size: adaptiv-font-func($pcSize, $mobSize, $maxWidth: 2000);
+    }
+    font-size: adaptiv-font-func($pcSize, $mobSize, $maxWidth: 1440);
+}
+
+html,
+body {
+    font-family: 'Consolas';
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: #232831;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+}
+.header {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+    &__subtitle-1 {
+        color: rgba($color: #ffc26e, $alpha: 0.15);
+        @include adaptiv-font(32, 18);
+        align-self: start;
+        margin-bottom: 2vh;
+        margin-left: 6vw;
+    }
+    &__subtitle-1:last-child {
+        margin-top: 0.7em;
+    }
+
+    &__subtitle-2 {
+        color: rgba($color: #ffc26e, $alpha: 0.3);
+        @include adaptiv-font(32, 18);
+        align-self: start;
+        margin-left: 16vw;
+    }
+    &__container-title {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    &__title {
+        color: #ffc26e;
+        @include adaptiv-font(72, 42);
+        font-weight: bold;
+    }
+    &__button-down {
+        color: rgba($color: #f68e00, $alpha: 0.75);
+        width: 100%;
+        text-align: center;
+        display: block;
+        @include adaptiv-font(22, 14);
+        font-style: italic;
+    }
+}
+.navigation {
+    a {
+        color: rgba($color: #f68e00, $alpha: 0.75);
+    }
+    a:hover {
+        color: #ffc26e;
+    }
+    @include adaptiv-font(48, 28);
+
+    li {
+        padding: 1.2vh 0 1.2vh 0;
+        margin-left: 75px;
+    }
+    li:first-child {
+        margin-top: 1.7vh;
+    }
+    li:last-child {
+        margin-bottom: 1.7vh;
+    }
+}
+@media all and (min-width: 1921px) {
+    .header__subtitle-1,
+    .header__subtitle-2 {
+        display: none;
+    }
+}
+@media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+    .header {
+        &__subtitle-1 {
+            @include adaptiv-font(25, 18);
+        }
+        &__subtitle-2 {
+            @include adaptiv-font(25, 18);
+        }
+        &__title {
+            @include adaptiv-font(56, 42);
+        }
+        &__button-down {
+            @include adaptiv-font(18, 14);
+        }
+    }
+}
