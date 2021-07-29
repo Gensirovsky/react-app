@@ -28,7 +28,7 @@ $maxWidth: 1440;
 html,
 body {
     font-family: 'Consolas';
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 header {
     width: 100vw;
@@ -36,6 +36,7 @@ header {
     background-color: #232831;
     padding-bottom: 7vh;
     padding-top: 10vh;
+    position: relative;
 }
 .header {
     &__container {
@@ -83,6 +84,9 @@ header {
             @include adaptiv-font(22, 14);
             font-style: italic;
         }
+        a:hover {
+            color: rgba($color: #ff9501, $alpha: 1);
+        }
     }
 }
 .navigation {
@@ -91,6 +95,7 @@ header {
     }
     a:hover {
         color: #ffc26e;
+        color: rgba($color: #ff9501, $alpha: 1);
     }
     @include adaptiv-font(48, 28);
 
@@ -175,4 +180,21 @@ header {
             margin-left: 6vw;
         }
     }
+}
+.weather-forecast-app {
+    width: 100vw;
+    height: 100vh;
+    background-color: #22212f;
+}
+.weather {
+    width: 80vw;
+    height: 35vw;
+    margin: 0 auto;
+}
+.weather-app {
+    min-width: 100%;
+    min-height: 100%;
+    background: red;
+    border: 1px solid #f68e00;
+    border-radius: 40px;
 }

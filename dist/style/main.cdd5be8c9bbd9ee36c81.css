@@ -88,14 +88,15 @@ h6 {
 html,
 body {
   font-family: 'Consolas';
-  overflow-y: hidden; }
+  overflow-x: hidden; }
 
 header {
   width: 100vw;
   height: 100vh;
   background-color: #232831;
   padding-bottom: 7vh;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  position: relative; }
 
 .header__container {
   display: flex;
@@ -200,13 +201,16 @@ header {
     @media all and (max-width: 420px) {
       .header__buttom-container a {
         font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .header__buttom-container a:hover {
+    color: #ff9501; }
 
 .navigation {
   font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1); }
   .navigation a {
     color: rgba(246, 142, 0, 0.75); }
   .navigation a:hover {
-    color: #ffc26e; }
+    color: #ffc26e;
+    color: #ff9501; }
   @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
     .navigation {
       font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.8); } }
@@ -270,5 +274,22 @@ header {
     padding: 3vh 0 3vh 0;
     margin-left: 6vw; } }
 
+.weather-forecast-app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #22212f; }
 
-/*# sourceMappingURL=main.33234845784a4c70d6f4.css.map*/
+.weather {
+  width: 80vw;
+  height: 35vw;
+  margin: 0 auto; }
+
+.weather-app {
+  min-width: 100%;
+  min-height: 100%;
+  background: red;
+  border: 1px solid #f68e00;
+  border-radius: 40px; }
+
+
+/*# sourceMappingURL=main.cdd5be8c9bbd9ee36c81.css.map*/
