@@ -1,2 +1,2 @@
 import '../styles/style.scss'
-import './apps/WeatherForecast/WeatherForecast.jsx'
+import './apps/WeatherForecast/index.jsx'

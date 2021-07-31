@@ -83,7 +83,7 @@ module.exports = {
                         options: {
                             esModule: false,
                             name: '[name].[ext]',
-                            outputPath: 'pulic/images',
+                            outputPath: 'public/images',
                         },
                     },
                 ],
