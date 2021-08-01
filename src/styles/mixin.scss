@@ -22,3 +22,7 @@ $maxWidth: 1440;
     }
     font-size: adaptiv-font-func($pcSize, $mobSize);
 }
+
+@mixin adaptiv-font-app($pcSize, $mobSize) {
+    font-size: adaptiv-font-func($pcSize, $mobSize);
+}
