@@ -8,8 +8,7 @@ import WeatherWeek from './content/WeatherWeek.jsx'
 
 export default function Weather() {
     let [location, setLocation] = useState('Lviv')
-    let [weatherData, setWeatherData] = useState()
-    console.log(weatherData)
+    let [weatherData, setWeatherData] = useState(null)
     function handlerLocation(value) {
         setLocation(value)
     }
@@ -19,11 +18,12 @@ export default function Weather() {
             .then(res => res.json())
             .then(data => setWeatherData(data.list))
     }, [location])
+
     return (
         <div className='weather-app' >
             <Header value={location} handlerLocation={handlerLocation} />
-            <WeatherToday weatherData={weatherData ? weatherData.slice(0, 8) : null} />
-            <WeatherWeek />
+            <WeatherToday weatherData={weatherData} />
+            <WeatherWeek weatherData={weatherData} />
         </div>
     )
 

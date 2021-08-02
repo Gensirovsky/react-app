@@ -301,6 +301,7 @@ header {
   .weather-app__header-img {
     height: 150%; }
   .weather-app__search-bar {
+    padding-left: 2.5%;
     width: 24%;
     height: 100%;
     background-color: #22212F;
@@ -317,8 +318,9 @@ header {
       font-weight: bold;
       color: #cecece;
       height: 100%;
-      width: 33%;
-      display: inline-block; }
+      max-width: 100%;
+      display: inline-block;
+      padding-left: 6.5%; }
   .weather-app__title {
     width: 24%;
     height: 100%;
@@ -365,9 +367,12 @@ header {
         background-color: #1a182d; }
       .weather-app__weather-today .weather-hour__line--small {
         height: 35%; }
+    .weather-app__weather-today .weather-hour:hover {
+      border-bottom: 2px solid #f68e00; }
   .weather-app__weather-week {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 35%;
     width: 100%; }
     .weather-app__weather-week .weather-day-card {
@@ -424,4 +429,4 @@ header {
       padding: 1.5% 1% 1.5% 1.5%; } }
 
 
-/*# sourceMappingURL=main.59dbc376370deb0590af.css.map*/
+/*# sourceMappingURL=main.439ac37f87bc7f369dd0.css.map*/

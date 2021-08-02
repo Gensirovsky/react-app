@@ -33,7 +33,7 @@ export default function WeatherHour(props) {
             <div className='weather-hour__status-img'>
                 <img src={weatherStatus()} alt="sun" />
             </div>
-            <div className='weather-hour__temperature'>{props.weatherDataHour.main.temp}°С</div>
+            <div className='weather-hour__temperature'>{Math.round(props.weatherDataHour.main.temp)}°С</div>
         </div>
     )
 }

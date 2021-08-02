@@ -23,6 +23,7 @@ $background-item: #22212F;
         height: 150%;
     }
     &__search-bar{
+        padding-left: 2.5%;
         width: 24%;
         height: 100%;
         background-color: $background-item;
@@ -40,8 +41,10 @@ $background-item: #22212F;
             font-weight: bold;
             color: $font-color;
             height: 100%;
-            width: 33%;
+            max-width: 100%;
             display: inline-block;
+            padding-left: 6.5%;
+
         }
     }
     &__title{
@@ -81,6 +84,7 @@ $background-item: #22212F;
             @include adaptiv-font-app(18, 6);
             padding: 0.5% 0;
             color: $font-color;
+            
             &__status-img{
                 width: 60%;
                 img{
@@ -97,11 +101,18 @@ $background-item: #22212F;
             &__line--small{
                 height: 35%;
             }
+            
+        }
+        .weather-hour:hover{
+            border-bottom: 2px solid #f68e00;
+
+
         }
     }
     &__weather-week{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         height: 35%;
         width: 100%;
         .weather-day-card{
@@ -134,6 +145,7 @@ $background-item: #22212F;
             &__title{
                 @include adaptiv-font-app(18, 6);
                 padding-right: 10px;
+                
             }
         }
     }

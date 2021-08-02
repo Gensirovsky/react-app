@@ -13,11 +13,10 @@ export default function WeatherDay(props) {
             <div className='weather-hour__line'></div>
         )
     }
-    console.log(props.weatherData)
     return (
         <div className='weather-app__weather-today'>
             <SmallLine />
-            {props.weatherData ? props.weatherData.map((el, index) => {
+            {props.weatherData ? props.weatherData.slice(0, 8).map((el, index) => {
                 return [<WeatherHour weatherDataHour={el} key={index} />,
                 index != 7 ? <Line key={index + 2} /> : null]
             }) : <Loader />}
