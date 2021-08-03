@@ -1,6 +1,24 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./app/apps/WeatherForecast/Context.jsx":
+/*!**********************************************!*\
+  !*** ./app/apps/WeatherForecast/Context.jsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+
+var weatherContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (weatherContext);
+
+/***/ }),
+
 /***/ "./app/apps/WeatherForecast/Weather.jsx":
 /*!**********************************************!*\
   !*** ./app/apps/WeatherForecast/Weather.jsx ***!
@@ -17,6 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/SearchBar.jsx */ "./app/apps/WeatherForecast/header/SearchBar.jsx");
 /* harmony import */ var _content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./content/WeatherToday.jsx */ "./app/apps/WeatherForecast/content/WeatherToday.jsx");
 /* harmony import */ var _content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./content/WeatherWeek.jsx */ "./app/apps/WeatherForecast/content/WeatherWeek.jsx");
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -35,6 +54,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Weather() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Lviv'),
       _useState2 = _slicedToArray(_useState, 2),
@@ -46,29 +66,98 @@ function Weather() {
       weatherData = _useState4[0],
       setWeatherData = _useState4[1];
 
-  function handlerLocation(value) {
-    setLocation(value);
+  function weatherStatus(prps) {
+    console.log(prps);
+    var time = prps.dt_txt.slice(11, 13);
+    var id = prps.weather[0].id;
+
+    switch (true) {
+      case id <= 232:
+        return storm;
+
+      case id <= 531:
+        return raining;
+
+      case id <= 622:
+        return snowflake;
+
+      case id <= 781:
+        return wind;
+
+      case id <= 800:
+        return time >= 6 && time < 21 ? sun : moon_2;
+
+      case id <= 1000:
+        return cloud;
+    }
+  }
+
+  var daysOfWeek = {
+    0: 'Sunday',
+    1: 'Monday',
+    2: 'Tuesday',
+    3: 'Wednesday',
+    4: 'Thursday',
+    5: 'Friday',
+    6: 'Saturday'
+  };
+
+  function handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      setLocation(e.target.value);
+    }
+  }
+
+  function errorDiv() {
+    var errDiv = document.querySelector('.slideSource');
+    errDiv.classList.add('fade');
+    setTimeout(function () {
+      errDiv.classList.remove('fade');
+    }, 4000);
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    setLocation('Lviv');
     var weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=".concat(location, "&units=metric&appid=3ccdcc7d9418e33a6d5833089853f381");
     fetch(weatherURL).then(function (res) {
+      if (!res.ok) {
+        console.log(res.status);
+        throw Error(res.status);
+      }
+
       return res.json();
     }).then(function (data) {
       return setWeatherData(data.list);
+    })["catch"](function (err) {
+      errorDiv();
     });
   }, [location]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Header_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-    value: location,
-    handlerLocation: handlerLocation
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
-    weatherData: weatherData
+    handleKeyPress: handleKeyPress
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Context_jsx__WEBPACK_IMPORTED_MODULE_5__.default.Provider, {
+    value: {
+      daysOfWeek: daysOfWeek,
+      weatherStatus: weatherStatus
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
+    weatherData: weatherData,
+    city: location
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_4__.default, {
     weatherData: weatherData
-  }));
+  })));
 }
+
+/***/ }),
+
+/***/ "./app/apps/WeatherForecast/content/WeatherDay.jsx":
+/*!*********************************************************!*\
+  !*** ./app/apps/WeatherForecast/content/WeatherDay.jsx ***!
+  \*********************************************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\React_Apps\\src\\app\\apps\\WeatherForecast\\content\\WeatherDay.jsx: Unexpected token, expected \",\" (82:93)\n\n\u001b[0m \u001b[90m 80 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 81 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'weather-day-card__status'\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mimg\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'weather-day-card__status-img'\u001b[39m src\u001b[33m=\u001b[39m{weatherStatus(weatherRound} alt\u001b[33m=\u001b[39m\u001b[32m'sun'\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mimg\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mh3\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'weather-day-card__title'\u001b[39m\u001b[33m>\u001b[39m{daysOfWeek[props\u001b[33m.\u001b[39mdayNum]}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mh3\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 85 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.unexpected (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:9929:16)\n    at Object.expect (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:9903:28)\n    at Object.parseCallExpressionArguments (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:11102:14)\n    at Object.parseCoverCallAndAsyncArrowHead (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:11025:29)\n    at Object.parseSubscript (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:10958:19)\n    at Object.parseSubscripts (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:10931:19)\n    at Object.parseExprSubscripts (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:10920:17)");
 
 /***/ }),
 
@@ -132,8 +221,12 @@ function WeatherHour(props) {
     }
   }
 
+  console.log(props.weatherDataHour);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "weather-hour"
+    className: "weather-hour",
+    onClick: function onClick() {
+      return console.log(11);
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour__time"
   }, props.weatherDataHour.dt_txt.slice(11, 16)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -143,7 +236,7 @@ function WeatherHour(props) {
     alt: "sun"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour__temperature"
-  }, props.weatherDataHour.main.temp, "\xB0\u0421"));
+  }, Math.round(props.weatherDataHour.main.temp), "\xB0\u0421"));
 }
 
 /***/ }),
@@ -178,8 +271,15 @@ function WeatherDay(props) {
     });
   }
 
-  console.log(props.weatherData);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-today-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-today-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "weather-app__weather-today-city"
+  }, props.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-today-date"
+  }, props.weatherData ? props.weatherData[0].dt_txt.slice(0, 10) : null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null), props.weatherData ? props.weatherData.slice(0, 8).map(function (el, index) {
     return [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WeatherHour_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -188,7 +288,7 @@ function WeatherDay(props) {
     }), index != 7 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Line, {
       key: index + 2
     }) : null];
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null)));
 }
 
 /***/ }),
@@ -197,9 +297,48 @@ function WeatherDay(props) {
 /*!**********************************************************!*\
   !*** ./app/apps/WeatherForecast/content/WeatherWeek.jsx ***!
   \**********************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\React_Apps\\src\\app\\apps\\WeatherForecast\\content\\WeatherWeek.jsx: Unsyntactic continue. (19:16)\n\n\u001b[0m \u001b[90m 17 |\u001b[39m             \u001b[36mif\u001b[39m (day \u001b[33m===\u001b[39m newDay) {\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m                 i\u001b[33m++\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m                 \u001b[36mcontinue\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m             }\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.verifyBreakContinue (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:12837:12)\n    at Object.parseBreakContinueStatement (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:12819:10)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:12596:21)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:13169:25)\n    at Object.parseBlockBody (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:13160:10)\n    at Object.parseBlock (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:13144:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WeatherWeek)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _WeatherDay_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WeatherDay.jsx */ "./app/apps/WeatherForecast/content/WeatherDay.jsx");
+/* harmony import */ var _header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../header/Loader.jsx */ "./app/apps/WeatherForecast/header/Loader.jsx");
+
+
+
+function WeatherWeek(props) {
+  var weatherData = props.weatherData;
+
+  function getWeatherArr() {
+    var weatherDayArr = [];
+
+    if (weatherData) {
+      var day = new Date(props.weatherData[0].dt_txt).getDay();
+
+      for (var i = 0; i <= weatherData.length - 8; i++) {
+        var newDay = new Date(weatherData[i].dt_txt).getDay();
+        if (day === newDay) continue;
+        day = newDay;
+        weatherDayArr.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WeatherDay_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+          weatherDay: weatherData.slice(i, i + 8),
+          dayNum: day,
+          key: i
+        }));
+        i + 8;
+      }
+    }
+
+    return weatherDayArr;
+  }
+
+  return !weatherData ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-week"
+  }, getWeatherArr());
+}
 
 /***/ }),
 
@@ -222,18 +361,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Header(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "city-\u200B\u200Bnot-found"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: " slideSource"
+  }, "\u0421ity \u200B\u200Bnot found")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-    value: props.value,
-    handlerLocation: props.handlerLocation
+    handleKeyPress: props.handleKeyPress
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (_img_moon_svg__WEBPACK_IMPORTED_MODULE_2___default()),
     alt: "moon",
     className: "weather-app__header-img"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Weather")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Weather"))));
 }
 
 /***/ }),
@@ -284,9 +426,10 @@ function searchBar(props) {
     className: "image",
     src: (_img_location_svg__WEBPACK_IMPORTED_MODULE_1___default())
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-    value: props.value,
-    onChange: function onChange(event) {
-      return props.handlerLocation(event.target.value);
+    type: "text",
+    placeholder: "City",
+    onKeyPress: function onKeyPress(event) {
+      return props.handleKeyPress(event);
     }
   }));
 }
@@ -727,4 +870,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.f967e3efb218eaee39f7.js.map
+//# sourceMappingURL=main.731c5031711adcc0789e.js.map

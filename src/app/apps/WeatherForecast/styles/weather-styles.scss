@@ -11,7 +11,10 @@ $background-item: #22212F;
     background: #1a182d;
     border: 1px solid #f68e00;
     border-radius: 1.4rem;
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 0rem 4rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+
     &__header{
         height: 10%;
         display: flex;
@@ -62,13 +65,42 @@ $background-item: #22212F;
             font-weight: bold;
         }
     }
-
-    &__weather-today{
+    &__weather-today-container{
         width: 100%;
-        height: 40%;
+        height: 42%;
         background: $background-item;
         border: 1px solid #f68e00;
         border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    &__weather-today-carousel-container{
+        height: 85%;
+        width: 200%;
+        //margin-left: -100%;
+        display: flex;
+    }
+    &__weather-today-detail{
+        height: 100%;
+    }
+    &__carousel-content{
+        min-width: 50%;
+        height: 100%;
+    }
+    &__weather-today-title{
+        color: $font-color;
+        @include adaptiv-font-app(20, 8);
+        padding: 1.2% 3.5% 0 3.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__weather-today-city{
+        font-weight: bold;
+        text-align: center;
+    }
+    &__weather-today{
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -84,7 +116,7 @@ $background-item: #22212F;
             @include adaptiv-font-app(18, 6);
             padding: 0.5% 0;
             color: $font-color;
-            
+            position: relative;
             &__status-img{
                 width: 60%;
                 img{
@@ -103,14 +135,21 @@ $background-item: #22212F;
             }
             
         }
-        .weather-hour:hover{
-            border-bottom: 2px solid #f68e00;
 
-
+        .weather-hour:hover :after{
+            position: absolute;
+            content: '';
+            height: 1%;
+            width: 100%;
+            background-color: #f68e00;
+            opacity: 1;
+            bottom: -10%;
+            left: 0;
         }
     }
     &__weather-week{
-        display: flex;
+        margin-top: 2%;
+        display: inline-flex;
         justify-content: space-between;
         align-items: center;
         height: 35%;
@@ -125,10 +164,6 @@ $background-item: #22212F;
             @include adaptiv-font-app(16, 6);
             padding: 1.5% 1% 1.5% 1.5%;
 
-            &__temperature{}
-            &__drop{}
-            &__humidity{}
-            &__wind{}
             &__status{
                 width: 100%;
                 display: inline-flex;
@@ -148,6 +183,15 @@ $background-item: #22212F;
                 
             }
         }
+    }
+}
+.weather-hour-detail{
+    height: 100%;
+    width: 100%;
+    color: $font-color;
+    padding: 2rem;
+    &__detail{
+        display: flex;
     }
 }
 .incard{
@@ -171,6 +215,16 @@ $background-item: #22212F;
     height: 35vw;
     margin: 0 auto;
 }
+.city-​​not-found{
+    width: 20%;
+    color: $font-color;
+    @include adaptiv-font-app(18, 6);
+    text-align: center;
+    height: 3.5%;
+    margin-bottom: 1.5rem;
+    margin-left: 15%;
+    padding-top: 0.5rem;
+}
 
 @media all and (max-width: 992px){
     .weather{
@@ -187,3 +241,18 @@ $background-item: #22212F;
         }
     }
 }
+.slideSource {
+    padding: 0.7% 0;
+    border: 1px solid $font-color;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s; 
+    background-color: $background-item;
+  }
+.slideSource.red{
+    border: 1px solid #f60000;
+
+  }
+.slideSource.fade {
+    opacity: 1;
+  }

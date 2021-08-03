@@ -284,6 +284,7 @@ header {
 /*!************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./app/apps/WeatherForecast/styles/weather-styles.scss ***!
   \************************************************************************************************************************************************/
+@charset "UTF-8";
 .weather-app {
   color: EDEDED;
   max-width: 100%;
@@ -291,7 +292,9 @@ header {
   background: #1a182d;
   border: 1px solid #f68e00;
   border-radius: 1.4rem;
-  padding: 4rem 4rem 2rem 4rem; }
+  padding: 0rem 4rem 4rem 4rem;
+  position: relative;
+  overflow: hidden; }
   .weather-app__header {
     height: 10%;
     display: flex;
@@ -334,12 +337,35 @@ header {
     justify-content: center; }
     .weather-app__title h2 {
       font-weight: bold; }
-  .weather-app__weather-today {
+  .weather-app__weather-today-container {
     width: 100%;
-    height: 40%;
+    height: 42%;
     background: #22212F;
     border: 1px solid #f68e00;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden; }
+  .weather-app__weather-today-carousel-container {
+    height: 85%;
+    width: 200%;
+    display: flex; }
+  .weather-app__weather-today-detail {
+    height: 100%; }
+  .weather-app__carousel-content {
+    min-width: 50%;
+    height: 100%; }
+  .weather-app__weather-today-title {
+    color: #cecece;
+    font-size: calc((8px + 12 * ((100vw - 320px) / 1120)) * 1);
+    padding: 1.2% 3.5% 0 3.5%;
+    display: flex;
+    justify-content: space-between; }
+  .weather-app__weather-today-city {
+    font-weight: bold;
+    text-align: center; }
+  .weather-app__weather-today {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -354,7 +380,8 @@ header {
       align-items: center;
       font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
       padding: 0.5% 0;
-      color: #cecece; }
+      color: #cecece;
+      position: relative; }
       .weather-app__weather-today .weather-hour__status-img {
         width: 60%; }
         .weather-app__weather-today .weather-hour__status-img img {
@@ -367,10 +394,18 @@ header {
         background-color: #1a182d; }
       .weather-app__weather-today .weather-hour__line--small {
         height: 35%; }
-    .weather-app__weather-today .weather-hour:hover {
-      border-bottom: 2px solid #f68e00; }
+    .weather-app__weather-today .weather-hour:hover :after {
+      position: absolute;
+      content: '';
+      height: 1%;
+      width: 100%;
+      background-color: #f68e00;
+      opacity: 1;
+      bottom: -10%;
+      left: 0; }
   .weather-app__weather-week {
-    display: flex;
+    margin-top: 2%;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     height: 35%;
@@ -398,6 +433,14 @@ header {
         font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
         padding-right: 10px; }
 
+.weather-hour-detail {
+  height: 100%;
+  width: 100%;
+  color: #cecece;
+  padding: 2rem; }
+  .weather-hour-detail__detail {
+    display: flex; }
+
 .incard {
   height: 20%;
   margin-bottom: 5%;
@@ -418,6 +461,16 @@ header {
   height: 35vw;
   margin: 0 auto; }
 
+.city-​​not-found {
+  width: 20%;
+  color: #cecece;
+  font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
+  text-align: center;
+  height: 3.5%;
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+  padding-top: 0.5rem; }
+
 @media all and (max-width: 992px) {
   .weather {
     width: 90vw;
@@ -428,5 +481,19 @@ header {
       width: 24%;
       padding: 1.5% 1% 1.5% 1.5%; } }
 
+.slideSource {
+  padding: 0.7% 0;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: #22212F; }
 
-/*# sourceMappingURL=main.439ac37f87bc7f369dd0.css.map*/
+.slideSource.red {
+  border: 1px solid #f60000; }
+
+.slideSource.fade {
+  opacity: 1; }
+
+
+/*# sourceMappingURL=main.8da15b1a6730b34c0c7c.css.map*/

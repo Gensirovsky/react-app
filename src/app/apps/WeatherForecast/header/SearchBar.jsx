@@ -5,7 +5,7 @@ export default function searchBar(props) {
     return (
         <div className='weather-app__search-bar'>
             <img className='image' src={location} />
-            <input value={props.value} onChange={event => props.handlerLocation(event.target.value)} />
+            <input type='text' placeholder='City' onKeyPress={event => props.handleKeyPress(event)} />
         </div>
     )
 }

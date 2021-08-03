@@ -1,39 +1,16 @@
-import React from 'react'
-import sun from '../img/sun.svg'
+import React, { useContext } from 'react'
 import temperature from '../img/temperature.svg'
 import drop from '../img/drop.svg'
 import umbrella from '../img/umbrella.svg'
 import wind from '../img/wind.svg'
-import cloud from '../img/cloud.svg'
-import raining from '../img/raining.svg'
-import snowflake from '../img/snowflake.svg'
-import storm from '../img/storm.svg'
-
-
-
+import weatherContext from '../Context.jsx'
 
 export default function WeatherDay(props) {
     let weatherDay = props.weatherDay
     let weatherRound = weatherDay[5]
-    function weatherStatus() {
 
-        const id = weatherDay[0].weather[0].id
-        console.log(weatherDay)
-        switch (true) {
-            case id <= 299:
-                return storm
-            case id <= 599:
-                return raining
-            case id <= 700:
-                return snowflake
-            case id <= 799:
-                return wind
-            case id <= 800:
-                return sun
-            case id <= 1000:
-                return cloud
-        }
-    }
+    const { daysOfWeek, weatherStatus } = useContext(weatherContext)
+
     function getTemp() {
         return Math.round(weatherRound.main.temp)
     }
@@ -41,19 +18,10 @@ export default function WeatherDay(props) {
         return Math.round(weatherRound.main.humidity)
     }
     function getFall_out() {
-        return (weatherRound.pop * 100)
+        return Math.round((weatherRound.pop * 100))
     }
     function getWindSpeed() {
         return weatherRound.wind.speed
-    }
-    const DaysOfWeek = {
-        0: 'Sunday',
-        1: 'Monday',
-        2: 'Tuesday',
-        3: 'Wednesday',
-        4: 'Thursday',
-        5: 'Friday',
-        6: 'Saturday',
     }
 
     return (
@@ -77,10 +45,9 @@ export default function WeatherDay(props) {
                 <span>{getWindSpeed()}m/s</span>
             </div>
             <div className='weather-day-card__status'>
-                <img className='weather-day-card__status-img' src={weatherStatus()} alt='sun'></img>
-                <h3 className='weather-day-card__title'>{DaysOfWeek[props.dayNum]}</h3>
+                <img className='weather-day-card__status-img' src={weatherStatus(weatherRound)} alt='sun'></img>
+                <h3 className='weather-day-card__title'>{daysOfWeek(weatherDay[0])}</h3>
             </div>
-
         </div>
     )
 }

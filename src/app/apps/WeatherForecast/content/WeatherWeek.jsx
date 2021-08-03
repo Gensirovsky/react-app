@@ -1,6 +1,5 @@
 import React from 'react'
 import WeatherDay from './WeatherDay.jsx'
-import Loader from '../header/Loader.jsx'
 
 export default function WeatherWeek(props) {
     const weatherData = props.weatherData
@@ -8,7 +7,7 @@ export default function WeatherWeek(props) {
         let weatherDayArr = []
         if (weatherData) {
             let day = new Date(props.weatherData[0].dt_txt).getDay()
-            for (let i = 0; i < weatherData.length - 8; i++) {
+            for (let i = 0; i <= weatherData.length - 8; i++) {
                 let newDay = new Date(weatherData[i].dt_txt).getDay()
                 if (day === newDay) continue
                 day = newDay
@@ -18,8 +17,6 @@ export default function WeatherWeek(props) {
         }
         return weatherDayArr
     }
-
-
     return (
         !weatherData ? null :
             <div className='weather-app__weather-week'>
