@@ -25,7 +25,7 @@ export default function WeatherDay(props) {
     }
 
     return (
-        <div className='weather-day-card'>
+        <div className='weather-day-card' onClick={() => { props.setWeatherData(weatherDay), dayContentAnimation() }}>
             <div className='weather-day-card__temperature incard'>
                 <div className='card-img-container'>
                     <img src={temperature} alt="temperature" />

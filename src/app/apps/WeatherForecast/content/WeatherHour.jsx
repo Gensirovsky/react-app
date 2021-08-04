@@ -15,4 +15,3 @@ export default function WeatherHour(props) {
         </div>
     )
 }
-//onClick={() => props.handlerDetails(props.weatherDataHour)}

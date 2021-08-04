@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react'
 import Header from './header/Header.jsx'
-import SearchBar from './header/SearchBar.jsx'
 import WeatherToday from './content/WeatherToday.jsx'
 import WeatherWeek from './content/WeatherWeek.jsx'
 import weatherContext from './Context.jsx'
@@ -17,10 +16,40 @@ import storm from './img/storm.svg'
 import moon_2 from './img/moon_2.svg'
 
 
-
 export default function Weather() {
     let [location, setLocation] = useState('Lviv')
-    let [weatherData, setWeatherData] = useState(null)
+    let [city, setCity] = useState('Lviv')
+    let [weatherDataDay, setWeatherDataDay] = useState(null)
+    let [weatherDataWeek, setWeatherDataWeek] = useState(null)
+    const div = document.querySelector('#weather-today-carousel')
+
+    function wDataHandler(data) {
+        animationDown()
+        setTimeout(() => {
+            animationUp()
+            setWeatherDataDay(data)
+            setTimeout(() => {
+                animationNormal()
+            }, 100);
+        }, 300);
+    }
+
+    function animationUp() {
+        div.style.transition = 'margin-top 0s'
+        div.style.marginTop = '-100%'
+    }
+    function animationNormal() {
+        div.style.transition = 'margin-top 0.3s'
+        div.style.visibility = 'visible'
+        div.style.marginTop = '0'
+    }
+    function animationDown() {
+        div.style.transition = 'margin-top 0.3s'
+        div.style.marginTop = '100%'
+        setTimeout(() => {
+            div.style.visibility = 'hidden'
+        }, 400)
+    }
 
     function weatherStatus(prps) {
         const time = prps.dt_txt.slice(11, 13);
@@ -40,6 +69,7 @@ export default function Weather() {
                 return cloud
         }
     }
+
     function daysOfWeek(prps) {
         const days = {
             0: 'Sunday',
@@ -67,8 +97,9 @@ export default function Weather() {
             errDiv.classList.remove('fade');
         }, 4000)
     }
+
     useEffect(() => {
-        let weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=3ccdcc7d9418e33a6d5833089853f381`
+        let weatherURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=b54007d1a20d9e5b6402cbb67162c324`
         fetch(weatherURL)
             .then(res => {
                 if (!res.ok) {
@@ -77,7 +108,11 @@ export default function Weather() {
                 }
                 return res.json()
             })
-            .then(data => setWeatherData(data.list))
+            .then(data => {
+                setWeatherDataDay(data.list)
+                setWeatherDataWeek(data.list)
+                setCity(location)
+            })
             .catch((err) => {
                 errorDiv()
             })
@@ -87,12 +122,11 @@ export default function Weather() {
         <div className='weather-app' >
             <Header handleKeyPress={handleKeyPress} />
             <weatherContext.Provider value={{ daysOfWeek, weatherStatus }}>
-                <WeatherToday weatherData={weatherData} city={location} />
-                <WeatherWeek weatherData={weatherData} />
+                <WeatherToday weatherData={weatherDataDay} city={city} />
+                <WeatherWeek weatherData={weatherDataWeek} setWeatherData={wDataHandler} />
             </weatherContext.Provider>
         </div>
     )
-
 }
 
 

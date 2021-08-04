@@ -32,19 +32,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var _header_Header_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/Header.jsx */ "./app/apps/WeatherForecast/header/Header.jsx");
-/* harmony import */ var _header_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/SearchBar.jsx */ "./app/apps/WeatherForecast/header/SearchBar.jsx");
-/* harmony import */ var _content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./content/WeatherToday.jsx */ "./app/apps/WeatherForecast/content/WeatherToday.jsx");
-/* harmony import */ var _content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./content/WeatherWeek.jsx */ "./app/apps/WeatherForecast/content/WeatherWeek.jsx");
-/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/sun.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/temperature.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/drop.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/umbrella.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/wind.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/cloud.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/raining.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/snowflake.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/storm.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./content/WeatherToday.jsx */ "./app/apps/WeatherForecast/content/WeatherToday.jsx");
+/* harmony import */ var _content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./content/WeatherWeek.jsx */ "./app/apps/WeatherForecast/content/WeatherWeek.jsx");
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
+/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/sun.svg */ "./app/apps/WeatherForecast/img/sun.svg");
+/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_sun_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/temperature.svg */ "./app/apps/WeatherForecast/img/temperature.svg");
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_temperature_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/drop.svg */ "./app/apps/WeatherForecast/img/drop.svg");
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_drop_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/umbrella.svg */ "./app/apps/WeatherForecast/img/umbrella.svg");
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./img/raining.svg */ "./app/apps/WeatherForecast/img/raining.svg");
+/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_raining_svg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./img/snowflake.svg */ "./app/apps/WeatherForecast/img/snowflake.svg");
+/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./img/storm.svg */ "./app/apps/WeatherForecast/img/storm.svg");
+/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_img_storm_svg__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./img/moon_2.svg */ "./app/apps/WeatherForecast/img/moon_2.svg");
+/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -79,46 +89,90 @@ function Weather() {
       location = _useState2[0],
       setLocation = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Lviv'),
       _useState4 = _slicedToArray(_useState3, 2),
-      weatherData = _useState4[0],
-      setWeatherData = _useState4[1];
+      city = _useState4[0],
+      setCity = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      weatherDataDay = _useState6[0],
+      setWeatherDataDay = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState8 = _slicedToArray(_useState7, 2),
+      weatherDataWeek = _useState8[0],
+      setWeatherDataWeek = _useState8[1];
+
+  var div = document.querySelector('#weather-today-carousel');
+
+  function wDataHandler(data) {
+    animationDown();
+    setTimeout(function () {
+      animationUp();
+      setWeatherDataDay(data);
+      setTimeout(function () {
+        animationNormal();
+      }, 100);
+    }, 300);
+  }
+
+  function animationUp() {
+    div.style.transition = 'margin-top 0s';
+    div.style.marginTop = '-100%';
+  }
+
+  function animationNormal() {
+    div.style.transition = 'margin-top 0.3s';
+    div.style.visibility = 'visible';
+    div.style.marginTop = '0';
+  }
+
+  function animationDown() {
+    div.style.transition = 'margin-top 0.3s';
+    div.style.marginTop = '100%';
+    setTimeout(function () {
+      div.style.visibility = 'hidden';
+    }, 400);
+  }
 
   function weatherStatus(prps) {
-    console.log(prps);
     var time = prps.dt_txt.slice(11, 13);
     var id = prps.weather[0].id;
 
     switch (true) {
-      case id <= 232:
-        return Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/storm.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+      case id <= 299:
+        return (_img_storm_svg__WEBPACK_IMPORTED_MODULE_13___default());
 
-      case id <= 531:
-        return Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/raining.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+      case id <= 599:
+        return (_img_raining_svg__WEBPACK_IMPORTED_MODULE_11___default());
 
-      case id <= 622:
-        return Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/snowflake.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+      case id <= 700:
+        return (_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12___default());
 
-      case id <= 781:
-        return Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/wind.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+      case id <= 799:
+        return (_img_wind_svg__WEBPACK_IMPORTED_MODULE_9___default());
 
       case id <= 800:
-        return time >= 6 && time < 21 ? Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/sun.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) : moon_2;
+        return time >= 6 && time < 21 ? (_img_sun_svg__WEBPACK_IMPORTED_MODULE_5___default()) : (_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14___default());
 
       case id <= 1000:
-        return Object(function webpackMissingModule() { var e = new Error("Cannot find module '../img/cloud.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+        return (_img_cloud_svg__WEBPACK_IMPORTED_MODULE_10___default());
     }
   }
 
-  var daysOfWeek = {
-    0: 'Sunday',
-    1: 'Monday',
-    2: 'Tuesday',
-    3: 'Wednesday',
-    4: 'Thursday',
-    5: 'Friday',
-    6: 'Saturday'
-  };
+  function daysOfWeek(prps) {
+    var days = {
+      0: 'Sunday',
+      1: 'Monday',
+      2: 'Tuesday',
+      3: 'Wednesday',
+      4: 'Thursday',
+      5: 'Friday',
+      6: 'Saturday'
+    };
+    return days[new Date(prps.dt_txt).getDay()];
+  }
 
   function handleKeyPress(e) {
     if (e.key === 'Enter') {
@@ -135,8 +189,7 @@ function Weather() {
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    setLocation('Lviv');
-    var weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=".concat(location, "&units=metric&appid=3ccdcc7d9418e33a6d5833089853f381");
+    var weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=".concat(location, "&units=metric&appid=b54007d1a20d9e5b6402cbb67162c324");
     fetch(weatherURL).then(function (res) {
       if (!res.ok) {
         console.log(res.status);
@@ -145,7 +198,9 @@ function Weather() {
 
       return res.json();
     }).then(function (data) {
-      return setWeatherData(data.list);
+      setWeatherDataDay(data.list);
+      setWeatherDataWeek(data.list);
+      setCity(location);
     })["catch"](function (err) {
       errorDiv();
     });
@@ -154,16 +209,17 @@ function Weather() {
     className: "weather-app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Header_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     handleKeyPress: handleKeyPress
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Context_jsx__WEBPACK_IMPORTED_MODULE_5__.default.Provider, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Context_jsx__WEBPACK_IMPORTED_MODULE_4__.default.Provider, {
     value: {
       daysOfWeek: daysOfWeek,
       weatherStatus: weatherStatus
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
-    weatherData: weatherData,
-    city: location
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_4__.default, {
-    weatherData: weatherData
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherToday_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
+    weatherData: weatherDataDay,
+    city: city
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_content_WeatherWeek_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
+    weatherData: weatherDataWeek,
+    setWeatherData: wDataHandler
   })));
 }
 
@@ -181,30 +237,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ WeatherDay)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/sun.svg */ "./app/apps/WeatherForecast/img/sun.svg");
-/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_sun_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/temperature.svg */ "./app/apps/WeatherForecast/img/temperature.svg");
-/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_temperature_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/drop.svg */ "./app/apps/WeatherForecast/img/drop.svg");
-/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_drop_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/umbrella.svg */ "./app/apps/WeatherForecast/img/umbrella.svg");
-/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/raining.svg */ "./app/apps/WeatherForecast/img/raining.svg");
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_raining_svg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/snowflake.svg */ "./app/apps/WeatherForecast/img/snowflake.svg");
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../img/storm.svg */ "./app/apps/WeatherForecast/img/storm.svg");
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_storm_svg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
-
-
-
-
-
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/temperature.svg */ "./app/apps/WeatherForecast/img/temperature.svg");
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_temperature_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/drop.svg */ "./app/apps/WeatherForecast/img/drop.svg");
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_drop_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/umbrella.svg */ "./app/apps/WeatherForecast/img/umbrella.svg");
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
 
 
 
@@ -215,27 +256,9 @@ function WeatherDay(props) {
   var weatherDay = props.weatherDay;
   var weatherRound = weatherDay[5];
 
-  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context_jsx__WEBPACK_IMPORTED_MODULE_10__.default),
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context_jsx__WEBPACK_IMPORTED_MODULE_5__.default),
       daysOfWeek = _useContext.daysOfWeek,
       weatherStatus = _useContext.weatherStatus;
-  /*function weatherStatus() {
-        const id = weatherDay[0].weather[0].id
-      switch (true) {
-          case id <= 299:
-              return storm
-          case id <= 599:
-              return raining
-          case id <= 700:
-              return snowflake
-          case id <= 799:
-              return wind
-          case id <= 800:
-              return sun
-          case id <= 1000:
-              return cloud
-      }
-  }*/
-
 
   function getTemp() {
     return Math.round(weatherRound.main.temp);
@@ -252,46 +275,39 @@ function WeatherDay(props) {
   function getWindSpeed() {
     return weatherRound.wind.speed;
   }
-  /*const DaysOfWeek = {
-      0: 'Sunday',
-      1: 'Monday',
-      2: 'Tuesday',
-      3: 'Wednesday',
-      4: 'Thursday',
-      5: 'Friday',
-      6: 'Saturday',
-  }*/
-
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "weather-day-card"
+    className: "weather-day-card",
+    onClick: function onClick() {
+      props.setWeatherData(weatherDay), dayContentAnimation();
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__temperature incard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "card-img-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_temperature_svg__WEBPACK_IMPORTED_MODULE_2___default()),
+    src: (_img_temperature_svg__WEBPACK_IMPORTED_MODULE_1___default()),
     alt: "temperature"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getTemp(), "\xB0C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__drop incard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "card-img-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_drop_svg__WEBPACK_IMPORTED_MODULE_3___default()),
+    src: (_img_drop_svg__WEBPACK_IMPORTED_MODULE_2___default()),
     alt: "drop"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getDrop(), "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__humidity incard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "card-img-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4___default()),
+    src: (_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_3___default()),
     alt: "umbrella"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getFall_out(), "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__wind incard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "card-img-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_wind_svg__WEBPACK_IMPORTED_MODULE_5___default()),
+    src: (_img_wind_svg__WEBPACK_IMPORTED_MODULE_4___default()),
     alt: "wind"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getWindSpeed(), "m/s")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__status"
@@ -301,7 +317,7 @@ function WeatherDay(props) {
     alt: "sun"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "weather-day-card__title"
-  }, daysOfWeek[props.dayNum])));
+  }, daysOfWeek(weatherDay[0]))));
 }
 
 /***/ }),
@@ -318,70 +334,156 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ WeatherHour)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/sun.svg */ "./app/apps/WeatherForecast/img/sun.svg");
-/* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_sun_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/raining.svg */ "./app/apps/WeatherForecast/img/raining.svg");
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_raining_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/snowflake.svg */ "./app/apps/WeatherForecast/img/snowflake.svg");
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/storm.svg */ "./app/apps/WeatherForecast/img/storm.svg");
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_storm_svg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/moon_2.svg */ "./app/apps/WeatherForecast/img/moon_2.svg");
-/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_7__);
-
-
-
-
-
-
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
 
 
 function WeatherHour(props) {
-  function weatherStatus() {
-    var time = props.weatherDataHour.dt_txt.slice(11, 13);
-    var id = props.weatherDataHour.weather[0].id;
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context_jsx__WEBPACK_IMPORTED_MODULE_1__.default),
+      weatherStatus = _useContext.weatherStatus;
 
-    switch (true) {
-      case id <= 232:
-        return (_img_storm_svg__WEBPACK_IMPORTED_MODULE_5___default());
-
-      case id <= 531:
-        return (_img_raining_svg__WEBPACK_IMPORTED_MODULE_3___default());
-
-      case id <= 622:
-        return (_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_4___default());
-
-      case id <= 781:
-        return (_img_wind_svg__WEBPACK_IMPORTED_MODULE_6___default());
-
-      case id <= 800:
-        return time >= 6 && time < 21 ? (_img_sun_svg__WEBPACK_IMPORTED_MODULE_1___default()) : (_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_7___default());
-
-      case id <= 1000:
-        return (_img_cloud_svg__WEBPACK_IMPORTED_MODULE_2___default());
-    }
-  }
-
-  console.log(props.weatherDataHour);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour",
     onClick: function onClick() {
-      return console.log(11);
+      return props.handlerDetails(props.weatherDataHour);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour__time"
   }, props.weatherDataHour.dt_txt.slice(11, 16)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour__status-img"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: weatherStatus(),
+    src: weatherStatus(props.weatherDataHour),
     alt: "sun"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour__temperature"
   }, Math.round(props.weatherDataHour.main.temp), "\xB0\u0421"));
+}
+
+/***/ }),
+
+/***/ "./app/apps/WeatherForecast/content/WeatherHourDetail.jsx":
+/*!****************************************************************!*\
+  !*** ./app/apps/WeatherForecast/content/WeatherHourDetail.jsx ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WeatherHourDetail)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/temperature.svg */ "./app/apps/WeatherForecast/img/temperature.svg");
+/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_temperature_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/drop.svg */ "./app/apps/WeatherForecast/img/drop.svg");
+/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_drop_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/umbrella.svg */ "./app/apps/WeatherForecast/img/umbrella.svg");
+/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _img_pressure_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/pressure.svg */ "./app/apps/WeatherForecast/img/pressure.svg");
+/* harmony import */ var _img_pressure_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_pressure_svg__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+function WeatherHourDetail(props) {
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context_jsx__WEBPACK_IMPORTED_MODULE_1__.default),
+      daysOfWeek = _useContext.daysOfWeek,
+      weatherStatus = _useContext.weatherStatus;
+
+  function Line() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "weather-hour-detail__line"
+    });
+  }
+
+  if (!props.hourDetail) return null;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail weather-app__carousel-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__detail"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__temperature detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_temperature_svg__WEBPACK_IMPORTED_MODULE_2___default()),
+    alt: "temperature"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Temperature"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Average ", Math.round(props.hourDetail.main.temp), "\xB0C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Feels like ", Math.round(props.hourDetail.main.feels_like), "\xB0C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__wind detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_wind_svg__WEBPACK_IMPORTED_MODULE_5___default()),
+    alt: "wind"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Wind"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Speed ", props.hourDetail.wind.speed, " m/s")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__pressure detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_pressure_svg__WEBPACK_IMPORTED_MODULE_7___default()),
+    alt: "pressure"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Pressure"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.main.pressure, " pressure unit \"hPa\"")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__humidity detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_4___default()),
+    alt: "umbrella"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Humidity"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.main.humidity, "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__pop detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_drop_svg__WEBPACK_IMPORTED_MODULE_3___default()),
+    alt: "drop"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Precipitation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.pop, "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__cloudy detail-p"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__image"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_cloud_svg__WEBPACK_IMPORTED_MODULE_6___default()),
+    alt: "cloud"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__title"
+  }, "Cloudy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.clouds.all, "%"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Line, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__city"
+  }, props.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__day"
+  }, daysOfWeek(props.hourDetail)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__date"
+  }, props.hourDetail.dt_txt.slice(0, 16))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__img-status"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__img"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: weatherStatus(props.hourDetail),
+    alt: ""
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "close",
+    onClick: function onClick() {
+      return props.closeDetail();
+    }
+  }));
 }
 
 /***/ }),
@@ -400,10 +502,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var _WeatherHour_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WeatherHour.jsx */ "./app/apps/WeatherForecast/content/WeatherHour.jsx");
 /* harmony import */ var _header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../header/Loader.jsx */ "./app/apps/WeatherForecast/header/Loader.jsx");
+/* harmony import */ var _WeatherHourDetail_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WeatherHourDetail.jsx */ "./app/apps/WeatherForecast/content/WeatherHourDetail.jsx");
+/* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
 function WeatherDay(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      detailsData = _useState2[0],
+      setDetailsData = _useState2[1];
+
+  var weatherToday = document.querySelector('#weather-today-carousel');
+
+  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context_jsx__WEBPACK_IMPORTED_MODULE_4__.default),
+      daysOfWeek = _useContext.daysOfWeek;
+
+  function handlerDetails(data) {
+    setDetailsData(data);
+    openDetail();
+  }
+
+  function openDetail() {
+    weatherToday.style.transition = 'margin-left 0.5s';
+    weatherToday.style.marginLeft = '-100%';
+  }
+
+  function closeDetail() {
+    weatherToday.style.marginLeft = '0';
+  }
+
   function SmallLine() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "weather-hour__line weather-hour__line--small"
@@ -419,21 +561,33 @@ function WeatherDay(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-today-carousel-container",
+    id: "weather-today-carousel"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-app__weather-today-content weather-app__carousel-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "weather-app__weather-today-city"
-  }, props.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, props.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "weather-app__weather-today-day"
+  }, props.weatherData ? daysOfWeek(props.weatherData[0]) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today-date"
   }, props.weatherData ? props.weatherData[0].dt_txt.slice(0, 10) : null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null), props.weatherData ? props.weatherData.slice(0, 8).map(function (el, index) {
     return [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WeatherHour_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
       weatherDataHour: el,
+      handlerDetails: handlerDetails,
       key: index
     }), index != 7 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Line, {
       key: index + 2
     }) : null];
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null)));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(SmallLine, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WeatherHourDetail_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
+    hourDetail: detailsData,
+    city: props.city,
+    closeDetail: closeDetail
+  })));
 }
 
 /***/ }),
@@ -451,8 +605,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var _WeatherDay_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WeatherDay.jsx */ "./app/apps/WeatherForecast/content/WeatherDay.jsx");
-/* harmony import */ var _header_Loader_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../header/Loader.jsx */ "./app/apps/WeatherForecast/header/Loader.jsx");
-
 
 
 function WeatherWeek(props) {
@@ -469,6 +621,7 @@ function WeatherWeek(props) {
         if (day === newDay) continue;
         day = newDay;
         weatherDayArr.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WeatherDay_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+          setWeatherData: props.setWeatherData,
           weatherDay: weatherData.slice(i, i + 8),
           dayNum: day,
           key: i
@@ -695,6 +848,16 @@ module.exports = __webpack_require__.p + "public/images/moon.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "public/images/moon_2.svg";
+
+/***/ }),
+
+/***/ "./app/apps/WeatherForecast/img/pressure.svg":
+/*!***************************************************!*\
+  !*** ./app/apps/WeatherForecast/img/pressure.svg ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/pressure.svg";
 
 /***/ }),
 
@@ -1045,4 +1208,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.4a1bafe46c5d496c6dbb.js.map
+//# sourceMappingURL=main.a7a4f4249eae558d20a5.js.map

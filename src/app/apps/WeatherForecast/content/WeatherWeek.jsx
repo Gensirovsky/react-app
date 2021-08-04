@@ -11,7 +11,7 @@ export default function WeatherWeek(props) {
                 let newDay = new Date(weatherData[i].dt_txt).getDay()
                 if (day === newDay) continue
                 day = newDay
-                weatherDayArr.push(<WeatherDay weatherDay={weatherData.slice(i, i + 8)} dayNum={day} key={i} />)
+                weatherDayArr.push(<WeatherDay setWeatherData={props.setWeatherData} weatherDay={weatherData.slice(i, i + 8)} dayNum={day} key={i} />)
                 i + 8
             }
         }
