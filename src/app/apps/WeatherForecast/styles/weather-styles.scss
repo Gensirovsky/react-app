@@ -11,7 +11,7 @@ $background-item: #22212F;
     background: #1a182d;
     border: 1px solid #f68e00;
     border-radius: 1.4rem;
-    padding: 0rem 4rem 4rem 4rem;
+    padding: 0% 4% 3% 4%;
     position: relative;
     overflow: hidden;
 
@@ -147,14 +147,18 @@ $background-item: #22212F;
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
-        height: 35%;
+        height: 31%;
         width: 100%;
-        .weather-day-card-container{
-            width: 20%;
+        .weather-day-card-animation{
+            width: 100%;
             height: 100%;
+            transition: opacity 0.5s; 
+        }
+        .weather-day-card-animation.opacity{
+            opacity: 0;
         }
         .weather-day-card{
-            width: 100%;
+            width: 20%;
             height: 100%;
             background-color: $background-item;
             border: 1px solid #f68e00;
@@ -201,7 +205,7 @@ $background-item: #22212F;
     position: relative;
     &__detail{
         display: flex;
-        max-width: 70%;
+        width: 70%;
         height: 100%;
         flex-wrap: wrap;
         @include adaptiv-font-app(14, 5);
@@ -224,36 +228,34 @@ $background-item: #22212F;
         }
     }
     &__title{
-        @include adaptiv-font-app(16, 7);
         margin-bottom: 2.5%;
     }
-    &__header{
-        width: 15%;
+    &__header-container{
+        display: flex;
+        width: 30%;
         height: 100%;
-        padding: 1% 0;
-        @include adaptiv-font-app(20, 8);
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: space-between;
+    }
+    &__header{
+        height: 35%;
+        width: 100%;
+        @include adaptiv-font-app(20, 3);
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 12%;
+        flex-wrap: wrap;
     }
     &__img-status{
-        width: 15%;
-        height: 100%;
+        height: 60%;
+        align-self: center;
     }
     &__img{
-        height: 50%;
-        width: 50%;
-        margin: 0 auto;
-        padding-top: 20%;
+        height: 100%;
         img{
-            width: 100%;
-            height: auto;
+            height: 100%;
+            width: auto;
         }
-    }
-    &__date{
-        line-height: 1.5rem;
     }
 }
 .detail-p{
@@ -295,21 +297,6 @@ $background-item: #22212F;
     padding-top: 0.5rem;
 }
 
-@media all and (max-width: 992px){
-    .weather{
-        width: 90vw;
-        height: 85vh;
-    }
-    .weather-app {
-        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
-        &__weather-week{
-            .weather-day-card{
-                width: 24%;
-                padding: 1.5% 1% 1.5% 1.5%;
-            }
-        }
-    }
-}
 .slideSource {
     padding: 0.7% 0;
     border: 1px solid $font-color;
@@ -350,4 +337,140 @@ $background-item: #22212F;
 }
 .close:after {
     transform: rotate(-45deg);
+}
+@media all and (max-width: 992px){
+    .weather{
+        width: 85vw;
+        height: 85vh;
+    }
+    .weather-app {
+        padding:1.5%;
+        &__weather-week{
+            margin-top: 3%;
+            flex-wrap: wrap;
+            height: 42%;
+            width: 100%;
+            .weather-day-card{
+                min-width: 49%;
+                margin-bottom: 2%;
+                height: 50%;
+                @include adaptiv-font-app(14, 12);
+                &__drop{
+                    margin-bottom: 0
+                }
+                &__wind{
+                    margin-bottom: 0;
+                }
+                &__status{
+                    width: 50%;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-self: center;
+                }
+                &__status-img{
+                    width: 35%;
+                    margin-bottom: 3%;
+                }
+                &__title{
+                    padding: 0;
+                    @include adaptiv-font-app(16, 16);
+                }
+            }
+            .weather-day-card-animation{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        &__header {
+            height: 7.5%;
+            margin-bottom: 5%;
+        }
+        &__search-bar, &__title {
+            width: 33%;
+            @include adaptiv-font-app(26, 18);
+        }
+        input{
+            @include adaptiv-font-app(26, 18);
+        }
+        &__weather-today-title{
+            @include adaptiv-font-app(26, 16);
+            padding-top: 2.5%;
+        }
+        &__weather-today{
+            .weather-hour{
+                width: 10%;
+                @include adaptiv-font-app(18, 14);
+                padding: 3% 0;
+                &__status-img{
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .city-​​not-found{
+        height: 1.2%;
+    }
+    .weather-hour-detail{
+        flex-wrap: wrap;
+        &__detail{
+            flex-wrap: wrap;
+            @include adaptiv-font-app(14, 12);
+            line-height: 1.2rem;
+        }
+        &__line{
+            display: none;
+        }
+        &__title{
+            @include adaptiv-font-app(16, 16);
+            margin-bottom: 2.5%;
+        }
+        &__header-container{
+            justify-content: space-around;
+            padding-right: 3%;
+            margin-left: -3%;
+        }
+        &__header{
+            height: 30%;
+            padding: 1% 0;
+            @include adaptiv-font-app(20, 18);
+        }
+        &__img-status{
+            width: 100%;
+            height: auto;
+        }
+        &__img{
+            width: 70%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .detail-p{
+        width: 50%;
+    }
+    .incard{
+        min-width: 35%;
+        height: 35%;
+        margin-bottom: 3%;
+    }
+    .card-img-container{
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        margin-right: 7px;
+        img{
+            width: auto;
+            height: 70%;
+        }
+    }
+}
+@media (max-width: 1920px){
+    .weather-app{
+        padding: 0 4% 4% 4%;
+    }
 }

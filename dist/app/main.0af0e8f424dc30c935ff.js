@@ -104,7 +104,7 @@ function Weather() {
       weatherDataWeek = _useState8[0],
       setWeatherDataWeek = _useState8[1];
 
-  var div = document.querySelector('#weather-today-carousel');
+  var weatherToday = document.querySelector('#weather-today-carousel');
 
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
       _useState10 = _slicedToArray(_useState9, 2),
@@ -120,14 +120,14 @@ function Weather() {
     var today = weatherDataWeek.slice(0, 8);
 
     if (data[0].dt_txt === selectedDay) {
-      animationDiv(div, function () {
+      animationDiv(weatherToday, function () {
         return setWeatherDataDay(today);
       });
       setSelectedDay(weatherDataWeek[0].dt_txt);
       return;
     }
 
-    animationDiv(div, function () {
+    animationDiv(weatherToday, function () {
       return setWeatherDataDay(data);
     });
     setSelectedDay(data[0].dt_txt);
@@ -212,13 +212,22 @@ function Weather() {
 
   function handleKeyPress(e) {
     if (e.key === 'Enter') {
-      document.querySelectorAll('.weather-day-card').forEach(function (el) {
-        el.classList.remove('select-border');
-        animationDiv(el, function () {});
-      });
-      animationDiv(div, function () {});
-      setLocation(e.target.value);
+      var locationNormalCase = e.target.value.split('').map(function (el, i) {
+        return i === 0 ? el.toUpperCase() : el.toLowerCase();
+      }).join('');
+      setLocation(locationNormalCase);
     }
+  }
+
+  function updateAnimation() {
+    document.querySelectorAll('.weather-day-card-animation').forEach(function (el) {
+      el.classList.remove('select-border');
+      el.classList.add('opacity');
+      setTimeout(function () {
+        el.classList.remove('opacity');
+      }, 500);
+    });
+    animationDiv(document.querySelector('#weather-today-carousel'), function () {});
   }
 
   function errorDiv() {
@@ -239,10 +248,13 @@ function Weather() {
 
       return res.json();
     }).then(function (data) {
+      console.log(2);
       setWeatherDataDay(data.list);
       setWeatherDataWeek(data.list);
       setCity(location);
+      updateAnimation();
     })["catch"](function (err) {
+      console.log(err);
       errorDiv();
     });
   }, [location]);
@@ -337,13 +349,12 @@ function WeatherDay(props) {
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: "weather-day-card-animation",
-    className: "weather-day-card-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card",
     onClick: function onClick(e) {
       closeDetail(), props.setWeatherData(weatherDay), selectDiv(e);
     }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-day-card-animation"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__temperature incard"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -621,6 +632,9 @@ function WeatherDay(props) {
       className: "weather-hour__line"
     });
   }
+
+  var screenWidth = window.screen.width;
+  var screenHeight = window.screen.height; //if (screenWidth <= 992) null
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today-container"
@@ -999,12 +1013,9 @@ module.exports = __webpack_require__.p + "public/images/wind.svg";
 /*!*************************************************************!*\
   !*** ./app/apps/WeatherForecast/styles/weather-styles.scss ***!
   \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ../node_modules/sass-loader/dist/cjs.js):\nSassError: Invalid CSS after \"}\": expected \"}\", was \"\"\n        on line 453 of src/app/apps/WeatherForecast/styles/weather-styles.scss\n>> }\n   ^\n\n    at processResult (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:703:19)\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:809:5\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\sass-loader\\dist\\index.js:54:7)\n    at Object.done [as callback] (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\neo-async\\async.js:8069:18)\n    at options.error (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\node-sass\\lib\\index.js:293:32)");
 
 /***/ }),
 
@@ -1272,4 +1283,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.d553582aa6fadcf2326b.js.map
+//# sourceMappingURL=main.0af0e8f424dc30c935ff.js.map

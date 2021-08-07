@@ -23,7 +23,7 @@ export default function WeatherDay(props) {
         return weatherRound.wind.speed
     }
     function selectDiv(event) {
-        let target = event.target.closest('.weather-day-card')
+        const target = event.target.closest('.weather-day-card')
         if (target.closest('.select-border')) {
             target.classList.remove('select-border')
         } else {
@@ -38,12 +38,12 @@ export default function WeatherDay(props) {
     }
 
     return (
-        <div id='weather-day-card-animation' className='weather-day-card-container'>
-            <div className='weather-day-card' onClick={(e) => {
-                closeDetail(),
-                    props.setWeatherData(weatherDay),
-                    selectDiv(e)
-            }}>
+        <div className='weather-day-card' onClick={(e) => {
+            closeDetail(),
+                props.setWeatherData(weatherDay),
+                selectDiv(e)
+        }}>
+            <div className="weather-day-card-animation">
                 <div className='weather-day-card__temperature incard'>
                     <div className='card-img-container'>
                         <img src={temperature} alt="temperature" />

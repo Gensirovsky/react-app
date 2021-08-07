@@ -21,18 +21,18 @@ export default function Weather() {
     let [city, setCity] = useState('Lviv')
     let [weatherDataDay, setWeatherDataDay] = useState(null)
     let [weatherDataWeek, setWeatherDataWeek] = useState(null)
-    const div = document.querySelector('#weather-today-carousel')
+    const weatherToday = document.querySelector('#weather-today-carousel')
     let [selectedDay, setSelectedDay] = useState(null)
     let [isWork, setIsWord] = useState(false)
 
     function wDataHandler(data) {
         let today = weatherDataWeek.slice(0, 8)
         if (data[0].dt_txt === selectedDay) {
-            animationDiv(div, (() => setWeatherDataDay(today)))
+            animationDiv(weatherToday, (() => setWeatherDataDay(today)))
             setSelectedDay(weatherDataWeek[0].dt_txt)
             return
         }
-        animationDiv(div, (() => setWeatherDataDay(data)))
+        animationDiv(weatherToday, (() => setWeatherDataDay(data)))
         setSelectedDay(data[0].dt_txt)
     }
 
@@ -68,7 +68,6 @@ export default function Weather() {
         }, 300);
     }
 
-
     function weatherStatus(prps) {
         const time = prps.dt_txt.slice(11, 13);
         const id = prps.weather[0].id
@@ -103,13 +102,20 @@ export default function Weather() {
 
     function handleKeyPress(e) {
         if (e.key === 'Enter') {
-            document.querySelectorAll('.weather-day-card').forEach(el => {
-                el.classList.remove('select-border')
-                animationDiv(el, (() => { }))
-            })
-            animationDiv(div, (() => { }))
-            setLocation(e.target.value)
+            let locationNormalCase = (e.target.value.split('').map((el, i) => i === 0 ? el.toUpperCase() : el.toLowerCase()).join(''))
+            setLocation(locationNormalCase)
         }
+    }
+
+    function updateAnimation() {
+        document.querySelectorAll('.weather-day-card-animation').forEach(el => {
+            el.classList.remove('select-border')
+            el.classList.add('opacity')
+            setTimeout(() => {
+                el.classList.remove('opacity')
+            }, 500)
+        })
+        animationDiv(document.querySelector('#weather-today-carousel'), (() => { }))
     }
 
     function errorDiv() {
@@ -135,6 +141,7 @@ export default function Weather() {
                 setWeatherDataDay(data.list)
                 setWeatherDataWeek(data.list)
                 setCity(location)
+                updateAnimation()
             })
             .catch((err) => {
                 errorDiv()
