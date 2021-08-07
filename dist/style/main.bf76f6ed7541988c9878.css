@@ -408,8 +408,11 @@ header {
     align-items: center;
     height: 35%;
     width: 100%; }
-    .weather-app__weather-week .weather-day-card {
+    .weather-app__weather-week .weather-day-card-container {
       width: 20%;
+      height: 100%; }
+    .weather-app__weather-week .weather-day-card {
+      width: 100%;
       height: 100%;
       background-color: #22212F;
       border: 1px solid #f68e00;
@@ -433,6 +436,9 @@ header {
     .weather-app__weather-week .weather-day-card:hover {
       padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
       border: 2px solid #f68e00; }
+    .weather-app__weather-week .weather-day-card.select-border {
+      padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
+      border: 2px solid #cecece; }
 
 .weather-hour-detail {
   height: 100%;
@@ -485,6 +491,8 @@ header {
     .weather-hour-detail__img img {
       width: 100%;
       height: auto; }
+  .weather-hour-detail__date {
+    line-height: 1.5rem; }
 
 .detail-p {
   width: 33.3%; }
@@ -573,4 +581,4 @@ header {
   transform: rotate(-45deg); }
 
 
-/*# sourceMappingURL=main.445ac9c2b7f1a99d0fcb.css.map*/
+/*# sourceMappingURL=main.bf76f6ed7541988c9878.css.map*/

@@ -106,34 +106,70 @@ function Weather() {
 
   var div = document.querySelector('#weather-today-carousel');
 
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState10 = _slicedToArray(_useState9, 2),
+      selectedDay = _useState10[0],
+      setSelectedDay = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState12 = _slicedToArray(_useState11, 2),
+      isWork = _useState12[0],
+      setIsWord = _useState12[1];
+
   function wDataHandler(data) {
+    var today = weatherDataWeek.slice(0, 8);
+
+    if (data[0].dt_txt === selectedDay) {
+      animationDiv(div, function () {
+        return setWeatherDataDay(today);
+      });
+      setSelectedDay(weatherDataWeek[0].dt_txt);
+      return;
+    }
+
+    animationDiv(div, function () {
+      return setWeatherDataDay(data);
+    });
+    setSelectedDay(data[0].dt_txt);
+  }
+
+  function animationDiv(elem, func) {
+    var marginLeft = window.getComputedStyle(elem, null).getPropertyValue("margin-left");
+
+    if (parseInt(marginLeft) < 0) {
+      func();
+      return;
+    }
+
+    if (isWork) return;
+    setIsWord(true);
+    setTimeout(function () {
+      setIsWord(false);
+    }, 750);
+
+    function animationUp() {
+      elem.style.transition = 'margin-top 0s';
+      elem.style.marginTop = '-100%';
+    }
+
+    function animationNormal() {
+      elem.style.transition = 'margin-top 0.3s';
+      elem.style.marginTop = '0';
+    }
+
+    function animationDown() {
+      elem.style.transition = 'margin-top 0.3s';
+      elem.style.marginTop = '100%';
+    }
+
     animationDown();
     setTimeout(function () {
       animationUp();
-      setWeatherDataDay(data);
+      func();
       setTimeout(function () {
         animationNormal();
       }, 100);
     }, 300);
-  }
-
-  function animationUp() {
-    div.style.transition = 'margin-top 0s';
-    div.style.marginTop = '-100%';
-  }
-
-  function animationNormal() {
-    div.style.transition = 'margin-top 0.3s';
-    div.style.visibility = 'visible';
-    div.style.marginTop = '0';
-  }
-
-  function animationDown() {
-    div.style.transition = 'margin-top 0.3s';
-    div.style.marginTop = '100%';
-    setTimeout(function () {
-      div.style.visibility = 'hidden';
-    }, 400);
   }
 
   function weatherStatus(prps) {
@@ -176,6 +212,11 @@ function Weather() {
 
   function handleKeyPress(e) {
     if (e.key === 'Enter') {
+      document.querySelectorAll('.weather-day-card').forEach(function (el) {
+        el.classList.remove('select-border');
+        animationDiv(el, function () {});
+      });
+      animationDiv(div, function () {});
       setLocation(e.target.value);
     }
   }
@@ -276,10 +317,32 @@ function WeatherDay(props) {
     return weatherRound.wind.speed;
   }
 
+  function selectDiv(event) {
+    var target = event.target.closest('.weather-day-card');
+
+    if (target.closest('.select-border')) {
+      target.classList.remove('select-border');
+    } else {
+      document.querySelectorAll('.weather-day-card').forEach(function (el) {
+        return el.classList.remove('select-border');
+      });
+      target.classList.add('select-border');
+    }
+  }
+
+  function closeDetail() {
+    var elem = document.querySelector('#weather-today-carousel');
+    elem.style.transition = 'margin-left 0.5s';
+    elem.style.marginLeft = '0';
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "weather-day-card-animation",
+    className: "weather-day-card-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card",
-    onClick: function onClick() {
-      props.setWeatherData(weatherDay), dayContentAnimation();
+    onClick: function onClick(e) {
+      closeDetail(), props.setWeatherData(weatherDay), selectDiv(e);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__temperature incard"
@@ -317,7 +380,7 @@ function WeatherDay(props) {
     alt: "sun"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "weather-day-card__title"
-  }, daysOfWeek(weatherDay[0]))));
+  }, daysOfWeek(weatherDay[0])))));
 }
 
 /***/ }),
@@ -543,6 +606,7 @@ function WeatherDay(props) {
   }
 
   function closeDetail() {
+    weatherToday.style.transition = 'margin-left 0.5s';
     weatherToday.style.marginLeft = '0';
   }
 
@@ -1208,4 +1272,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.a7a4f4249eae558d20a5.js.map
+//# sourceMappingURL=main.d553582aa6fadcf2326b.js.map

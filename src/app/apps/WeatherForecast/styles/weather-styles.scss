@@ -149,8 +149,12 @@ $background-item: #22212F;
         align-items: center;
         height: 35%;
         width: 100%;
-        .weather-day-card{
+        .weather-day-card-container{
             width: 20%;
+            height: 100%;
+        }
+        .weather-day-card{
+            width: 100%;
             height: 100%;
             background-color: $background-item;
             border: 1px solid #f68e00;
@@ -181,6 +185,10 @@ $background-item: #22212F;
         .weather-day-card:hover{
             padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
             border: 2px solid #f68e00;
+        }
+        .weather-day-card.select-border{
+            padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
+            border: 2px solid $font-color;
         }
     }
 }
@@ -243,6 +251,9 @@ $background-item: #22212F;
             width: 100%;
             height: auto;
         }
+    }
+    &__date{
+        line-height: 1.5rem;
     }
 }
 .detail-p{

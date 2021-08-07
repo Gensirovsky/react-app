@@ -22,34 +22,52 @@ export default function Weather() {
     let [weatherDataDay, setWeatherDataDay] = useState(null)
     let [weatherDataWeek, setWeatherDataWeek] = useState(null)
     const div = document.querySelector('#weather-today-carousel')
+    let [selectedDay, setSelectedDay] = useState(null)
+    let [isWork, setIsWord] = useState(false)
 
     function wDataHandler(data) {
+        let today = weatherDataWeek.slice(0, 8)
+        if (data[0].dt_txt === selectedDay) {
+            animationDiv(div, (() => setWeatherDataDay(today)))
+            setSelectedDay(weatherDataWeek[0].dt_txt)
+            return
+        }
+        animationDiv(div, (() => setWeatherDataDay(data)))
+        setSelectedDay(data[0].dt_txt)
+    }
+
+    function animationDiv(elem, func) {
+        const marginLeft = window.getComputedStyle(elem, null).getPropertyValue("margin-left");
+        if (parseInt(marginLeft) < 0) {
+            func()
+            return
+        }
+        if (isWork) return
+        setIsWord(true)
+        setTimeout(() => { setIsWord(false) }, 750)
+
+        function animationUp() {
+            elem.style.transition = 'margin-top 0s'
+            elem.style.marginTop = '-100%'
+        }
+        function animationNormal() {
+            elem.style.transition = 'margin-top 0.3s'
+            elem.style.marginTop = '0'
+        }
+        function animationDown() {
+            elem.style.transition = 'margin-top 0.3s'
+            elem.style.marginTop = '100%'
+        }
         animationDown()
         setTimeout(() => {
             animationUp()
-            setWeatherDataDay(data)
+            func()
             setTimeout(() => {
                 animationNormal()
             }, 100);
         }, 300);
     }
 
-    function animationUp() {
-        div.style.transition = 'margin-top 0s'
-        div.style.marginTop = '-100%'
-    }
-    function animationNormal() {
-        div.style.transition = 'margin-top 0.3s'
-        div.style.visibility = 'visible'
-        div.style.marginTop = '0'
-    }
-    function animationDown() {
-        div.style.transition = 'margin-top 0.3s'
-        div.style.marginTop = '100%'
-        setTimeout(() => {
-            div.style.visibility = 'hidden'
-        }, 400)
-    }
 
     function weatherStatus(prps) {
         const time = prps.dt_txt.slice(11, 13);
@@ -85,6 +103,11 @@ export default function Weather() {
 
     function handleKeyPress(e) {
         if (e.key === 'Enter') {
+            document.querySelectorAll('.weather-day-card').forEach(el => {
+                el.classList.remove('select-border')
+                animationDiv(el, (() => { }))
+            })
+            animationDiv(div, (() => { }))
             setLocation(e.target.value)
         }
     }

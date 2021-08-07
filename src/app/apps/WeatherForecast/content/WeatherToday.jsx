@@ -9,6 +9,7 @@ export default function WeatherDay(props) {
     let [detailsData, setDetailsData] = useState(null)
     const weatherToday = document.querySelector('#weather-today-carousel')
     const { daysOfWeek } = useContext(weatherContext)
+
     function handlerDetails(data) {
         setDetailsData(data)
         openDetail()
@@ -19,6 +20,7 @@ export default function WeatherDay(props) {
         weatherToday.style.marginLeft = '-100%'
     }
     function closeDetail() {
+        weatherToday.style.transition = 'margin-left 0.5s'
         weatherToday.style.marginLeft = '0'
     }
 
