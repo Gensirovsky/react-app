@@ -248,13 +248,11 @@ function Weather() {
 
       return res.json();
     }).then(function (data) {
-      console.log(2);
       setWeatherDataDay(data.list);
       setWeatherDataWeek(data.list);
       setCity(location);
       updateAnimation();
     })["catch"](function (err) {
-      console.log(err);
       errorDiv();
     });
   }, [location]);
@@ -538,6 +536,8 @@ function WeatherHourDetail(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__title"
   }, "Cloudy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.clouds.all, "%"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Line, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__header-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__city"
@@ -545,14 +545,16 @@ function WeatherHourDetail(props) {
     className: "weather-hour-detail__day"
   }, daysOfWeek(props.hourDetail)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__date"
-  }, props.hourDetail.dt_txt.slice(0, 16))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, props.hourDetail.dt_txt.slice(0, 11)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "weather-hour-detail__time"
+  }, props.hourDetail.dt_txt.slice(11, 16))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__img-status"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__img"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: weatherStatus(props.hourDetail),
     alt: ""
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "close",
     onClick: function onClick() {
       return props.closeDetail();
@@ -632,9 +634,6 @@ function WeatherDay(props) {
       className: "weather-hour__line"
     });
   }
-
-  var screenWidth = window.screen.width;
-  var screenHeight = window.screen.height; //if (screenWidth <= 992) null
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-app__weather-today-container"
@@ -1013,9 +1012,12 @@ module.exports = __webpack_require__.p + "public/images/wind.svg";
 /*!*************************************************************!*\
   !*** ./app/apps/WeatherForecast/styles/weather-styles.scss ***!
   \*************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ../node_modules/sass-loader/dist/cjs.js):\nSassError: Invalid CSS after \"}\": expected \"}\", was \"\"\n        on line 453 of src/app/apps/WeatherForecast/styles/weather-styles.scss\n>> }\n   ^\n\n    at processResult (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:703:19)\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:809:5\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\sass-loader\\dist\\index.js:54:7)\n    at Object.done [as callback] (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\neo-async\\async.js:8069:18)\n    at options.error (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\node-sass\\lib\\index.js:293:32)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -1283,4 +1285,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.0af0e8f424dc30c935ff.js.map
+//# sourceMappingURL=main.790bb7a9d78cd12dc473.js.map

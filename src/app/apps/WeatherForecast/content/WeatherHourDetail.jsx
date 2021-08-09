@@ -61,7 +61,6 @@ export default function WeatherHourDetail(props) {
                     <div className="weather-hour-detail__day">{daysOfWeek(props.hourDetail)}</div>
                     <div className="weather-hour-detail__date">{props.hourDetail.dt_txt.slice(0, 11)}</div>
                     <div className="weather-hour-detail__time">{props.hourDetail.dt_txt.slice(11, 16)}</div>
-
                 </div>
                 <div className="weather-hour-detail__img-status">
                     <div className="weather-hour-detail__img">

@@ -44,7 +44,7 @@ $background-item: #22212F;
             font-weight: bold;
             color: $font-color;
             height: 100%;
-            max-width: 100%;
+            min-width: 60%;
             display: inline-block;
             padding-left: 6.5%;
 
@@ -268,9 +268,10 @@ $background-item: #22212F;
 .incard{
     height: 20%;
     margin-bottom: 5%;
-    min-width: 45%;
+    width: 50%;
     display: inline-flex;
     align-items: center;
+    //justify-content: center;
 }
 .card-img-container{
     display: inline-block;
@@ -298,6 +299,8 @@ $background-item: #22212F;
 }
 
 .slideSource {
+    height: 25px;
+    line-height: 25px;
     padding: 0.7% 0;
     border: 1px solid $font-color;
     border-radius: 5px;
@@ -338,7 +341,7 @@ $background-item: #22212F;
 .close:after {
     transform: rotate(-45deg);
 }
-@media all and (max-width: 992px){
+@media (max-width: 768px){
     .weather{
         width: 85vw;
         height: 85vh;
@@ -351,41 +354,42 @@ $background-item: #22212F;
             height: 42%;
             width: 100%;
             .weather-day-card{
-                min-width: 49%;
+                width: 49%;
                 margin-bottom: 2%;
-                height: 50%;
+                height: 46%;
+                padding: 2% 5% 1% 5%;
                 @include adaptiv-font-app(14, 12);
-                &__drop{
-                    margin-bottom: 0
-                }
-                &__wind{
-                    margin-bottom: 0;
-                }
                 &__status{
-                    width: 50%;
-                    height: 100%;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-self: center;
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-self: flex-start;
                 }
                 &__status-img{
-                    width: 35%;
-                    margin-bottom: 3%;
+                    width: 25%;
+                    margin-bottom: 0;
                 }
                 &__title{
-                    padding: 0;
-                    @include adaptiv-font-app(16, 16);
+                    width: 50%;
+                    padding-left: 12%;
+                    padding-right: 0;
+                    @include adaptiv-font-app(20, 16);
                 }
             }
             .weather-day-card-animation{
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex-direction: row;
                 flex-wrap: wrap;
+                align-items: center;
             }
+            .weather-day-card:hover{
+                padding: calc(2% - 1px) calc(5% - 1px) calc(1% - 1px) calc(5% - 1px);
+            }
+
         }
         &__header {
-            height: 7.5%;
+            height: 5.5%;
             margin-bottom: 5%;
         }
         &__search-bar, &__title {
@@ -396,22 +400,65 @@ $background-item: #22212F;
             @include adaptiv-font-app(26, 18);
         }
         &__weather-today-title{
-            @include adaptiv-font-app(26, 16);
-            padding-top: 2.5%;
+            @include adaptiv-font-app(20, 20);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            height: 10%;
+        }
+        &__weather-today-title *{
+            width: 33.3%;
+            text-align: center;
+        }
+        &__weather-today-city{
+            font-weight: bold;
         }
         &__weather-today{
+            height: 85%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: space-between;
+            margin-bottom: 2%;
+            padding: 0 3%;
             .weather-hour{
-                width: 10%;
-                @include adaptiv-font-app(18, 14);
-                padding: 3% 0;
-                &__status-img{
-                    width: 75%;
+                height: 40%;
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                @include adaptiv-font-app(16, 12);
+                &__time{
+                    order: 2;
+                    margin-bottom: 3%;
                 }
+                &__status-img{
+                    order: 1;
+                    width: 55%;
+                    margin-bottom: 7%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                &__temperature{
+                    order: 3;
+                }
+                &__line{
+                    display: none;
+                }
+            }
+            .weather-hour:hover :after{
+                height: 2%;
+                width: 75%;
+                bottom: -10%;
+                left: 12.5%;
             }
         }
     }
     .city-​​not-found{
-        height: 1.2%;
+        height: 2%;
     }
     .weather-hour-detail{
         flex-wrap: wrap;
@@ -420,11 +467,14 @@ $background-item: #22212F;
             @include adaptiv-font-app(14, 12);
             line-height: 1.2rem;
         }
+        &__image{
+            margin-bottom: 10%;
+        }
         &__line{
             display: none;
         }
         &__title{
-            @include adaptiv-font-app(16, 16);
+            @include adaptiv-font-app(20, 16);
             margin-bottom: 2.5%;
         }
         &__header-container{
@@ -433,20 +483,20 @@ $background-item: #22212F;
             margin-left: -3%;
         }
         &__header{
-            height: 30%;
+            min-height: 50%;
             padding: 1% 0;
             @include adaptiv-font-app(20, 18);
+            display: flex;
+            justify-content: space-around;
         }
         &__img-status{
-            width: 100%;
-            height: auto;
+            height: 100%;
         }
         &__img{
-            width: 70%;
-            margin: 0 auto;
+            height: 75%;
             img{
-                width: 100%;
-                height: auto;
+                height: 100%;
+                width: auto;
             }
         }
     }
@@ -454,18 +504,18 @@ $background-item: #22212F;
         width: 50%;
     }
     .incard{
-        min-width: 35%;
-        height: 35%;
-        margin-bottom: 3%;
+        width: 50%;
+        height: 20%;
+        margin-bottom: 0;
+        @include adaptiv-font-app(16, 11);
     }
     .card-img-container{
-        display: inline-flex;
-        align-items: center;
+        display: inline-block;
         height: 100%;
-        margin-right: 7px;
+        margin-right: 7%;
         img{
             width: auto;
-            height: 70%;
+            height: 100%;
         }
     }
 }
@@ -473,4 +523,33 @@ $background-item: #22212F;
     .weather-app{
         padding: 0 4% 4% 4%;
     }
+}
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
 }

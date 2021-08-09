@@ -1015,12 +1015,9 @@ module.exports = __webpack_require__.p + "public/images/wind.svg";
 /*!*************************************************************!*\
   !*** ./app/apps/WeatherForecast/styles/weather-styles.scss ***!
   \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ../node_modules/sass-loader/dist/cjs.js):\nSassError: Invalid CSS after \"...     padding: 0\": expected expression (e.g. 1px, bold), was \"@include adaptiv-fo\"\n        on line 358 of src/app/apps/WeatherForecast/styles/weather-styles.scss\n>>                 @include adaptiv-font-app(14, 12);\r\n   ----------------^\n\n    at processResult (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:703:19)\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\webpack\\lib\\NormalModule.js:809:5\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.callback (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\sass-loader\\dist\\index.js:54:7)\n    at Object.done [as callback] (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\neo-async\\async.js:8069:18)\n    at options.error (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\node-sass\\lib\\index.js:293:32)");
 
 /***/ }),
 
@@ -1288,4 +1285,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.844dab00fa1a1437075c.js.map
+//# sourceMappingURL=main.ecd1d3d08ed51868b7e5.js.map

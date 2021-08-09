@@ -34,9 +34,6 @@ export default function WeatherDay(props) {
             <div className='weather-hour__line'></div>
         )
     }
-    const screenWidth = window.screen.width
-    const screenHeight = window.screen.height
-    //if (screenWidth <= 992) null
     return (
         <div className='weather-app__weather-today-container'>
             <div className="weather-app__weather-today-carousel-container" id='weather-today-carousel'>
