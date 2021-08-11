@@ -381,7 +381,7 @@ function WeatherDay(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: (_img_wind_svg__WEBPACK_IMPORTED_MODULE_4___default()),
     alt: "wind"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getWindSpeed(), "m/s")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, getWindSpeed().toFixed(1), "m/s")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-day-card__status"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "weather-day-card__status-img",
@@ -526,7 +526,7 @@ function WeatherHourDetail(props) {
     alt: "drop"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__title"
-  }, "Precipitation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.pop, "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Rainfall"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.hourDetail.pop, "%")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__cloudy detail-p"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "weather-hour-detail__image"
@@ -554,7 +554,7 @@ function WeatherHourDetail(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: weatherStatus(props.hourDetail),
     alt: ""
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "close",
     onClick: function onClick() {
       return props.closeDetail();
@@ -1285,4 +1285,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.790bb7a9d78cd12dc473.js.map
+//# sourceMappingURL=main.b347161bfbbf9d3e8507.js.map

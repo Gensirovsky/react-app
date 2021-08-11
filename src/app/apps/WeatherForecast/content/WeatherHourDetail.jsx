@@ -44,7 +44,7 @@ export default function WeatherHourDetail(props) {
                 </div>
                 <div className="weather-hour-detail__pop detail-p">
                     <div className="weather-hour-detail__image"><img src={drop} alt="drop" /></div>
-                    <div className="weather-hour-detail__title">Precipitation</div>
+                    <div className="weather-hour-detail__title">Rainfall</div>
                     <div>{props.hourDetail.pop}%</div>
                 </div>
                 <div className="weather-hour-detail__cloudy detail-p">
@@ -67,7 +67,7 @@ export default function WeatherHourDetail(props) {
                         <img src={weatherStatus(props.hourDetail)} alt="" /></div>
                 </div>
             </div>
-            <span className='close' onClick={() => props.closeDetail()}></span>
+            <div className='close' onClick={() => props.closeDetail()}></div>
         </div>
     )
 }

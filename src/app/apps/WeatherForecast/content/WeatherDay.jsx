@@ -60,7 +60,7 @@ export default function WeatherDay(props) {
                 </div>
                 <div className='weather-day-card__wind incard'>
                     <div className='card-img-container'><img src={wind} alt="wind" /></div>
-                    <span>{getWindSpeed()}m/s</span>
+                    <span>{getWindSpeed().toFixed(1)}m/s</span>
                 </div>
                 <div className='weather-day-card__status'>
                     <img className='weather-day-card__status-img' src={weatherStatus(weatherRound)} alt='sun'></img>
