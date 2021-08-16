@@ -1,6 +1,116 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./app/apps/ToDoList/TodoApp.jsx":
+/*!***************************************!*\
+  !*** ./app/apps/ToDoList/TodoApp.jsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/TodoList.jsx */ "./app/apps/ToDoList/todo/TodoList.jsx");
+
+
+var listToDo = [{
+  id: 1,
+  name: 'Купити продукти',
+  children: null
+}, {
+  id: 2,
+  name: 'Донести продукти додому',
+  children: null
+}, {
+  id: 3,
+  name: 'Приготувати продукти',
+  children: null
+}, {
+  id: 4,
+  name: 'Поїсти',
+  children: null
+}, {
+  id: 5,
+  name: 'Помити посуд',
+  children: null
+}, {
+  id: 6,
+  name: 'Помити посуд',
+  children: [{
+    id: 3,
+    name: 'gg',
+    children: null
+  }, {
+    id: 4,
+    name: 'ff',
+    children: [{
+      id: 2,
+      name: 'Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g',
+      children: null
+    }, {
+      id: 3,
+      name: 'Приготувати продукти',
+      children: null
+    }]
+  }]
+}];
+
+function Header() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todo-app__header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "To-do list"));
+}
+
+function TodoApp() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todo-app"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+    list: listToDo
+  }));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoApp);
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/index.jsx":
+/*!*************************************!*\
+  !*** ./app/apps/ToDoList/index.jsx ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../node_modules/react-dom/index.js");
+/* harmony import */ var _styles_todolist_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/todolist-styles.scss */ "./app/apps/ToDoList/styles/todolist-styles.scss");
+/* harmony import */ var _TodoApp_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TodoApp.jsx */ "./app/apps/ToDoList/TodoApp.jsx");
+
+
+
+
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TodoApp_jsx__WEBPACK_IMPORTED_MODULE_3__.default, null));
+}
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null), document.getElementById('todolist-app'));
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/todo/TodoList.jsx":
+/*!*********************************************!*\
+  !*** ./app/apps/ToDoList/todo/TodoList.jsx ***!
+  \*********************************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\React_Apps\\src\\app\\apps\\ToDoList\\todo\\TodoList.jsx: JSX attributes must only be assigned a non-empty expression. (19:31)\n\n\u001b[0m \u001b[90m 17 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'todo-app__todos-do checkbox-label'\u001b[39m\u001b[33m>\u001b[39m{item\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m                 {children \u001b[33m?\u001b[39m \u001b[33m<\u001b[39m\u001b[33mimg\u001b[39m src\u001b[33m=\u001b[39m{downArrow} className\u001b[33m=\u001b[39m\u001b[32m'down-arrow'\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m \u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m{ }\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m                 {children}\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.jsxParseAttributeValue (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5042:16)\n    at Object.jsxParseAttribute (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5091:46)\n    at Object.jsxParseOpeningElementAfterName (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5111:28)\n    at Object.jsxParseOpeningElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5104:17)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5136:33)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5152:32)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5152:32)");
+
+/***/ }),
+
 /***/ "./app/apps/WeatherForecast/Context.jsx":
 /*!**********************************************!*\
   !*** ./app/apps/WeatherForecast/Context.jsx ***!
@@ -37,24 +147,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Context_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Context.jsx */ "./app/apps/WeatherForecast/Context.jsx");
 /* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/sun.svg */ "./app/apps/WeatherForecast/img/sun.svg");
 /* harmony import */ var _img_sun_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_sun_svg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/temperature.svg */ "./app/apps/WeatherForecast/img/temperature.svg");
-/* harmony import */ var _img_temperature_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_temperature_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/drop.svg */ "./app/apps/WeatherForecast/img/drop.svg");
-/* harmony import */ var _img_drop_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_drop_svg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/umbrella.svg */ "./app/apps/WeatherForecast/img/umbrella.svg");
-/* harmony import */ var _img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_umbrella_svg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
-/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
-/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./img/raining.svg */ "./app/apps/WeatherForecast/img/raining.svg");
-/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_raining_svg__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./img/snowflake.svg */ "./app/apps/WeatherForecast/img/snowflake.svg");
-/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./img/storm.svg */ "./app/apps/WeatherForecast/img/storm.svg");
-/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_img_storm_svg__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./img/moon_2.svg */ "./app/apps/WeatherForecast/img/moon_2.svg");
-/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/wind.svg */ "./app/apps/WeatherForecast/img/wind.svg");
+/* harmony import */ var _img_wind_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_wind_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/cloud.svg */ "./app/apps/WeatherForecast/img/cloud.svg");
+/* harmony import */ var _img_cloud_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_cloud_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/raining.svg */ "./app/apps/WeatherForecast/img/raining.svg");
+/* harmony import */ var _img_raining_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_raining_svg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./img/snowflake.svg */ "./app/apps/WeatherForecast/img/snowflake.svg");
+/* harmony import */ var _img_snowflake_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./img/storm.svg */ "./app/apps/WeatherForecast/img/storm.svg");
+/* harmony import */ var _img_storm_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_storm_svg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./img/moon_2.svg */ "./app/apps/WeatherForecast/img/moon_2.svg");
+/* harmony import */ var _img_moon_2_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_11__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -66,10 +170,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
 
 
 
@@ -178,22 +278,22 @@ function Weather() {
 
     switch (true) {
       case id <= 299:
-        return (_img_storm_svg__WEBPACK_IMPORTED_MODULE_13___default());
+        return (_img_storm_svg__WEBPACK_IMPORTED_MODULE_10___default());
 
       case id <= 599:
-        return (_img_raining_svg__WEBPACK_IMPORTED_MODULE_11___default());
+        return (_img_raining_svg__WEBPACK_IMPORTED_MODULE_8___default());
 
       case id <= 700:
-        return (_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_12___default());
+        return (_img_snowflake_svg__WEBPACK_IMPORTED_MODULE_9___default());
 
       case id <= 799:
-        return (_img_wind_svg__WEBPACK_IMPORTED_MODULE_9___default());
+        return (_img_wind_svg__WEBPACK_IMPORTED_MODULE_6___default());
 
       case id <= 800:
-        return time >= 6 && time < 21 ? (_img_sun_svg__WEBPACK_IMPORTED_MODULE_5___default()) : (_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_14___default());
+        return time >= 6 && time < 21 ? (_img_sun_svg__WEBPACK_IMPORTED_MODULE_5___default()) : (_img_moon_2_svg__WEBPACK_IMPORTED_MODULE_11___default());
 
       case id <= 1000:
-        return (_img_cloud_svg__WEBPACK_IMPORTED_MODULE_10___default());
+        return (_img_cloud_svg__WEBPACK_IMPORTED_MODULE_7___default());
     }
   }
 
@@ -846,6 +946,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
 /* harmony import */ var _apps_WeatherForecast_index_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./apps/WeatherForecast/index.jsx */ "./app/apps/WeatherForecast/index.jsx");
+/* harmony import */ var _apps_ToDoList_index_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./apps/ToDoList/index.jsx */ "./app/apps/ToDoList/index.jsx");
+
 
 
 
@@ -1005,6 +1107,19 @@ module.exports = __webpack_require__.p + "public/images/umbrella.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "public/images/wind.svg";
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/styles/todolist-styles.scss":
+/*!*******************************************************!*\
+  !*** ./app/apps/ToDoList/styles/todolist-styles.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -1285,4 +1400,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.b347161bfbbf9d3e8507.js.map
+//# sourceMappingURL=main.e49980206b90bc8011c8.js.map

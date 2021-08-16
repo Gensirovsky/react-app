@@ -158,11 +158,22 @@ header {
         }
     }
 }
-.weather-forecast-app {
+.weather-forecast-app, .todolist-app {
     width: 100vw;
     height: 100vh;
     background-color: #22212f;
     display: flex;
     align-items: center;
 }
-
+.todolist-app {
+    position: relative;
+}
+.todolist-app::before {
+    content: '';
+    width: 50%;
+    height: 2.5px;
+    background-color: #F68E00;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}

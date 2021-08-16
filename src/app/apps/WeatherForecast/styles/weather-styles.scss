@@ -4,6 +4,11 @@
 $font-color: #cecece;
 $background-main: #1a182d;
 $background-item: #22212F;
+.weather {
+    width: 80vw;
+    height: 35vw;
+    margin: 0 auto;
+}
 .weather-app {
     color: EDEDED;
     max-width: 100%;
@@ -281,11 +286,6 @@ $background-item: #22212F;
         width: auto;
         height: 100%;
     }
-}
-.weather {
-    width: 80vw;
-    height: 35vw;
-    margin: 0 auto;
 }
 .city-​​not-found{
     width: 20%;
