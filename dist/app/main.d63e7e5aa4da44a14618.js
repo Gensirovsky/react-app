@@ -14,45 +14,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var _todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/TodoList.jsx */ "./app/apps/ToDoList/todo/TodoList.jsx");
+/* harmony import */ var _actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions/Menu.jsx */ "./app/apps/ToDoList/actions/Menu.jsx");
+
 
 
 var listToDo = [{
   id: 1,
-  name: 'Купити продукти',
+  name: "Купити продукти",
   children: null
 }, {
   id: 2,
-  name: 'Донести продукти додому',
+  name: "Донести продукти додому",
   children: null
 }, {
   id: 3,
-  name: 'Приготувати продукти',
+  name: "Приготувати продукти",
   children: null
 }, {
   id: 4,
-  name: 'Поїсти',
+  name: "Поїсти",
   children: null
 }, {
   id: 5,
-  name: 'Помити посуд',
+  name: "Помити посуд",
   children: null
 }, {
   id: 6,
-  name: 'Помити посуд',
+  name: "Помити посуд",
   children: [{
     id: 3,
-    name: 'gg',
+    name: "gg",
     children: null
   }, {
     id: 4,
-    name: 'ff',
+    name: "ff",
     children: [{
       id: 2,
-      name: 'Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g',
+      name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
       children: null
     }, {
       id: 3,
-      name: 'Приготувати продукти',
+      name: "Приготувати продукти",
       children: null
     }]
   }]
@@ -69,10 +71,66 @@ function TodoApp() {
     className: "todo-app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     list: listToDo
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoApp);
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/actions/Menu.jsx":
+/*!********************************************!*\
+  !*** ./app/apps/ToDoList/actions/Menu.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/add.svg */ "./app/apps/ToDoList/img/add.svg");
+/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_add_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cancel.svg */ "./app/apps/ToDoList/img/cancel.svg");
+/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/folder.svg */ "./app/apps/ToDoList/img/folder.svg");
+/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_folder_svg__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+function Menu() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todo-app__menu"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__add menu__button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_add_svg__WEBPACK_IMPORTED_MODULE_1___default()),
+    alt: "Add task"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Add")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__remove menu__button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default()),
+    alt: "Xancel"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Cancel")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__forlders menu__button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_folder_svg__WEBPACK_IMPORTED_MODULE_3___default()),
+    alt: "Folder"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Folder"))));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Menu);
 
 /***/ }),
 
@@ -101,13 +159,133 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 
 /***/ }),
 
+/***/ "./app/apps/ToDoList/js/scrollBarFix.jsx":
+/*!***********************************************!*\
+  !*** ./app/apps/ToDoList/js/scrollBarFix.jsx ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function scrollBarFix() {
+  var i = false;
+  return function () {
+    var elem = document.querySelector('.todo-app__todos');
+
+    if (elem.clientHeight !== elem.scrollHeight && !i) {
+      elem.style.paddingRight = parseFloat(getComputedStyle(elem).paddingRight) - 5 + 'px';
+      i = true;
+    }
+
+    if (elem.clientHeight === elem.scrollHeight && i) {
+      elem.style.paddingRight = parseFloat(getComputedStyle(elem).paddingRight) + 5 + 'px';
+      i = false;
+    }
+  };
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollBarFix());
+
+/***/ }),
+
 /***/ "./app/apps/ToDoList/todo/TodoList.jsx":
 /*!*********************************************!*\
   !*** ./app/apps/ToDoList/todo/TodoList.jsx ***!
   \*********************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\React_Apps\\src\\app\\apps\\ToDoList\\todo\\TodoList.jsx: JSX attributes must only be assigned a non-empty expression. (19:31)\n\n\u001b[0m \u001b[90m 17 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'todo-app__todos-do checkbox-label'\u001b[39m\u001b[33m>\u001b[39m{item\u001b[33m.\u001b[39mname}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m                 {children \u001b[33m?\u001b[39m \u001b[33m<\u001b[39m\u001b[33mimg\u001b[39m src\u001b[33m=\u001b[39m{downArrow} className\u001b[33m=\u001b[39m\u001b[32m'down-arrow'\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m \u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m                 \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m{ }\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m                 {children}\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.jsxParseAttributeValue (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5042:16)\n    at Object.jsxParseAttribute (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5091:46)\n    at Object.jsxParseOpeningElementAfterName (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5111:28)\n    at Object.jsxParseOpeningElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5104:17)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5136:33)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5152:32)\n    at Object.jsxParseElementAt (C:\\Users\\gensi\\Desktop\\React_Apps\\node_modules\\@babel\\parser\\lib\\index.js:5152:32)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/down-arrow.svg */ "./app/apps/ToDoList/img/down-arrow.svg");
+/* harmony import */ var _img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/scrollBarFix.jsx */ "./app/apps/ToDoList/js/scrollBarFix.jsx");
+
+
+
+
+function ListItem(_ref) {
+  var item = _ref.item;
+
+  function checkboxHandler(e) {
+    if (!e.target.checked) return;
+    var childrenCheckbox = e.target.closest('.todos-do__container').querySelectorAll('.todos-do__checkbox');
+
+    if (childrenCheckbox.length) {
+      childrenCheckbox.forEach(function (el) {
+        el.checked = true;
+      });
+    }
+  }
+
+  var children = null;
+
+  if (item.children) {
+    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+      className: "todos-do__child todos-do",
+      hidden: true
+    }, item.children.map(function (i) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ListItem, {
+        item: i,
+        key: i.id
+      });
+    }));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: 'todos-do'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todos-do__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    className: "todos-do__checkbox-label"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "checkbox",
+    className: "todos-do__checkbox",
+    onChange: function onChange(e) {
+      return checkboxHandler(e);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "todos-do__checkbox-fake"
+  }), item.name), children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todos-do__btn-down"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_1___default())
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "todos-do__line"
+  }), children));
+}
+
+function TodoList(props) {
+  function listOpenHandler(event) {
+    if (!event.target.closest('.todos-do__btn-down')) return;
+    var target = event.target.closest('.todos-do__container');
+    var children = target.parentNode.querySelector('ul');
+    if (!children) return;
+    event.target.style.transform = children.hidden ? 'rotate(-90deg)' : 'rotate(0deg)';
+    children.hidden = !children.hidden;
+    (0,_js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__.default)();
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "todo-app__todos",
+    onClick: function onClick(e) {
+      return listOpenHandler(e);
+    }
+  }, props.list.map(function (item, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ListItem, {
+      item: item,
+      key: i
+    });
+  }));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList);
 
 /***/ }),
 
@@ -947,6 +1125,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
 /* harmony import */ var _apps_WeatherForecast_index_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./apps/WeatherForecast/index.jsx */ "./app/apps/WeatherForecast/index.jsx");
 /* harmony import */ var _apps_ToDoList_index_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./apps/ToDoList/index.jsx */ "./app/apps/ToDoList/index.jsx");
+/* harmony import */ var _apps_ToDoList_js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./apps/ToDoList/js/scrollBarFix.jsx */ "./app/apps/ToDoList/js/scrollBarFix.jsx");
+
 
 
 
@@ -977,6 +1157,46 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lds-dual-ring {\r\n  display: inline-
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/img/add.svg":
+/*!***************************************!*\
+  !*** ./app/apps/ToDoList/img/add.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/add.svg";
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/img/cancel.svg":
+/*!******************************************!*\
+  !*** ./app/apps/ToDoList/img/cancel.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/cancel.svg";
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/img/down-arrow.svg":
+/*!**********************************************!*\
+  !*** ./app/apps/ToDoList/img/down-arrow.svg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/down-arrow.svg";
+
+/***/ }),
+
+/***/ "./app/apps/ToDoList/img/folder.svg":
+/*!******************************************!*\
+  !*** ./app/apps/ToDoList/img/folder.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/folder.svg";
 
 /***/ }),
 
@@ -1400,4 +1620,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.e49980206b90bc8011c8.js.map
+//# sourceMappingURL=main.d63e7e5aa4da44a14618.js.map

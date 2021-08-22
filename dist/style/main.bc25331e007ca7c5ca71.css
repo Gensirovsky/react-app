@@ -798,56 +798,125 @@ header {
 .todo-app {
   width: 100%;
   height: 100%;
-  background: linear-gradient(140.6deg, #22212F 0.77%, #22212F 0.78%, #1A182D 100%);
-  border: 1px solid #F68E00;
+  background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
+  border: 1px solid #abb2bf;
   border-radius: 24px;
   font-family: Consolas;
-  color: #c4c4c4; }
+  color: #abb2bf; }
   .todo-app__header {
+    color: #e06c75;
     position: relative;
-    margin-top: 5vh;
-    margin-bottom: 8vh;
+    margin-top: 5%;
+    margin-bottom: 2%;
     width: 100%;
+    height: 9%;
     font-size: 2.5vw; }
     .todo-app__header h1 {
       text-align: center; }
   .todo-app__header::after {
-    content: '';
+    content: "";
     width: 30%;
     height: 2px;
-    background-color: #F68E00;
+    background-color: #abb2bf;
     position: absolute;
-    top: 8vh;
+    bottom: 0;
     left: 35%; }
   .todo-app__todos {
-    padding: 0 4vw;
-    height: 70%; }
-    .todo-app__todos .children {
-      margin-left: 10%; }
-  .todo-app .todos-do__container {
+    overflow: auto;
+    padding: 0 5vw;
+    height: 73%; }
+  .todo-app__todos::-webkit-scrollbar {
+    width: 5px; }
+  .todo-app__todos::-webkit-scrollbar-track {
+    border-bottom: 2px solid #7c7c7c;
+    border-top: 2px solid #7c7c7c; }
+  .todo-app__todos::-webkit-scrollbar-thumb {
+    background: #939393; }
+  .todo-app__todos::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c; }
+  .todo-app__menu {
+    width: 90%;
+    height: 10%;
+    margin: 0 auto; }
+  .todo-app .menu__container {
     width: 100%;
-    min-height: 6.5vh;
+    height: 100%;
+    padding: 0.8em 0;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    border-top: 3px solid #abb2bf; }
+  .todo-app .menu__button {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    flex-wrap: wrap; }
-  .todo-app .todos-do__checkbox-label {
-    width: 80%;
-    margin-left: 2vw;
-    padding: 2vh 0;
     font-size: 1.2vw; }
-  .todo-app .todos-do__btn-down {
-    width: 1vw; }
-    .todo-app .todos-do__btn-down img {
+    .todo-app .menu__button img {
+      margin-right: 0.7em;
+      height: 100%;
+      width: auto; }
+  .todo-app .menu__button:nth-child(2) {
+    border-left: 1px solid #abb2bf;
+    border-right: 1px solid #abb2bf;
+    height: 80%; }
+  .todo-app .menu__button:hover :after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    background-color: #abb2bf;
+    bottom: -12px;
+    left: 20%; }
+  .todo-app .todos-do {
+    width: 100%; }
+    .todo-app .todos-do__container {
+      min-width: 100%;
+      min-height: 100%;
+      min-height: 6.5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap; }
+    .todo-app .todos-do__checkbox-label {
+      width: 80%;
+      padding: 1em 0 1em 1.3em;
+      font-size: 1.2vw; }
+    .todo-app .todos-do__checkbox {
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
+    .todo-app .todos-do__checkbox-fake {
+      position: absolute;
+      margin-left: -1.3em;
+      margin-top: 0.1em;
+      width: 0.8em;
+      height: 0.8em;
+      box-shadow: 0 0 0 0.1em #e06c75;
+      border-radius: 0.2em; }
+    .todo-app .todos-do__btn-down {
+      width: 1.3vw;
+      transform: rotate(90deg); }
+      .todo-app .todos-do__btn-down img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__line {
       width: 100%;
-      height: auto; }
-  .todo-app .todos-do__line {
-    width: 100%;
-    height: 1.5px;
-    background-color: #FFC26E; }
-  .todo-app input {
-    transform: scale(1.3); }
+      height: 1.5px;
+      background-color: #e06c75; }
+    .todo-app .todos-do__child {
+      margin-left: 3vw;
+      transition: all 1s ease-out; }
+
+.todos-do__checkbox:checked + .todos-do__checkbox-fake {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95% auto;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27%3F%3E%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 xmlns:svgjs=%27http://svgjs.com/svgjs%27 version=%271.1%27 width=%27512%27 height=%27512%27 x=%270%27 y=%270%27 viewBox=%270 0 45.701 45.7%27 style=%27enable-background:new 0 0 512 512%27 xml:space=%27preserve%27 class=%27%27%3E%3Cg%3E%3Cg xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%3E%3Cpath d=%27M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504 c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0 c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z%27 fill=%27%2398c389%27 data-original=%27%23000000%27 style=%27%27 class=%27%27/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A"); }
 
 
-/*# sourceMappingURL=main.2a7e72bc80bd4a20d7eb.css.map*/
+/*# sourceMappingURL=main.bc25331e007ca7c5ca71.css.map*/
