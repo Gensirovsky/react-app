@@ -15,50 +15,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
 /* harmony import */ var _todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo/TodoList.jsx */ "./app/apps/ToDoList/todo/TodoList.jsx");
 /* harmony import */ var _actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions/Menu.jsx */ "./app/apps/ToDoList/actions/Menu.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var listToDo = [{
-  id: 1,
-  name: "Купити продукти",
-  children: null
-}, {
-  id: 2,
-  name: "Донести продукти додому",
-  children: null
-}, {
-  id: 3,
-  name: "Приготувати продукти",
-  children: null
-}, {
-  id: 4,
-  name: "Поїсти",
-  children: null
-}, {
-  id: 5,
-  name: "Помити посуд",
-  children: null
-}, {
-  id: 6,
-  name: "Помити посуд",
-  children: [{
-    id: 3,
-    name: "gg",
-    children: null
-  }, {
-    id: 4,
-    name: "ff",
-    children: [{
-      id: 2,
-      name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
-      children: null
-    }, {
-      id: 3,
-      name: "Приготувати продукти",
-      children: null
-    }]
-  }]
-}];
+
+var allMarks = ["main", "secondary", "last", "chell", "secondary", "secondary", "secondary", "secondary", "secondary", "secondary", "chell", "chell", "chell", "chell", "chell", "chell", "chell", "chell"];
 
 function Header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -67,11 +39,69 @@ function Header() {
 }
 
 function TodoApp() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+    id: 1,
+    name: "Купити продукти",
+    children: null,
+    mark: null
+  }, {
+    id: 2,
+    name: "Донести продукти додому",
+    mark: "main",
+    children: null
+  }, {
+    id: 3,
+    name: "Приготувати продукти",
+    mark: "main",
+    children: null
+  }, {
+    id: 4,
+    name: "Поїсти",
+    mark: "main",
+    children: null
+  }, {
+    id: 5,
+    name: "Помити посуд",
+    mark: "secondary",
+    children: null
+  }, {
+    id: 6,
+    name: "Помити посуд",
+    mark: null,
+    children: [{
+      id: 3,
+      name: "gg",
+      mark: "main",
+      children: null
+    }, {
+      id: 4,
+      name: "ff",
+      mark: "secondary main",
+      children: [{
+        id: 2,
+        name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
+        children: null
+      }, {
+        id: 3,
+        name: "Приготувати продукти",
+        mark: "secondary",
+        children: null
+      }]
+    }]
+  }]),
+      _useState2 = _slicedToArray(_useState, 2),
+      listToDo = _useState2[0],
+      setListToDo = _useState2[1];
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todo-app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     list: listToDo
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
+    marks: allMarks,
+    id: listToDo.length ? listToDo.length + 1 : 1,
+    setListToDo: setListToDo
+  }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoApp);
@@ -82,55 +112,9 @@ function TodoApp() {
 /*!********************************************!*\
   !*** ./app/apps/ToDoList/actions/Menu.jsx ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/add.svg */ "./app/apps/ToDoList/img/add.svg");
-/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_add_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cancel.svg */ "./app/apps/ToDoList/img/cancel.svg");
-/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/folder.svg */ "./app/apps/ToDoList/img/folder.svg");
-/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_folder_svg__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-function Menu() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todo-app__menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__add menu__button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_add_svg__WEBPACK_IMPORTED_MODULE_1___default()),
-    alt: "Add task"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__text"
-  }, "Add")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__remove menu__button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default()),
-    alt: "Xancel"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__text"
-  }, "Cancel")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__forlders menu__button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_folder_svg__WEBPACK_IMPORTED_MODULE_3___default()),
-    alt: "Folder"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "menu__text"
-  }, "Folder"))));
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Menu);
+throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\react-app\\src\\app\\apps\\ToDoList\\actions\\Menu.jsx: Missing semicolon. (8:12)\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mMenu\u001b[39m({ marks\u001b[33m,\u001b[39m id\u001b[33m,\u001b[39m setListToDo }) {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     funcrion \u001b[33mMenuDisplay\u001b[39m() {\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m         \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'menu__main-item-container'\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.semicolon (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9899:10)\n    at Object.parseExpressionStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13127:10)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12716:19)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13169:25)\n    at Object.parseBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13160:10)\n    at Object.parseBlock (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13144:10)");
 
 /***/ }),
 
@@ -215,7 +199,7 @@ function ListItem(_ref) {
 
   function checkboxHandler(e) {
     if (!e.target.checked) return;
-    var childrenCheckbox = e.target.closest('.todos-do__container').querySelectorAll('.todos-do__checkbox');
+    var childrenCheckbox = e.target.closest(".todos-do__container").querySelectorAll(".todos-do__checkbox");
 
     if (childrenCheckbox.length) {
       childrenCheckbox.forEach(function (el) {
@@ -239,19 +223,19 @@ function ListItem(_ref) {
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: 'todos-do'
+    className: "todos-do"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todos-do__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-    className: "todos-do__checkbox-label"
+    className: "todos-do__checkbox-label checkbox-label"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "checkbox",
-    className: "todos-do__checkbox",
+    className: "todos-do__checkbox checkbox",
     onChange: function onChange(e) {
       return checkboxHandler(e);
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "todos-do__checkbox-fake"
+    className: "todos-do__checkbox-fake checkbox-fake"
   }), item.name), children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todos-do__btn-down"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -263,11 +247,11 @@ function ListItem(_ref) {
 
 function TodoList(props) {
   function listOpenHandler(event) {
-    if (!event.target.closest('.todos-do__btn-down')) return;
-    var target = event.target.closest('.todos-do__container');
-    var children = target.parentNode.querySelector('ul');
+    if (!event.target.closest(".todos-do__btn-down")) return;
+    var target = event.target.closest(".todos-do__container");
+    var children = target.parentNode.querySelector("ul");
     if (!children) return;
-    event.target.style.transform = children.hidden ? 'rotate(-90deg)' : 'rotate(0deg)';
+    event.target.style.transform = children.hidden ? "rotate(-90deg)" : "rotate(0deg)";
     children.hidden = !children.hidden;
     (0,_js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__.default)();
   }
@@ -1160,26 +1144,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lds-dual-ring {\r\n  display: inline-
 
 /***/ }),
 
-/***/ "./app/apps/ToDoList/img/add.svg":
-/*!***************************************!*\
-  !*** ./app/apps/ToDoList/img/add.svg ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "public/images/add.svg";
-
-/***/ }),
-
-/***/ "./app/apps/ToDoList/img/cancel.svg":
-/*!******************************************!*\
-  !*** ./app/apps/ToDoList/img/cancel.svg ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "public/images/cancel.svg";
-
-/***/ }),
-
 /***/ "./app/apps/ToDoList/img/down-arrow.svg":
 /*!**********************************************!*\
   !*** ./app/apps/ToDoList/img/down-arrow.svg ***!
@@ -1187,16 +1151,6 @@ module.exports = __webpack_require__.p + "public/images/cancel.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "public/images/down-arrow.svg";
-
-/***/ }),
-
-/***/ "./app/apps/ToDoList/img/folder.svg":
-/*!******************************************!*\
-  !*** ./app/apps/ToDoList/img/folder.svg ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "public/images/folder.svg";
 
 /***/ }),
 
@@ -1620,4 +1574,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.d63e7e5aa4da44a14618.js.map
+//# sourceMappingURL=main.cad582821ed614722abd.js.map
