@@ -26,7 +26,7 @@ const allMarks = [
 function Header() {
     return (
         <div className='todo-app__header'>
-            <h1>To-do list</h1>
+            <h2>To-do list</h2>
         </div>
     )
 }

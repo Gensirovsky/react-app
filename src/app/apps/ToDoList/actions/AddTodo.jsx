@@ -2,6 +2,10 @@ import React from "react"
 import cancel from "../img/cancel.svg"
 
 function AddTodo({ marks, id, setListToDo }) {
+    function closeMenuAdd() {
+        const menu = document.querySelector(".menu__container")
+        menu.style.marginLeft = "0"
+    }
     function closeMarks(e) {
         if (e.target.id === "cls")
             document.querySelector("#markCls").hidden = true
@@ -55,6 +59,12 @@ function AddTodo({ marks, id, setListToDo }) {
                         marksDiv.focus()
                     }}
                 />
+                <div
+                    className='menu__add__close'
+                    onClick={() => closeMenuAdd()}
+                >
+                    <img src={cancel} alt='close' />
+                </div>
                 <div
                     hidden
                     className='menu__add__marks-list'

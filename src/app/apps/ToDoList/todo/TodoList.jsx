@@ -18,7 +18,7 @@ function ListItem({ item }) {
     let children = null
     if (item.children) {
         children = (
-            <ul className='todos-do__child todos-do' hidden>
+            <ul className='todos-do__child todos-do visually-hidden todo-emerging'>
                 {item.children.map((i) => (
                     <ListItem item={i} key={i.id} />
                 ))}
@@ -54,12 +54,14 @@ function TodoList(props) {
         let target = event.target.closest(".todos-do__container")
         let children = target.parentNode.querySelector("ul")
         if (!children) return
-
-        event.target.style.transform = children.hidden
+        event.target.style.transition = "all .25s ease"
+        event.target.style.transform = children.classList.contains(
+            "visually-hidden"
+        )
             ? "rotate(-90deg)"
             : "rotate(0deg)"
-        children.hidden = !children.hidden
-
+        children.classList.toggle("visually-hidden")
+        children.classList.toggle("todo-emerging")
         scrollBarFix()
     }
 

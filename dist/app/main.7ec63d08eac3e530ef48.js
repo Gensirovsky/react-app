@@ -35,7 +35,7 @@ var allMarks = ["main", "secondary", "last", "chell", "secondary", "secondary", 
 function Header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todo-app__header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "To-do list"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "To-do list"));
 }
 
 function TodoApp() {
@@ -142,6 +142,11 @@ function AddTodo(_ref) {
       id = _ref.id,
       setListToDo = _ref.setListToDo;
 
+  function closeMenuAdd() {
+    var menu = document.querySelector(".menu__container");
+    menu.style.marginLeft = "0";
+  }
+
   function closeMarks(e) {
     if (e.target.id === "cls") document.querySelector("#markCls").hidden = true;
   }
@@ -197,6 +202,14 @@ function AddTodo(_ref) {
       marksDiv.focus();
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__add__close",
+    onClick: function onClick() {
+      return closeMenuAdd();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_cancel_svg__WEBPACK_IMPORTED_MODULE_1___default()),
+    alt: "close"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     hidden: true,
     className: "menu__add__marks-list",
     onClick: function onClick(e) {
@@ -259,10 +272,18 @@ function Menu(_ref) {
       setListToDo = _ref.setListToDo;
 
   function MenuDisplay() {
+    function addButtonHanler() {
+      var menu = document.querySelector(".menu__container");
+      menu.style.marginLeft = "-100%";
+    }
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "menu__main-item-container"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "menu__add menu__button"
+      className: "menu__add-button menu__button",
+      onClick: function onClick() {
+        return addButtonHanler();
+      }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: (_img_add_svg__WEBPACK_IMPORTED_MODULE_2___default()),
       alt: "Add task"
@@ -289,7 +310,7 @@ function Menu(_ref) {
     className: "todo-app__menu"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "menu__container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddTodo_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MenuDisplay, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddTodo_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     marks: marks,
     id: id,
     setListToDo: setListToDo
@@ -394,8 +415,7 @@ function ListItem(_ref) {
 
   if (item.children) {
     children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-      className: "todos-do__child todos-do",
-      hidden: true
+      className: "todos-do__child todos-do visually-hidden todo-emerging"
     }, item.children.map(function (i) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ListItem, {
         item: i,
@@ -433,8 +453,10 @@ function TodoList(props) {
     var target = event.target.closest(".todos-do__container");
     var children = target.parentNode.querySelector("ul");
     if (!children) return;
-    event.target.style.transform = children.hidden ? "rotate(-90deg)" : "rotate(0deg)";
-    children.hidden = !children.hidden;
+    event.target.style.transition = "all .25s ease";
+    event.target.style.transform = children.classList.contains("visually-hidden") ? "rotate(-90deg)" : "rotate(0deg)";
+    children.classList.toggle("visually-hidden");
+    children.classList.toggle("todo-emerging");
     (0,_js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__.default)();
   }
 
@@ -1786,4 +1808,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.d04fe413fe5c69afff80.js.map
+//# sourceMappingURL=main.7ec63d08eac3e530ef48.js.map
