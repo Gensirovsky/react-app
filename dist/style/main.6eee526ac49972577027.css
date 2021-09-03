@@ -787,5 +787,446 @@ header {
     opacity: 0.5;
     transition: opacity 0.5s; } }
 
+/*!******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./app/apps/ToDoList/styles/todolist-styles.scss ***!
+  \******************************************************************************************************************************************/
+.todolist-container {
+  width: 35%;
+  height: 90%;
+  margin: 0 auto; }
 
-/*# sourceMappingURL=main.4f37acc7fc2a6e34f6fc.css.map*/
+.todo-app {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
+  border: 1px solid #abb2bf;
+  border-radius: 24px;
+  font-family: Consolas;
+  color: #abb2bf; }
+  .todo-app__header {
+    color: #e06c75;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 9%;
+    font-size: 2.5vw; }
+    .todo-app__header h2 {
+      text-align: center; }
+  .todo-app__header::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #abb2bf;
+    position: absolute;
+    bottom: 0;
+    left: 35%; }
+  .todo-app__todos {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    padding: 0 0 2vw 5vw;
+    height: 73%;
+    position: relative; }
+  .todo-app__todos::-webkit-scrollbar {
+    width: 5px; }
+  .todo-app__todos::-webkit-scrollbar-track {
+    border-bottom: 2px solid #7c7c7c;
+    border-top: 2px solid #7c7c7c; }
+  .todo-app__todos::-webkit-scrollbar-thumb {
+    background: #939393; }
+  .todo-app__todos::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c; }
+  .todo-app__menu {
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    position: relative; }
+  .todo-app__menu::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    top: 0;
+    left: 5%;
+    background-color: #abb2bf; }
+  .todo-app .menu__container {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: margin-left 1s; }
+  .todo-app .menu__main-item-container {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
+    padding: 0.9em 2.5em; }
+  .todo-app .menu__forlders {
+    position: relative; }
+  .todo-app .menu__button {
+    height: 100%;
+    width: 33.3%;
+    cursor: pointer; }
+  .todo-app .menu__filter-container {
+    height: 200%;
+    width: 100%;
+    transition: margin-top 0.25s ease; }
+  .todo-app .menu__filter {
+    height: 100%;
+    cursor: auto;
+    align-self: flex-start;
+    overflow-y: hidden; }
+    .todo-app .menu__filter .filter__container {
+      width: 90%;
+      height: 50%;
+      margin: 0 auto;
+      position: relative; }
+    .todo-app .menu__filter .filter__input {
+      width: 85%;
+      height: 50%;
+      padding: 1% 15% 1% 3%;
+      background-color: transparent;
+      border: 2px solid #e06c75;
+      border-radius: 0.5em;
+      color: #abb2bf;
+      font-size: 0.8vw; }
+    .todo-app .menu__filter .filter__submit {
+      cursor: pointer;
+      height: 50%;
+      padding: 4px 0;
+      margin: 0 4px;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      right: 16%; }
+      .todo-app .menu__filter .filter__submit img {
+        height: 100%;
+        width: auto; }
+    .todo-app .menu__filter .filter__clear {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5%;
+      width: 10%; }
+      .todo-app .menu__filter .filter__clear img {
+        width: 100%;
+        height: auto; }
+    .todo-app .menu__filter .filter__close {
+      height: 35%;
+      width: 100%;
+      text-align: center;
+      margin-top: 5%; }
+      .todo-app .menu__filter .filter__close img {
+        height: 100%;
+        width: auto;
+        cursor: pointer; }
+  .todo-app .menu__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    cursor: pointer; }
+  .todo-app .menu__content > img {
+    margin-right: 0.7em;
+    height: 100%;
+    width: auto; }
+  .todo-app .menu__filter-content {
+    height: 50%; }
+  .todo-app .menu__button:nth-child(1) {
+    border-right: 1px solid #abb2bf; }
+  .todo-app .menu__button:nth-child(3) {
+    border-left: 1px solid #abb2bf; }
+  .todo-app .menu__content:hover {
+    color: #e4b7bb; }
+  .todo-app .menu__del-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    height: 70%;
+    padding: 0.1em; }
+    .todo-app .menu__del-buttons img {
+      width: auto;
+      height: 100%; }
+  .todo-app .menu__add {
+    height: 100%;
+    width: 50%;
+    padding: 1em 2em; }
+    .todo-app .menu__add__main-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative; }
+    .todo-app .menu__add__form {
+      width: 60%;
+      height: 80%;
+      position: relative; }
+    .todo-app .menu__add__form::before {
+      content: "";
+      position: absolute;
+      height: 35%;
+      width: 2px;
+      right: 15%;
+      top: 32.5%;
+      background-color: #e06c75; }
+    .todo-app .menu__add__npt {
+      background-color: transparent;
+      color: #abb2bf;
+      font-size: 1vw; }
+    .todo-app .menu__add__input {
+      border: 2px solid #e06c75;
+      border-radius: 0.5em;
+      padding-left: 0.8em;
+      padding-right: 17%;
+      width: 100%;
+      height: 100%; }
+    .todo-app .menu__add__submit {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 15%;
+      text-align: center; }
+    .todo-app .menu__add__submit:hover .menu__add__marks-title, .todo-app .menu__add__submit:focus .menu__add__marks-title, .todo-app .menu__add__marks:hover .menu__add__marks-title, .todo-app .menu__add__marks:focus .menu__add__marks-title {
+      color: #e4e4e4; }
+    .todo-app .menu__add__marks {
+      height: 80%;
+      width: 20%;
+      display: inline-block;
+      border: 2px solid #e06c75;
+      padding-bottom: -5px;
+      border-radius: 0.5em;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .todo-app .menu__add__close {
+      cursor: pointer;
+      border: 2px solid #e06c75;
+      border-radius: 5px;
+      padding: 0.8%;
+      height: 65%; }
+      .todo-app .menu__add__close img {
+        height: 100%;
+        width: auto; }
+  .todo-app .todos-do {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 200%;
+    display: flex;
+    transition: margin-left 0.25s ease; }
+    .todo-app .todos-do__container {
+      padding-left: 2px;
+      width: 50%;
+      min-height: 6.5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      flex-wrap: wrap;
+      padding-right: 5vw; }
+    .todo-app .todos-do__checkbox-label {
+      margin-left: 0.3em; }
+    .todo-app .todos-do__btn-down {
+      cursor: pointer;
+      width: 1.3vw; }
+      .todo-app .todos-do__btn-down img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__btn-menu {
+      cursor: pointer;
+      width: 1.3vw;
+      margin-left: 0.5em;
+      position: relative;
+      margin-right: 0.3em; }
+      .todo-app .todos-do__btn-menu img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__popup-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 180px;
+      background-color: #171623;
+      border: 2px solid #e06c75; }
+    .todo-app .todos-do__line {
+      width: 100%;
+      height: 1.5px;
+      background-color: #e06c75; }
+    .todo-app .todos-do__child {
+      transition: opacity 0.25s ease;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .todo-app .todos-do__child .todos-do__container {
+        padding-right: 0; }
+      .todo-app .todos-do__child .todos-do__sub-menu {
+        padding-right: 0; }
+      .todo-app .todos-do__child .todos-do__sub-menu::after {
+        width: 75%; }
+    .todo-app .todos-do__sub-menu {
+      width: 50%;
+      min-height: 6.5vh;
+      padding: 1em 0 1em 0;
+      padding-right: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative; }
+    .todo-app .todos-do__sub-menu::after {
+      content: "";
+      width: calc(75% - 5vw);
+      height: 1.5px;
+      background-color: #e06c75;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .todo-app .todos-do__sub-menu-content {
+      width: 70%;
+      position: relative;
+      padding: 0 1vw; }
+    .todo-app .todos-do__sub-menu-without-content {
+      padding-left: 1vw;
+      height: 1em;
+      font-style: italic; }
+    .todo-app .todos-do span {
+      cursor: pointer; }
+    .todo-app .todos-do span:hover {
+      color: #e4b7bb; }
+    .todo-app .todos-do .cls-mark {
+      color: #e06c75; }
+    .todo-app .todos-do__sub-menu-btn {
+      cursor: pointer;
+      width: 6%; }
+      .todo-app .todos-do__sub-menu-btn img {
+        height: auto;
+        width: 100%; }
+    .todo-app .todos-do__sub-menu-btn-cls {
+      transform: rotate(180deg); }
+
+.marks-list {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 150px;
+  height: 180px;
+  background-color: #171623;
+  border: 2px solid #e06c75;
+  border-radius: 0.5em;
+  padding-bottom: 5%;
+  user-select: none; }
+  .marks-list__marks-list {
+    overflow-y: auto;
+    height: 70%;
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 0 0.5em 0.5em 0.5em; }
+    .marks-list__marks-list li {
+      font-size: 0.85em;
+      padding: 0.2em;
+      display: inline-block; }
+    .marks-list__marks-list li:not(.add-mark):hover {
+      color: #e4b7bb; }
+    .marks-list__marks-list .add-mark {
+      color: #e06c75; }
+  .marks-list__marks-list::-webkit-scrollbar {
+    width: 4px; }
+  .marks-list__marks-list::-webkit-scrollbar-track {
+    border-bottom: 2px solid #e06c75;
+    border-top: 2px solid #e06c75; }
+  .marks-list__marks-list::-webkit-scrollbar-thumb {
+    background: #939393; }
+  .marks-list__marks-list::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c; }
+  .marks-list__btn-close {
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 5px;
+    width: 14%; }
+    .marks-list__btn-close img {
+      width: 100%;
+      height: auto; }
+  .marks-list__title {
+    font-size: 1vw;
+    font-family: Consolas;
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+    line-height: 1em; }
+  .marks-list__mark-add {
+    width: 85%;
+    height: 10%;
+    margin: 0 auto;
+    padding-right: 10%;
+    position: relative; }
+  .marks-list__mark-add-npt {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #e4b7bb;
+    border-radius: 2px;
+    color: #abb2bf;
+    font-size: 0.8em;
+    padding-left: 5%;
+    padding-right: 25%; }
+  .marks-list__mark-add-btn {
+    background-color: transparent;
+    position: absolute;
+    color: #e06c75;
+    right: 15%;
+    height: 100%;
+    font-size: 0.8em; }
+  .marks-list__mark-add-btn:hover {
+    color: #e4b7bb; }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
+
+.todo-del-selected {
+  opacity: 0.3; }
+
+.checkbox-label {
+  width: 80%;
+  padding: 1em 0 1em 1.3em;
+  font-size: 1.2vw;
+  position: relative; }
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.checkbox-fake {
+  position: absolute;
+  margin-left: -1.3em;
+  margin-top: 0.1em;
+  width: 0.8em;
+  height: 0.8em;
+  box-shadow: 0 0 0 0.1em #e06c75;
+  border-radius: 0.2em; }
+
+.checkbox:checked + .checkbox-fake {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95% auto;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27%3F%3E%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 xmlns:svgjs=%27http://svgjs.com/svgjs%27 version=%271.1%27 width=%27512%27 height=%27512%27 x=%270%27 y=%270%27 viewBox=%270 0 45.701 45.7%27 style=%27enable-background:new 0 0 512 512%27 xml:space=%27preserve%27 class=%27%27%3E%3Cg%3E%3Cg xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%3E%3Cpath d=%27M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504 c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0 c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z%27 fill=%27%2398c389%27 data-original=%27%23000000%27 style=%27%27 class=%27%27/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A"); }
+
+
+/*# sourceMappingURL=main.6eee526ac49972577027.css.map*/

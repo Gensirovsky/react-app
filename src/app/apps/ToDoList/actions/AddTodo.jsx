@@ -1,99 +1,75 @@
 import React from "react"
 import cancel from "../img/cancel.svg"
+import MarksMenu from "./MarksMenu.jsx"
 
-function AddTodo({ marks, id, setListToDo }) {
+function AddTodo({ id, setListToDo, marks, setMarks, isFiltered }) {
     function closeMenuAdd() {
         const menu = document.querySelector(".menu__container")
         menu.style.marginLeft = "0"
-    }
-    function closeMarks(e) {
-        if (e.target.id === "cls")
-            document.querySelector("#markCls").hidden = true
     }
     function addTodoHandler(e) {
         e.preventDefault()
         const todoName = e.target.elements.todoName.value
         const todoMarks = Array.from(
             document.querySelectorAll(".add-mark")
-        ).map((el) => el.innerHTML)
+        ).map((el) => el.innerHTML + " ")
         let todo = {
             id,
             name: todoName,
             chechead: false,
             mark: todoMarks,
             children: null,
+            filtered: isFiltered,
         }
         setListToDo((prev) => [...prev, todo])
         e.target.elements.todoName.value = ""
-        console.log(todo)
     }
     return (
         <div className='menu__add'>
-            <form
-                action=''
-                className='menu__add__form'
-                onSubmit={(e) => addTodoHandler(e)}
-                name='addTodo'
-            >
-                <div className='menu__add__container'>
+            <div className='menu__add__main-container'>
+                <form
+                    action=''
+                    className='menu__add__form'
+                    onSubmit={(e) => addTodoHandler(e)}
+                    name='addTodo'
+                >
                     <input
                         type='text'
                         placeholder='Add task'
-                        className='menu__add__input'
+                        className='menu__add__input menu__add__npt'
                         name='todoName'
                         autoComplete='off'
                     />
                     <input
                         type='submit'
                         value='Add'
-                        className='menu__add__submit'
+                        className='menu__add__submit menu__add__npt'
                     />
-                </div>
-                <input
-                    type='button'
-                    value='Marks'
+                </form>
+                <div
                     className='menu__add__marks'
                     onClick={() => {
-                        let marksDiv = document.querySelector("#markCls")
+                        let marksDiv = document.querySelector(
+                            "#menu-add-marks-list"
+                        )
                         marksDiv.hidden = false
                         marksDiv.focus()
                     }}
-                />
+                >
+                    <div className='menu__add__marks-title'>Marks</div>
+                    <MarksMenu
+                        marks={marks}
+                        setMarks={setMarks}
+                        divId={"menu-add-marks-list"}
+                    />
+                </div>
                 <div
                     className='menu__add__close'
                     onClick={() => closeMenuAdd()}
                 >
                     <img src={cancel} alt='close' />
                 </div>
-                <div
-                    hidden
-                    className='menu__add__marks-list'
-                    onClick={(e) => closeMarks(e)}
-                    id='markCls'
-                >
-                    <div className='marks-list__btn-close'>
-                        <img src={cancel} alt='close' id='cls' />
-                    </div>
-                    <h3 className='marks-list__title'>Marks</h3>
-                    <ul className='marks-list__marks-list'>
-                        {marks.map((el, i) => {
-                            return (
-                                <li key={i}>
-                                    <span
-                                        onClick={(e) =>
-                                            e.target.classList.toggle(
-                                                "add-mark"
-                                            )
-                                        }
-                                    >
-                                        {el}
-                                    </span>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </form>
+            </div>
         </div>
     )
 }
