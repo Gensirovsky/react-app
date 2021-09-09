@@ -1020,8 +1020,7 @@ header {
     overflow-x: hidden;
     overflow-y: auto;
     width: 200%;
-    display: flex;
-    transition: margin-left 0.25s ease; }
+    display: flex; }
     .todo-app .todos-do__container {
       padding-left: 2px;
       width: 50%;
@@ -1058,6 +1057,20 @@ header {
       height: 180px;
       background-color: #171623;
       border: 2px solid #e06c75; }
+    .todo-app .todos-do__add-child {
+      position: absolute;
+      top: 2vh;
+      right: 7%;
+      cursor: pointer;
+      width: 1.5vw; }
+      .todo-app .todos-do__add-child img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__child .todos-do__add-child {
+      right: 7%; }
+    .todo-app .todos-do__add-child.drag-hover {
+      width: 1.7vw;
+      right: calc(7% - 0.1vw); }
     .todo-app .todos-do__line {
       width: 100%;
       height: 1.5px;
@@ -1229,4 +1242,4 @@ header {
   background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27%3F%3E%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 xmlns:svgjs=%27http://svgjs.com/svgjs%27 version=%271.1%27 width=%27512%27 height=%27512%27 x=%270%27 y=%270%27 viewBox=%270 0 45.701 45.7%27 style=%27enable-background:new 0 0 512 512%27 xml:space=%27preserve%27 class=%27%27%3E%3Cg%3E%3Cg xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%3E%3Cpath d=%27M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504 c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0 c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z%27 fill=%27%2398c389%27 data-original=%27%23000000%27 style=%27%27 class=%27%27/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A"); }
 
 
-/*# sourceMappingURL=main.6eee526ac49972577027.css.map*/
+/*# sourceMappingURL=main.57268d8fa19412ae1e40.css.map*/

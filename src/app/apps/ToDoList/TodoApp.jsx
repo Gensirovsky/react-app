@@ -34,7 +34,7 @@ function TodoApp() {
     ])
     let [listToDo, setListToDo] = useState([
         {
-            id: 1,
+            id: 1631222044156,
             name: "Купити продукти",
             children: null,
             mark: null,
@@ -42,7 +42,7 @@ function TodoApp() {
             filtered: false,
         },
         {
-            id: 2,
+            id: 1631222046008,
             name: "Донести продукти додому",
             mark: ["main "],
             children: null,
@@ -50,7 +50,7 @@ function TodoApp() {
             filtered: false,
         },
         {
-            id: 3,
+            id: 1631222046983,
             name: "Приготувати продукти",
             mark: ["main "],
             children: null,
@@ -58,7 +58,7 @@ function TodoApp() {
             filtered: false,
         },
         {
-            id: 4,
+            id: 1631222048185,
             name: "Поїсти",
             mark: ["main "],
             children: null,
@@ -66,7 +66,7 @@ function TodoApp() {
             filtered: false,
         },
         {
-            id: 5,
+            id: 1631222049905,
             name: "Помити посуд",
             mark: ["secondary "],
             children: null,
@@ -74,14 +74,14 @@ function TodoApp() {
             filtered: false,
         },
         {
-            id: 6,
+            id: 1631222050975,
             name: "Помити посуд",
             mark: ["main "],
             child: false,
             filtered: false,
             children: [
                 {
-                    id: 3,
+                    id: 1631222051643,
                     name: "gg",
                     mark: ["main "],
                     children: null,
@@ -89,14 +89,14 @@ function TodoApp() {
                     filtered: false,
                 },
                 {
-                    id: 4,
+                    id: 1631222052275,
                     name: "ff",
                     mark: ["secondary ", "main "],
                     child: true,
                     filtered: false,
                     children: [
                         {
-                            id: 2,
+                            id: 1631222052812,
                             mark: ["secondary "],
                             name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
                             child: true,
@@ -104,7 +104,7 @@ function TodoApp() {
                             filtered: false,
                         },
                         {
-                            id: 3,
+                            id: 1631222053345,
                             name: "Приготувати продукти",
                             mark: ["secondary "],
                             child: true,
@@ -123,14 +123,13 @@ function TodoApp() {
             <Header />
 
             <TodoList
-                list={listToDo}
-                marks={marks}
+                todos={listToDo}
                 isFiltered={isListFiltered}
+                setListToDo={setListToDo}
             />
             <Menu
                 marks={marks}
                 setMarks={setMarks}
-                id={listToDo.length ? listToDo.length + 1 : 1}
                 list={listToDo}
                 setListToDo={setListToDo}
                 isFiltered={isListFiltered}

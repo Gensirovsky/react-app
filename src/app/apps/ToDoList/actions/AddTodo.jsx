@@ -2,7 +2,7 @@ import React from "react"
 import cancel from "../img/cancel.svg"
 import MarksMenu from "./MarksMenu.jsx"
 
-function AddTodo({ id, setListToDo, marks, setMarks, isFiltered }) {
+function AddTodo({ setListToDo, marks, setMarks, isFiltered }) {
     function closeMenuAdd() {
         const menu = document.querySelector(".menu__container")
         menu.style.marginLeft = "0"
@@ -14,7 +14,7 @@ function AddTodo({ id, setListToDo, marks, setMarks, isFiltered }) {
             document.querySelectorAll(".add-mark")
         ).map((el) => el.innerHTML + " ")
         let todo = {
-            id,
+            id: Date.now(),
             name: todoName,
             chechead: false,
             mark: todoMarks,

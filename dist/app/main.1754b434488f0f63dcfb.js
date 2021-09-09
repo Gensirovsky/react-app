@@ -50,57 +50,67 @@ function TodoApp() {
     name: "Купити продукти",
     children: null,
     mark: null,
+    child: false,
     filtered: false
   }, {
     id: 2,
     name: "Донести продукти додому",
     mark: ["main "],
     children: null,
+    child: false,
     filtered: false
   }, {
     id: 3,
     name: "Приготувати продукти",
     mark: ["main "],
     children: null,
+    child: false,
     filtered: false
   }, {
     id: 4,
     name: "Поїсти",
     mark: ["main "],
     children: null,
+    child: false,
     filtered: false
   }, {
     id: 5,
     name: "Помити посуд",
     mark: ["secondary "],
     children: null,
+    child: false,
     filtered: false
   }, {
     id: 6,
     name: "Помити посуд",
-    mark: null,
+    mark: ["main "],
+    child: false,
     filtered: false,
     children: [{
       id: 3,
       name: "gg",
       mark: ["main "],
       children: null,
+      child: true,
       filtered: false
     }, {
       id: 4,
       name: "ff",
       mark: ["secondary ", "main "],
+      child: true,
       filtered: false,
       children: [{
         id: 2,
         mark: ["secondary "],
         name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
+        child: true,
         children: null,
         filtered: false
       }, {
         id: 3,
         name: "Приготувати продукти",
         mark: ["secondary "],
+        child: true,
         children: null,
         filtered: false
       }]
@@ -110,17 +120,25 @@ function TodoApp() {
       listToDo = _useState4[0],
       setListToDo = _useState4[1];
 
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      isListFiltered = _useState6[0],
+      setIsListFiltered = _useState6[1];
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todo-app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Header, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_todo_TodoList_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-    list: listToDo,
-    marks: marks
+    todos: listToDo,
+    isFiltered: isListFiltered,
+    setListToDo: setListToDo
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
     marks: marks,
     setMarks: setMarks,
-    id: listToDo.lenght ? listToDo.lenght + 1 : 1,
+    id: listToDo.length ? listToDo.length + 1 : 1,
     list: listToDo,
-    setListToDo: setListToDo
+    setListToDo: setListToDo,
+    isFiltered: isListFiltered,
+    setIsListFiltered: setIsListFiltered
   }));
 }
 
@@ -163,7 +181,8 @@ function AddTodo(_ref) {
   var id = _ref.id,
       setListToDo = _ref.setListToDo,
       marks = _ref.marks,
-      setMarks = _ref.setMarks;
+      setMarks = _ref.setMarks,
+      isFiltered = _ref.isFiltered;
 
   function closeMenuAdd() {
     var menu = document.querySelector(".menu__container");
@@ -181,7 +200,8 @@ function AddTodo(_ref) {
       name: todoName,
       chechead: false,
       mark: todoMarks,
-      children: null
+      children: null,
+      filtered: isFiltered
     };
     setListToDo(function (prev) {
       return [].concat(_toConsumableArray(prev), [todo]);
@@ -354,7 +374,9 @@ function Menu(_ref) {
       setMarks = _ref.setMarks,
       id = _ref.id,
       list = _ref.list,
-      setListToDo = _ref.setListToDo;
+      setListToDo = _ref.setListToDo,
+      setIsListFiltered = _ref.setIsListFiltered,
+      isFiltered = _ref.isFiltered;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todo-app__menu"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -363,12 +385,14 @@ function Menu(_ref) {
     marks: marks,
     setMarks: setMarks,
     setListToDo: setListToDo,
-    list: list
+    list: list,
+    setIsListFiltered: setIsListFiltered
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddTodo_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     id: id,
     setListToDo: setListToDo,
     marks: marks,
-    setMarks: setMarks
+    setMarks: setMarks,
+    isFiltered: isFiltered
   })));
 }
 
@@ -380,9 +404,191 @@ function Menu(_ref) {
 /*!***************************************************!*\
   !*** ./app/apps/ToDoList/actions/MenuDisplay.jsx ***!
   \***************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\react-app\\src\\app\\apps\\ToDoList\\actions\\MenuDisplay.jsx: Unexpected token, expected \",\" (31:26)\n\n\u001b[0m \u001b[90m 29 |\u001b[39m                     \u001b[36mreturn\u001b[39m el\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m                 }\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m                 \u001b[36mreturn\u001b[39m {el\u001b[33m.\u001b[39mfiltered \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m             })\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m         )\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m     }\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.unexpected (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9929:16)\n    at Object.expect (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9903:28)\n    at Object.parseObjectLike (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:11733:14)\n    at Object.parseExprAtom (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:11265:23)\n    at Object.parseExprAtom (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:5222:20)\n    at Object.parseExprSubscripts (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:10914:23)\n    at Object.parseUpdate (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:10894:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MenuDisplay)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/add.svg */ "./app/apps/ToDoList/img/add.svg");
+/* harmony import */ var _img_add_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_add_svg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/cancel.svg */ "./app/apps/ToDoList/img/cancel.svg");
+/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_search_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/search.svg */ "./app/apps/ToDoList/img/search.svg");
+/* harmony import */ var _img_search_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_search_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/down-arrow.svg */ "./app/apps/ToDoList/img/down-arrow.svg");
+/* harmony import */ var _img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/folder.svg */ "./app/apps/ToDoList/img/folder.svg");
+/* harmony import */ var _img_folder_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_folder_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _MarksMenu_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MarksMenu.jsx */ "./app/apps/ToDoList/actions/MarksMenu.jsx");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+function MenuDisplay(_ref) {
+  var marks = _ref.marks,
+      setMarks = _ref.setMarks,
+      list = _ref.list,
+      setListToDo = _ref.setListToDo,
+      setIsListFiltered = _ref.setIsListFiltered;
+
+  function addButtonHanler() {
+    var menu = document.querySelector(".menu__container");
+    menu.style.marginLeft = "-100%";
+  }
+
+  function openFilterHander(e) {
+    if (e.target.closest(".menu__filter-content")) {
+      e.currentTarget.style.marginTop = -e.currentTarget.offsetHeight / 2 + "px";
+    } else if (e.target.closest("#filterCls")) {
+      e.currentTarget.style.marginTop = 0 + "px";
+    }
+  }
+
+  function filterHandler(e, todos) {
+    e.preventDefault();
+    var filter = e.target.elements.filterValue.value;
+    if (!filter.length) return;
+    filter += " ";
+    var filteredTodos = [];
+
+    function filterFunc(todos) {
+      todos.forEach(function (el) {
+        var _el$mark, _el$mark2, _el$mark3;
+
+        if (el.children && (_el$mark = el.mark) !== null && _el$mark !== void 0 && _el$mark.includes(filter)) {
+          filteredTodos.push(el);
+          return filterFunc(el.children);
+        }
+
+        if (el.children && !((_el$mark2 = el.mark) !== null && _el$mark2 !== void 0 && _el$mark2.includes(filter))) {
+          return filterFunc(el.children);
+        }
+
+        if ((_el$mark3 = el.mark) !== null && _el$mark3 !== void 0 && _el$mark3.includes(filter)) {
+          filteredTodos.push(el);
+          return;
+        }
+
+        filteredTodos.push(_objectSpread(_objectSpread({}, el), {}, {
+          filtered: true
+        }));
+        return;
+      });
+    }
+
+    filterFunc(todos);
+    setIsListFiltered(true);
+    setListToDo(filteredTodos);
+  }
+
+  function filterClear(list) {
+    setIsListFiltered(false);
+    setListToDo(list.map(function (el) {
+      console.log(el);
+      if (el.child) return null;else {
+        console.log(_objectSpread(_objectSpread({}, el), {}, {
+          filtered: false
+        }));
+        return _objectSpread(_objectSpread({}, el), {}, {
+          filtered: false
+        });
+      }
+    }).filter(function (el) {
+      return el != null;
+    }));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__main-item-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__add-button menu__button",
+    onClick: function onClick() {
+      return addButtonHanler();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_add_svg__WEBPACK_IMPORTED_MODULE_1___default()),
+    alt: "Add task"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Add"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__filter menu__button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__filter-container",
+    onClick: function onClick(e) {
+      return openFilterHander(e);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__content menu__filter-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_search_svg__WEBPACK_IMPORTED_MODULE_3___default()),
+    alt: "filter"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Filter")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "filter__container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+    onSubmit: function onSubmit(e) {
+      return filterHandler(e, list);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    className: "filter__input",
+    type: "text",
+    name: "filterValue",
+    autoComplete: "off"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "submit",
+    className: "filter__submit"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_search_svg__WEBPACK_IMPORTED_MODULE_3___default()),
+    alt: "search"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "filter__clear",
+    onClick: function onClick() {
+      return filterClear(list);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_cancel_svg__WEBPACK_IMPORTED_MODULE_2___default()),
+    alt: ""
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "filter__close"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default()),
+    alt: "close filter",
+    id: "filterCls"
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__forlders menu__button",
+    onClick: function onClick() {
+      var marksDiv = document.querySelector("#marks-list");
+      marksDiv.hidden = false;
+      marksDiv.focus();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: (_img_folder_svg__WEBPACK_IMPORTED_MODULE_5___default()),
+    alt: "Folder"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "menu__text"
+  }, "Mark")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MarksMenu_jsx__WEBPACK_IMPORTED_MODULE_6__.default, {
+    marks: marks,
+    setMarks: setMarks,
+    divId: "marks-list"
+  }))));
+}
 
 /***/ }),
 
@@ -443,233 +649,13 @@ function scrollBarFix() {
 
 /***/ }),
 
-/***/ "./app/apps/ToDoList/todo/SubMenuTodo.jsx":
-/*!************************************************!*\
-  !*** ./app/apps/ToDoList/todo/SubMenuTodo.jsx ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _img_trashBin_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/trashBin.svg */ "./app/apps/ToDoList/img/trashBin.svg");
-/* harmony import */ var _img_trashBin_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_trashBin_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/left-arrow.svg */ "./app/apps/ToDoList/img/left-arrow.svg");
-/* harmony import */ var _img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/cancel.svg */ "./app/apps/ToDoList/img/cancel.svg");
-/* harmony import */ var _img_cancel_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_cancel_svg__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-function SubMenuTodo(_ref) {
-  var item = _ref.item;
-
-  function subMenuMarkers(e) {
-    return e.target.closest(".todos-do__sub-menu").querySelectorAll(".todos-do__sub-menu-mark");
-  }
-
-  function delTodo(e) {
-    e.target.closest(".todos-do").remove();
-  }
-
-  function delMarkers(e) {
-    subMenuMarkers(e).forEach(function (el) {
-      el.classList.contains("cls-mark") ? el.remove() : null;
-    });
-  }
-
-  function marklist(markers) {
-    return markers.map(function (el, id) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-        className: "todos-do__sub-menu-mark",
-        onClick: function onClick(e) {
-          e.target.classList.toggle("cls-mark");
-        },
-        key: id
-      }, el);
-    });
-  }
-
-  function subMenuClose(e) {
-    subMenuMarkers(e).forEach(function (el) {
-      el.classList.remove("cls-mark");
-    });
-    e.target.closest(".todos-do").style.marginLeft = "0";
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu-content"
-  }, item.mark ? marklist(item.mark) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu-without-content"
-  }, "empty")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu-btn-del todos-do__sub-menu-btn",
-    onClick: function onClick(e) {
-      delMarkers(e);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_trashBin_svg__WEBPACK_IMPORTED_MODULE_1___default()),
-    alt: "",
-    title: "Remove todo"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu-btn-del-todo todos-do__sub-menu-btn",
-    onClick: function onClick(e) {
-      delTodo(e);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_cancel_svg__WEBPACK_IMPORTED_MODULE_3___default()),
-    alt: "",
-    title: "Remove marks"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__sub-menu-btn-cls todos-do__sub-menu-btn",
-    onClick: function onClick(e) {
-      return subMenuClose(e);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_2___default()),
-    alt: ""
-  })));
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubMenuTodo);
-
-/***/ }),
-
 /***/ "./app/apps/ToDoList/todo/TodoList.jsx":
 /*!*********************************************!*\
   !*** ./app/apps/ToDoList/todo/TodoList.jsx ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
-/* harmony import */ var _img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/left-arrow.svg */ "./app/apps/ToDoList/img/left-arrow.svg");
-/* harmony import */ var _img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/scrollBarFix.jsx */ "./app/apps/ToDoList/js/scrollBarFix.jsx");
-/* harmony import */ var _img_submenu_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/submenu.svg */ "./app/apps/ToDoList/img/submenu.svg");
-/* harmony import */ var _img_submenu_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_submenu_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _SubMenuTodo_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SubMenuTodo.jsx */ "./app/apps/ToDoList/todo/SubMenuTodo.jsx");
-
-
-
-
-
-
-function ListItem(_ref) {
-  var item = _ref.item;
-
-  function subMenuOpen(e) {
-    document.querySelectorAll(".todos-do").forEach(function (el) {
-      el.style.marginLeft = "0";
-    });
-    var todosDiv = e.target.closest(".todos-do");
-    todosDiv.style.marginLeft = "-100%"; //close parent block and turn arrow
-
-    var todosDivParent = todosDiv.querySelector(".todos-do__child");
-    if (!todosDivParent) return;
-
-    if (!todosDivParent.classList.contains("visually-hidden")) {
-      todosDivParent.classList.add("visually-hidden");
-      todosDiv.querySelector(".todos-do__btn-down-img").style.transform = "rotate(0deg)";
-    }
-  }
-
-  function checkboxHandler(e) {
-    if (!e.target.checked) return;
-    var childrenCheckbox = e.target.closest(".todos-do__container").querySelectorAll(".todos-do__checkbox");
-
-    if (childrenCheckbox.length) {
-      childrenCheckbox.forEach(function (el) {
-        el.checked = true;
-      });
-    }
-  }
-
-  var children = null;
-
-  if (item.children) {
-    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-      className: "todos-do__child todos-do visually-hidden"
-    }, item.children.map(function (i) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ListItem, {
-        item: i,
-        key: i.id
-      });
-    }));
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: "todos-do"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-    className: "todos-do__checkbox-label checkbox-label"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-    type: "checkbox",
-    className: "todos-do__checkbox checkbox",
-    onChange: function onChange(e) {
-      return checkboxHandler(e);
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "todos-do__checkbox-fake checkbox-fake"
-  }), item.name), children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__btn-down"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_left_arrow_svg__WEBPACK_IMPORTED_MODULE_1___default()),
-    className: "todos-do__btn-down-img"
-  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__btn-down"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__btn-menu",
-    onClick: function onClick(e) {
-      return subMenuOpen(e);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: (_img_submenu_svg__WEBPACK_IMPORTED_MODULE_3___default()),
-    alt: ""
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "todos-do__line"
-  }), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SubMenuTodo_jsx__WEBPACK_IMPORTED_MODULE_4__.default, {
-    item: item
-  }));
-}
-
-function listOpenHandler(event) {
-  if (!event.target.closest(".todos-do__btn-down")) return;
-  var target = event.target.closest(".todos-do__container");
-  var children = target.parentNode.querySelector("ul");
-  if (!children) return;
-  children.classList.toggle("visually-hidden");
-  event.target.style.transition = "all .25s ease";
-  event.target.style.transform = children.classList.contains("visually-hidden") ? "rotate(0deg)" : "rotate(-90deg)";
-  (0,_js_scrollBarFix_jsx__WEBPACK_IMPORTED_MODULE_2__.default)();
-}
-
-function TodoList(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "todo-app__todos",
-    onClick: function onClick(e) {
-      return listOpenHandler(e);
-    }
-  }, props.list.map(function (item, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ListItem, {
-      item: item,
-      key: i
-    });
-  }));
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList); //(event.target.src = require("../img/down-arrow.svg"))
+throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\react-app\\src\\app\\apps\\ToDoList\\todo\\TodoList.jsx: Missing semicolon. (75:17)\n\n\u001b[0m \u001b[90m 73 |\u001b[39m                         ))}\u001b[0m\n\u001b[0m \u001b[90m 74 |\u001b[39m                     \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m                 ))\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 76 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 77 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 78 |\u001b[39m     \u001b[36mreturn\u001b[39m (\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.semicolon (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9899:10)\n    at Object.parseExpressionStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13127:10)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12716:19)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13169:25)\n    at Object.parseBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13160:10)\n    at Object.parseBlock (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13144:10)");
 
 /***/ }),
 
@@ -1544,6 +1530,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lds-dual-ring {\r\n  display: inline-
 
 /***/ }),
 
+/***/ "./app/apps/ToDoList/img/add.svg":
+/*!***************************************!*\
+  !*** ./app/apps/ToDoList/img/add.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "public/images/add.svg";
+
+/***/ }),
+
 /***/ "./app/apps/ToDoList/img/cancel.svg":
 /*!******************************************!*\
   !*** ./app/apps/ToDoList/img/cancel.svg ***!
@@ -1554,33 +1550,33 @@ module.exports = __webpack_require__.p + "public/images/cancel.svg";
 
 /***/ }),
 
-/***/ "./app/apps/ToDoList/img/left-arrow.svg":
+/***/ "./app/apps/ToDoList/img/down-arrow.svg":
 /*!**********************************************!*\
-  !*** ./app/apps/ToDoList/img/left-arrow.svg ***!
+  !*** ./app/apps/ToDoList/img/down-arrow.svg ***!
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "public/images/left-arrow.svg";
+module.exports = __webpack_require__.p + "public/images/down-arrow.svg";
 
 /***/ }),
 
-/***/ "./app/apps/ToDoList/img/submenu.svg":
-/*!*******************************************!*\
-  !*** ./app/apps/ToDoList/img/submenu.svg ***!
-  \*******************************************/
+/***/ "./app/apps/ToDoList/img/folder.svg":
+/*!******************************************!*\
+  !*** ./app/apps/ToDoList/img/folder.svg ***!
+  \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "public/images/submenu.svg";
+module.exports = __webpack_require__.p + "public/images/folder.svg";
 
 /***/ }),
 
-/***/ "./app/apps/ToDoList/img/trashBin.svg":
-/*!********************************************!*\
-  !*** ./app/apps/ToDoList/img/trashBin.svg ***!
-  \********************************************/
+/***/ "./app/apps/ToDoList/img/search.svg":
+/*!******************************************!*\
+  !*** ./app/apps/ToDoList/img/search.svg ***!
+  \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "public/images/trashBin.svg";
+module.exports = __webpack_require__.p + "public/images/search.svg";
 
 /***/ }),
 
@@ -2004,4 +2000,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.ac3f60980960f61c51bc.js.map
+//# sourceMappingURL=main.1754b434488f0f63dcfb.js.map

@@ -24,7 +24,6 @@ function Menu({
                 />
 
                 <AddTodo
-                    id={id}
                     setListToDo={setListToDo}
                     marks={marks}
                     setMarks={setMarks}
