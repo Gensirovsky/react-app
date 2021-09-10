@@ -3,8 +3,8 @@ import leftArrow from "../img/left-arrow.svg"
 import documentImg from "../img/document.svg"
 import scrollBarFix from "../js/scrollBarFix.jsx"
 import submenu from "../img/submenu.svg"
-import addImg from "../img/add.svg"
 import SubMenuTodo from "./SubMenuTodo.jsx"
+import depth from "../img/depth.svg"
 
 function subMenuOpen(e) {
     document.querySelectorAll(".todos-do").forEach((el) => {
@@ -25,6 +25,7 @@ function subMenuOpen(e) {
     }
 }
 
+// add a check mark to all children checkbox
 function checkboxHandler(e) {
     if (!e.target.checked) return
     let childrenCheckbox = e.target
@@ -37,6 +38,7 @@ function checkboxHandler(e) {
     }
 }
 function ListItem({ item, isFiltered, ...props }) {
+    // rotate button-arrow after click
     function listOpenHandler(event) {
         let target = event.target.closest(".todos-do__container")
         let children = target.parentNode.querySelector("ul")
@@ -48,13 +50,15 @@ function ListItem({ item, isFiltered, ...props }) {
         )
             ? "rotate(0deg)"
             : "rotate(-90deg)"
+
+        // so that the scroll bar does not displace the contents
         scrollBarFix()
     }
 
     if (item.filtered) return null
     let children = null
     if (!isFiltered) {
-        if (item.children) {
+        if (item.children && item.children.length) {
             children = (
                 <ul className='todos-do__child todos-do visually-hidden'>
                     {item.children.map((i) => (
@@ -125,16 +129,18 @@ function TodoList({ todos, isFiltered, setListToDo }) {
     let [currentElement, setCurrentElement] = useState(null)
     let [dragImg, setDragImg] = useState()
 
+    // Load drag-image
     useEffect(() => {
         let img = new Image()
         img.src = documentImg
         img.onload = () => setDragImg(img)
     }, [])
 
+    // delete currentItem, before adding it to dropItem
     function deleteCurrentTodo(todosArr, todo) {
         todosArr = todosArr
             .filter((item) => {
-                return JSON.stringify(item) !== JSON.stringify(todo)
+                return item.id !== todo.id
             })
             .map((item) => {
                 if (item.children) {
@@ -148,35 +154,32 @@ function TodoList({ todos, isFiltered, setListToDo }) {
             })
         return todosArr
     }
-    function detphCounter() {
-        let i = 0
-        return function Counter(plus) {
-            console.log(i)
-            return plus ? ++i : --i
-        }
-    }
-    function addCurrentTodo(todosArr, todo, parent, depthCounter) {
-        depthCounter()
-        todosArr = todosArr.map((item) => {
-            depthCounter(true)
 
-            if (JSON.stringify(item) === JSON.stringify(parent)) {
-                depthCounter(true)
+    function addCurrentTodo(todosArr, todo, parent) {
+        todosArr = todosArr.map((item) => {
+            if (item.id === parent.id) {
+                // Add currentItem 'todo' in item.children 'parent'
                 return {
                     ...item,
                     children: item.children
-                        ? [...item.children, { ...todo, child: true }]
-                        : (item.children = [{ ...todo, child: true }]),
+                        ? [
+                              ...item.children,
+                              { ...todo, child: true, depth: item.depth + 1 },
+                          ]
+                        : (item.children = [
+                              { ...todo, child: true, depth: item.depth + 1 },
+                          ]),
                 }
             }
             if (item.children) {
-                depthCounter(true)
+                if (!item.children.length) {
+                    return { ...item, children: null }
+                }
                 return {
                     ...item,
                     children: addCurrentTodo(item.children, todo, parent),
                 }
             } else {
-                depthCounter(false)
                 return item
             }
         })
@@ -215,35 +218,79 @@ function TodoList({ todos, isFiltered, setListToDo }) {
         setLineBackGround(e, "#98C379")
     }
 
-    function dropHandler(e, item) {
+    function dropHandler(e, dropItem) {
+        e.preventDefault()
         e.stopPropagation()
-        let counterFunc = detphCounter()
+        console.log(dropItem)
+        //  if (dropItem != currentItem && currentItem outside his parent && depth < 4)
+        //  then Add currentItem in dropItem
+        if (
+            dropItem !== currentItem &&
+            isOutside() &&
+            getSumDepth(currentItem, dropItem) < 4
+        ) {
+            let itemDeletedArr = deleteCurrentTodo(todos, currentItem)
+            setListToDo(addCurrentTodo(itemDeletedArr, currentItem, dropItem))
+        }
+        setLineBackGround(e, "")
+
+        //currentItem outside his parent?
         function isOutside() {
             let outside = true
-            item.children
-                ? item.children.forEach((el) => {
-                      if (el.id === currentItem.id) a = false
+            dropItem.children
+                ? dropItem.children.forEach((el) => {
+                      if (el.id === currentItem.id) outside = false
                   })
                 : (outside = true)
             return outside
         }
 
-        if (item !== currentItem && isOutside()) {
-            let newList = deleteCurrentTodo(todos, currentItem)
-            setListToDo(addCurrentTodo(newList, currentItem, item, counterFunc))
+        function getSumDepth(currentObj, dropObj) {
+            let SumLevel = 0
+            function depthCurrentObjObj(obj) {
+                let level = 1
+                if (obj.children) {
+                    level++
+                    obj.children.forEach((el) => {
+                        let depth = depthCurrentObjObj(el) + 1
+                        level = Math.max(depth, level)
+                    })
+                }
+                return level
+            }
+            SumLevel += depthCurrentObjObj(currentObj) + dropObj.depth
+            return SumLevel
         }
-
-        e.preventDefault()
-        setLineBackGround(e, "")
     }
 
     return (
         <ul className='todo-app__todos'>
-            {todos.map((item, i) => (
+            <div
+                className='todo-app__depth-cls'
+                style={currentElement ? { display: "" } : { display: "none" }}
+                onDragOver={(e) => {
+                    e.preventDefault()
+                }}
+                onDrop={(e) => {
+                    //move the item to the first level
+                    e.preventDefault()
+                    if (currentItem.depth === 1) return
+                    let itemDeletedArr = deleteCurrentTodo(todos, currentItem)
+                    setListToDo([
+                        { ...currentItem, depth: 1 },
+                        ...itemDeletedArr,
+                    ])
+                }}
+            >
+                <div className='todo-app__depth-cls-img'>
+                    <img src={depth} alt='first level' />
+                </div>
+            </div>
+            {todos.map((item) => (
                 <ListItem
                     item={item}
                     isFiltered={isFiltered}
-                    key={i}
+                    key={item.id}
                     dragStartHandler={dragStartHandler}
                     dragLeaveHandler={dragLeaveHandler}
                     dragEndHandler={dragEndHandler}

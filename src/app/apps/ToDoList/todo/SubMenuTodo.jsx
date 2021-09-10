@@ -55,7 +55,7 @@ function SubMenuTodo({ item }) {
                     delMarkers(e)
                 }}
             >
-                <img src={trashBin} alt='' title='Remove todo' />
+                <img src={trashBin} alt='' title='Remove marks' />
             </div>
             <div
                 className='todos-do__sub-menu-btn-del-todo todos-do__sub-menu-btn'
@@ -63,7 +63,7 @@ function SubMenuTodo({ item }) {
                     delTodo(e)
                 }}
             >
-                <img src={cancel} alt='' title='Remove marks' />
+                <img src={cancel} alt='' title='Remove todo' />
             </div>
             <div
                 className='todos-do__sub-menu-btn-cls todos-do__sub-menu-btn'

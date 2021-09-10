@@ -46,69 +46,79 @@ function TodoApp() {
       setMarks = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-    id: 1,
+    id: 1631222044156,
     name: "Купити продукти",
+    depth: 0,
     children: null,
     mark: null,
     child: false,
     filtered: false
   }, {
-    id: 2,
+    id: 1631222046008,
     name: "Донести продукти додому",
+    depth: 0,
     mark: ["main "],
     children: null,
     child: false,
     filtered: false
   }, {
-    id: 3,
+    id: 1631222046983,
     name: "Приготувати продукти",
+    depth: 0,
     mark: ["main "],
     children: null,
     child: false,
     filtered: false
   }, {
-    id: 4,
+    id: 1631222048185,
     name: "Поїсти",
+    depth: 0,
     mark: ["main "],
     children: null,
     child: false,
     filtered: false
   }, {
-    id: 5,
+    id: 1631222049905,
     name: "Помити посуд",
+    depth: 0,
     mark: ["secondary "],
     children: null,
     child: false,
     filtered: false
   }, {
-    id: 6,
+    id: 1631222050975,
     name: "Помити посуд",
+    depth: 0,
     mark: ["main "],
     child: false,
     filtered: false,
     children: [{
-      id: 3,
+      id: 1631222051643,
       name: "gg",
+      depth: 1,
       mark: ["main "],
       children: null,
       child: true,
       filtered: false
     }, {
-      id: 4,
+      id: 1631222052275,
       name: "ff",
+      depth: 1,
       mark: ["secondary ", "main "],
       child: true,
       filtered: false,
       children: [{
-        id: 2,
+        id: 1631222052812,
         mark: ["secondary "],
         name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
+        depth: 2,
         child: true,
         children: null,
         filtered: false
       }, {
-        id: 3,
+        id: 1631222053345,
         name: "Приготувати продукти",
+        depth: 2,
         mark: ["secondary "],
         child: true,
         children: null,
@@ -134,7 +144,6 @@ function TodoApp() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_actions_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
     marks: marks,
     setMarks: setMarks,
-    id: listToDo.length ? listToDo.length + 1 : 1,
     list: listToDo,
     setListToDo: setListToDo,
     isFiltered: isListFiltered,
@@ -178,8 +187,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 function AddTodo(_ref) {
-  var id = _ref.id,
-      setListToDo = _ref.setListToDo,
+  var setListToDo = _ref.setListToDo,
       marks = _ref.marks,
       setMarks = _ref.setMarks,
       isFiltered = _ref.isFiltered;
@@ -196,7 +204,7 @@ function AddTodo(_ref) {
       return el.innerHTML + " ";
     });
     var todo = {
-      id: id,
+      id: Date.now(),
       name: todoName,
       chechead: false,
       mark: todoMarks,
@@ -388,7 +396,6 @@ function Menu(_ref) {
     list: list,
     setIsListFiltered: setIsListFiltered
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddTodo_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-    id: id,
     setListToDo: setListToDo,
     marks: marks,
     setMarks: setMarks,
@@ -655,7 +662,7 @@ function scrollBarFix() {
   \*********************************************/
 /***/ (() => {
 
-throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\react-app\\src\\app\\apps\\ToDoList\\todo\\TodoList.jsx: Missing semicolon. (75:17)\n\n\u001b[0m \u001b[90m 73 |\u001b[39m                         ))}\u001b[0m\n\u001b[0m \u001b[90m 74 |\u001b[39m                     \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m                 ))\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 76 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 77 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 78 |\u001b[39m     \u001b[36mreturn\u001b[39m (\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.semicolon (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9899:10)\n    at Object.parseExpressionStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13127:10)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12716:19)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13169:25)\n    at Object.parseBlockBody (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13160:10)\n    at Object.parseBlock (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13144:10)");
+throw new Error("Module build failed (from ../node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\gensi\\Desktop\\react-app\\src\\app\\apps\\ToDoList\\todo\\TodoList.jsx: Missing semicolon. (222:51)\n\n\u001b[0m \u001b[90m 220 |\u001b[39m             \u001b[36mlet\u001b[39m itemAddArr \u001b[33m=\u001b[39m addCurrentTodo(itemDeletedArr\u001b[33m,\u001b[39m currentItem\u001b[33m,\u001b[39m item)\u001b[0m\n\u001b[0m \u001b[90m 221 |\u001b[39m             console\u001b[33m.\u001b[39mlog(itemAddArr)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 222 |\u001b[39m             \u001b[36mif\u001b[39m (itemAddArr) setListToDo(itemAddArr) \u001b[36melse\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 223 |\u001b[39m                 setListToDo(todos)\u001b[0m\n\u001b[0m \u001b[90m 224 |\u001b[39m             }\u001b[0m\n\u001b[0m \u001b[90m 225 |\u001b[39m         }\u001b[0m\n    at Object._raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:788:17)\n    at Object.raiseWithData (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:781:17)\n    at Object.raise (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.semicolon (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:9899:10)\n    at Object.parseExpressionStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:13127:10)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12716:19)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)\n    at Object.parseIfStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12943:28)\n    at Object.parseStatementContent (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12625:21)\n    at Object.parseStatement (C:\\Users\\gensi\\Desktop\\react-app\\node_modules\\@babel\\parser\\lib\\index.js:12580:17)");
 
 /***/ }),
 
@@ -2000,4 +2007,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.1754b434488f0f63dcfb.js.map
+//# sourceMappingURL=main.8588809fea320a6fd8ae.js.map
