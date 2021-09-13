@@ -1,17 +1,17 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
+const path = require("path")
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const TerserWebpackPlugin = require("terser-webpack-plugin")
 
-const isDev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== "production"
 const isProd = !isDev
 
 const optimization = () => {
     const config = {
         splitChunks: {
-            chunks: 'all',
+            chunks: "all",
         },
     }
     if (isProd) {
@@ -23,68 +23,71 @@ const optimization = () => {
 const jsLoaders = () => {
     const loaders = [
         {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-                presets: ['@babel/preset-env'],
+                presets: ["@babel/preset-env"],
             },
         },
     ]
 
     if (isDev) {
-        loaders.push('eslint-loader')
+        loaders.push("eslint-loader")
     }
 
     return loaders
 }
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
+    context: path.resolve(__dirname, "src"),
+    mode: "development",
     entry: {
-        main: ['@babel/polyfill', './app/index.jsx'],
+        main: ["@babel/polyfill", "./app/index.jsx"],
     },
     output: {
-        filename: 'app/[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: "app/[name].[contenthash].js",
+        path: path.resolve(__dirname, "dist"),
     },
     optimization: optimization(),
-    devtool: isDev ? 'source-map' : false,
+    devtool: isDev ? "source-map" : false,
     plugins: [
         new HTMLWebpackPlugin({
-            template: 'public/index.html',
-            filename: 'index.html',
-            publicPath: '/dist/',
+            template: "public/index.html",
+            filename: "index.html",
             minify: {
                 collapseWhitespace: isProd,
             },
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'style/[name].[contenthash].css',
+            filename: "style/[name].[contenthash].css",
         }),
     ],
     module: {
         rules: [
-            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            {
+                test: /\.html$/,
+                use: "html-loader",
+            },
+            { test: /\.css$/, use: ["style-loader", "css-loader"] },
             {
                 test: /\.s[ac]ss$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
-                    'css-loader',
-                    'sass-loader',
+                    "css-loader",
+                    "sass-loader",
                 ],
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
                             esModule: false,
-                            name: '[name].[ext]',
-                            outputPath: 'public/images',
+                            name: "[name].[ext]",
+                            outputPath: "public/images",
                         },
                     },
                 ],
@@ -93,14 +96,14 @@ module.exports = {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
                             esModule: false,
-                            name: 'public/fonts/[name].[ext]',
+                            name: "public/fonts/[name].[ext]",
                         },
                     },
                 ],
-                type: 'javascript/auto',
+                type: "javascript/auto",
             },
             {
                 test: /\.js$/,
@@ -111,9 +114,9 @@ module.exports = {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        presets: ["@babel/preset-env", "@babel/preset-react"],
                     },
                 },
             },
