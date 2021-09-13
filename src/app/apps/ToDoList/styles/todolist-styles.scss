@@ -7,12 +7,7 @@
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        140.6deg,
-        #1b1a26 0.77%,
-        #171623 0.78%,
-        #283143 100%
-    );
+    background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
     border: 1px solid #abb2bf;
     border-radius: 24px;
     font-family: Consolas;
@@ -178,7 +173,6 @@
             cursor: pointer;
         }
         &__content > img {
-            margin-right: 0.7em;
             height: 100%;
             width: auto;
         }

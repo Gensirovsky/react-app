@@ -3,15 +3,7 @@ import AddTodo from "./AddTodo.jsx"
 
 import MenuDisplay from "./MenuDisplay.jsx"
 
-function Menu({
-    marks,
-    setMarks,
-    id,
-    list,
-    setListToDo,
-    setIsListFiltered,
-    isFiltered,
-}) {
+function Menu({ marks, setMarks, list, setListToDo, setIsListFiltered, isFiltered }) {
     return (
         <div className='todo-app__menu'>
             <div className='menu__container'>
@@ -23,12 +15,7 @@ function Menu({
                     setIsListFiltered={setIsListFiltered}
                 />
 
-                <AddTodo
-                    setListToDo={setListToDo}
-                    marks={marks}
-                    setMarks={setMarks}
-                    isFiltered={isFiltered}
-                />
+                <AddTodo setListToDo={setListToDo} marks={marks} setMarks={setMarks} isFiltered={isFiltered} />
             </div>
         </div>
     )

@@ -1,10 +1,9 @@
-@import 'reset-style.css';
-@import 'mixin.scss';
-
+@import "reset-style.css";
+@import "mixin.scss";
 
 html,
 body {
-    font-family: 'Consolas';
+    font-family: "Consolas";
     overflow-x: hidden;
 }
 header {
@@ -158,8 +157,10 @@ header {
         }
     }
 }
-.weather-forecast-app, .todolist-app {
-    width: 100vw;
+
+.weather-forecast-app,
+.todolist-app {
+    width: 100%;
     height: 100vh;
     background-color: #22212f;
     display: flex;
@@ -169,11 +170,158 @@ header {
     position: relative;
 }
 .todolist-app::before {
-    content: '';
+    content: "";
     width: 50%;
     height: 2.5px;
-    background-color: #F68E00;
+    background-color: #f68e00;
     position: absolute;
     top: 0;
     left: 25%;
+}
+
+.weather-forecast-app {
+    position: relative;
+}
+.about-app-section-open {
+    position: absolute;
+    width: 3%;
+    right: 3%;
+    top: 6%;
+    border-radius: 50%;
+    &:hover {
+        background-color: rgba($color: #abb2bf, $alpha: 0.2);
+    }
+    &:active {
+        background-color: rgba($color: #abb2bf, $alpha: 0.1);
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.about-app-section {
+    position: absolute;
+    z-index: 2;
+    height: 90vh;
+    width: 45%;
+    right: -45%;
+    top: 0;
+    color: #abb2bf;
+    padding: 3vh 0 3vh 4vw;
+    border: 3px solid #abb2bf;
+    background: rgba($color: #232526, $alpha: 0.95);
+
+    &__wrapp {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        padding-right: 4vw;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-bottom: 2px solid #7c7c7c;
+            border-top: 2px solid #7c7c7c;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #939393;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #7c7c7c;
+        }
+    }
+
+    &__button-cls {
+        position: absolute;
+        top: 1%;
+        right: 2%;
+        width: 1.5em;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__title {
+        @include adaptiv-font(36, 18);
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3.5vh;
+    }
+    &__content {
+        @include adaptiv-font(18, 12);
+        p {
+            margin-bottom: 1vh;
+            line-height: 130%;
+        }
+        a {
+            color: #abb2bf;
+            text-decoration: underline;
+            &:hover {
+                color: #919fb9;
+            }
+        }
+    }
+    .content-interaction {
+        &__title {
+            margin: 3vh 0 1vh 0;
+            color: #919fb9;
+            @include adaptiv-font(20, 14);
+        }
+        &__content {
+            li {
+                padding-left: 15px;
+                position: relative;
+                margin-bottom: 1vh;
+            }
+            li:before {
+                content: "🞄";
+                position: absolute;
+                left: 0;
+            }
+        }
+        &__content-uplist {
+            li:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
+    color: #abb2bf;
+    padding: 10vh 0;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 1.5px;
+        background-color: #abb2bf;
+        top: 0;
+        right: 15%;
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        @include adaptiv-font(48, 28);
+        margin-bottom: 6.5vh;
+    }
+    &__content {
+        width: 60%;
+        margin: 0 auto;
+        @include adaptiv-font(22, 14);
+        text-shadow: 2px 2px 1px black;
+        p {
+            margin-bottom: 2vh;
+            line-height: 130%;
+        }
+    }
 }

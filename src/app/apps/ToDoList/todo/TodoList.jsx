@@ -20,17 +20,14 @@ function subMenuOpen(e) {
     if (!todosDivParent) return
     if (!todosDivParent.classList.contains("visually-hidden")) {
         todosDivParent.classList.add("visually-hidden")
-        todosDiv.querySelector(".todos-do__btn-down-img").style.transform =
-            "rotate(0deg)"
+        todosDiv.querySelector(".todos-do__btn-down-img").style.transform = "rotate(0deg)"
     }
 }
 
 // add a check mark to all children checkbox
 function checkboxHandler(e) {
     if (!e.target.checked) return
-    let childrenCheckbox = e.target
-        .closest(".todos-do__container")
-        .querySelectorAll(".todos-do__checkbox")
+    let childrenCheckbox = e.target.closest(".todos-do__container").querySelectorAll(".todos-do__checkbox")
     if (childrenCheckbox.length) {
         childrenCheckbox.forEach((el) => {
             el.checked = true
@@ -45,14 +42,12 @@ function ListItem({ item, isFiltered, ...props }) {
         if (!children) return
         children.classList.toggle("visually-hidden")
         event.target.style.transition = "all .25s ease"
-        event.target.style.transform = children.classList.contains(
-            "visually-hidden"
-        )
+        event.target.style.transform = children.classList.contains("visually-hidden")
             ? "rotate(0deg)"
             : "rotate(-90deg)"
 
-        // so that the scroll bar does not displace the contents
-        scrollBarFix()
+        // so that the scrollbar does not displace the contents
+        //scrollBarFix()
     }
 
     if (item.filtered) return null
@@ -65,6 +60,7 @@ function ListItem({ item, isFiltered, ...props }) {
                         <ListItem
                             item={i}
                             key={i.id}
+                            isFiltered={isFiltered}
                             dragStartHandler={props.dragStartHandler}
                             dragLeaveHandler={props.dragLeaveHandler}
                             dragEndHandler={props.dragEndHandler}
@@ -97,22 +93,13 @@ function ListItem({ item, isFiltered, ...props }) {
                     {item.name}
                 </label>
                 {children ? (
-                    <div
-                        className='todos-do__btn-down'
-                        onClick={(e) => listOpenHandler(e)}
-                    >
-                        <img
-                            src={leftArrow}
-                            className='todos-do__btn-down-img'
-                        />
+                    <div className='todos-do__btn-down' onClick={(e) => listOpenHandler(e)}>
+                        <img src={leftArrow} className='todos-do__btn-down-img' />
                     </div>
                 ) : (
                     <div className='todos-do__btn-down' />
                 )}
-                <div
-                    className='todos-do__btn-menu'
-                    onClick={(e) => subMenuOpen(e)}
-                >
+                <div className='todos-do__btn-menu' onClick={(e) => subMenuOpen(e)}>
                     <img src={submenu} alt='' />
                 </div>
 
@@ -162,13 +149,8 @@ function TodoList({ todos, isFiltered, setListToDo }) {
                 return {
                     ...item,
                     children: item.children
-                        ? [
-                              ...item.children,
-                              { ...todo, child: true, depth: item.depth + 1 },
-                          ]
-                        : (item.children = [
-                              { ...todo, child: true, depth: item.depth + 1 },
-                          ]),
+                        ? [...item.children, { ...todo, child: true, depth: item.depth + 1 }]
+                        : (item.children = [{ ...todo, child: true, depth: item.depth + 1 }]),
                 }
             }
             if (item.children) {
@@ -191,9 +173,7 @@ function TodoList({ todos, isFiltered, setListToDo }) {
     }
 
     function setLineBackGround(e, color) {
-        return (e.target
-            .closest(".todos-do")
-            .querySelector(".todos-do__line").style.backgroundColor = color)
+        return (e.target.closest(".todos-do").querySelector(".todos-do__line").style.backgroundColor = color)
     }
 
     function dragStartHandler(e, item) {
@@ -221,14 +201,9 @@ function TodoList({ todos, isFiltered, setListToDo }) {
     function dropHandler(e, dropItem) {
         e.preventDefault()
         e.stopPropagation()
-        console.log(dropItem)
         //  if (dropItem != currentItem && currentItem outside his parent && depth < 4)
         //  then Add currentItem in dropItem
-        if (
-            dropItem !== currentItem &&
-            isOutside() &&
-            getSumDepth(currentItem, dropItem) < 4
-        ) {
+        if (dropItem !== currentItem && isOutside() && getSumDepth(currentItem, dropItem) < 4) {
             let itemDeletedArr = deleteCurrentTodo(todos, currentItem)
             setListToDo(addCurrentTodo(itemDeletedArr, currentItem, dropItem))
         }
@@ -276,10 +251,8 @@ function TodoList({ todos, isFiltered, setListToDo }) {
                     e.preventDefault()
                     if (currentItem.depth === 1) return
                     let itemDeletedArr = deleteCurrentTodo(todos, currentItem)
-                    setListToDo([
-                        { ...currentItem, depth: 1 },
-                        ...itemDeletedArr,
-                    ])
+                    setListToDo([{ ...currentItem, depth: 1 }, ...itemDeletedArr])
+                    setCurrentElement(null)
                 }}
             >
                 <div className='todo-app__depth-cls-img'>
