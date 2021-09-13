@@ -53,6 +53,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: 'public/index.html',
             filename: 'index.html',
+            publicPath: './',
             minify: {
                 collapseWhitespace: isProd,
             },
