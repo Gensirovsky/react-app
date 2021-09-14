@@ -16,10 +16,13 @@
                     <h1 class="header__title">&lt;React App&gt;</h1>
                     <nav>
                         <ul class="navigation">
-                            <li><a href="#">&lt;About/&gt;</a></li>
-                            <li><a href="#">&lt;WeatherForecast/&gt;</a></li>
-                            <li><a href="#">&lt;Calculator/&gt;</a></li>
-                            <li><a href="#">&lt;Todo-list/&gt;</a></li>
+                            <li><a href="#about">&lt;About/&gt;</a></li>
+                            <li>
+                                <a href="#weatherForecast"
+                                    >&lt;WeatherForecast/&gt;</a
+                                >
+                            </li>
+                            <li><a href="#todoList">&lt;Todo-list/&gt;</a></li>
                         </ul>
                     </nav>
 
@@ -29,13 +32,13 @@
                 <div class="header__subtitle-1">}</div>
             </div>
             <div class="header__buttom-container">
-                <a href="#">onClick = {scrollDown}</a>
+                <a href="#about">onClick = {scrollDown}</a>
             </div>
         </header>
 
         <body>
             <main>
-                <section class="about">
+                <section class="about" id="about">
                     <h2 class="about__title">About</h2>
                     <div class="about__content">
                         <p>Сайт створений для демонстрації React-додатків.</p>
@@ -49,7 +52,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="weather-forecast-app">
+                <section class="weather-forecast-app" id="weatherForecast">
                     <div class="about-app-section-open" data-id="weather-menu">
                         <img src="./img/info.svg" alt="info" />
                     </div>
@@ -175,7 +178,7 @@
                     </div>
                     <div id="weather-app" class="weather"></div>
                 </section>
-                <section class="todolist-app">
+                <section class="todolist-app" id="todoList">
                     <div class="about-app-section-open" data-id="todo-menu">
                         <img src="./img/info.svg" alt="info" />
                     </div>

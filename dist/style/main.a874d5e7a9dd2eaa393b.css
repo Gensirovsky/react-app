@@ -1,0 +1,1458 @@
+/*!***************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./styles/reset-style.css ***!
+  \***************************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*!**************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/style.scss ***!
+  \**************************************************************************************************************/
+@charset "UTF-8";
+html,
+body {
+  font-family: "Consolas";
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #232831;
+  padding-bottom: 7vh;
+  padding-top: 10vh;
+  position: relative; }
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  width: 100%; }
+
+.header__subtitle-1 {
+  color: rgba(255, 194, 110, 0.15);
+  font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1);
+  align-self: start;
+  margin-bottom: 2vh;
+  margin-left: 6vw; }
+  @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+    .header__subtitle-1 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.8); } }
+  @media all and (max-width: 779px) and (min-height: 844px) {
+    .header__subtitle-1 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1.3); } }
+  @media all and (max-width: 600px) {
+    .header__subtitle-1 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1); } }
+  @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+    .header__subtitle-1 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.7); } }
+  @media all and (max-width: 420px) {
+    .header__subtitle-1 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.7); } }
+
+.header__subtitle-1:last-child {
+  margin-top: 0.7em; }
+
+.header__subtitle-2 {
+  color: rgba(255, 194, 110, 0.3);
+  font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1);
+  align-self: start;
+  margin-left: 16vw; }
+  @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+    .header__subtitle-2 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.8); } }
+  @media all and (max-width: 779px) and (min-height: 844px) {
+    .header__subtitle-2 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1.3); } }
+  @media all and (max-width: 600px) {
+    .header__subtitle-2 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 1); } }
+  @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+    .header__subtitle-2 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.7); } }
+  @media all and (max-width: 420px) {
+    .header__subtitle-2 {
+      font-size: calc((18px + 14 * ((100vw - 320px) / 1120)) * 0.7); } }
+
+.header__container-title {
+  margin-top: 5vh;
+  margin-bottom: 5vh; }
+
+.header__title {
+  color: #ffc26e;
+  font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 1);
+  font-weight: bold; }
+  @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+    .header__title {
+      font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 0.8); } }
+  @media all and (max-width: 779px) and (min-height: 844px) {
+    .header__title {
+      font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 1.3); } }
+  @media all and (max-width: 600px) {
+    .header__title {
+      font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 1); } }
+  @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+    .header__title {
+      font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 0.7); } }
+  @media all and (max-width: 420px) {
+    .header__title {
+      font-size: calc((42px + 30 * ((100vw - 320px) / 1120)) * 0.7); } }
+
+.header__buttom-container {
+  height: 3vh;
+  width: 100vw;
+  position: absolute;
+  text-align: center;
+  bottom: 1.2vh; }
+  .header__buttom-container a {
+    color: rgba(246, 142, 0, 0.75);
+    font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1);
+    font-style: italic; }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .header__buttom-container a {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .header__buttom-container a {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .header__buttom-container a {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .header__buttom-container a {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .header__buttom-container a {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .header__buttom-container a:hover {
+    color: #ff9501; }
+
+.navigation {
+  font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1); }
+  .navigation a {
+    color: rgba(246, 142, 0, 0.75); }
+  .navigation a:hover {
+    color: #ffc26e;
+    color: #ff9501; }
+  @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+    .navigation {
+      font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.8); } }
+  @media all and (max-width: 779px) and (min-height: 844px) {
+    .navigation {
+      font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1.3); } }
+  @media all and (max-width: 600px) {
+    .navigation {
+      font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1); } }
+  @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+    .navigation {
+      font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.7); } }
+  @media all and (max-width: 420px) {
+    .navigation {
+      font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .navigation li {
+    padding: 1.2vh 0 1.2vh 0;
+    margin-left: 75px; }
+  .navigation li:first-child {
+    margin-top: 1.7vh; }
+  .navigation li:last-child {
+    margin-bottom: 1.7vh; }
+
+@media all and (min-width: 1921px) {
+  .header__subtitle-1,
+  .header__subtitle-2 {
+    display: none; } }
+
+@media all and (max-width: 800px) {
+  header {
+    padding-top: 0; }
+  .header__subtitle-1, .header__subtitle-2 {
+    display: none; }
+  .navigation li {
+    padding: 2vh 0 2vh 0;
+    margin-left: 75px; }
+  .navigation li:first-child {
+    margin-top: 3.5vh; }
+  .navigation li:last-child {
+    margin-bottom: 3.5vh; } }
+
+@media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+  header {
+    padding-top: 0; }
+  .header__subtitle-1, .header__subtitle-2, .header__title:last-child {
+    display: none; }
+  .header__buttom-container {
+    bottom: 5vh; }
+  .navigation li {
+    padding: 3vh 0 3vh 0;
+    margin-left: 6vw; } }
+
+@media all and (max-width: 480px) {
+  header {
+    padding-top: 0; }
+  .header__subtitle-1, .header__subtitle-2, .header__title:last-child {
+    display: none; }
+  .header__buttom-container {
+    bottom: 5vh; }
+  .navigation li {
+    padding: 3vh 0 3vh 0;
+    margin-left: 6vw; } }
+
+.weather-forecast-app,
+.todolist-app {
+  width: 100%;
+  height: 100vh;
+  background-color: #22212f;
+  display: flex;
+  align-items: center; }
+
+.todolist-app {
+  position: relative; }
+
+.todolist-app::before {
+  content: "";
+  width: 50%;
+  height: 2.5px;
+  background-color: #f68e00;
+  position: absolute;
+  top: 0;
+  left: 25%; }
+
+.weather-forecast-app {
+  position: relative; }
+
+.about-app-section-open {
+  position: absolute;
+  width: 3%;
+  right: 3%;
+  top: 6%;
+  border-radius: 50%; }
+  .about-app-section-open:hover {
+    background-color: rgba(171, 178, 191, 0.2); }
+  .about-app-section-open:active {
+    background-color: rgba(171, 178, 191, 0.1); }
+  .about-app-section-open img {
+    width: 100%;
+    height: auto; }
+
+.about-app-section {
+  position: absolute;
+  z-index: 2;
+  height: 90vh;
+  width: 45%;
+  right: -45%;
+  top: 0;
+  color: #abb2bf;
+  padding: 3vh 0 3vh 4vw;
+  border: 3px solid #abb2bf;
+  background: rgba(35, 37, 38, 0.95); }
+  @media all and (max-width: 1024px) {
+    .about-app-section {
+      width: 100%;
+      height: 100%;
+      right: -100%; } }
+  .about-app-section__wrapp {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    padding-right: 4vw; }
+    .about-app-section__wrapp::-webkit-scrollbar {
+      width: 5px; }
+    .about-app-section__wrapp::-webkit-scrollbar-track {
+      border-bottom: 2px solid #7c7c7c;
+      border-top: 2px solid #7c7c7c; }
+    .about-app-section__wrapp::-webkit-scrollbar-thumb {
+      background: #939393; }
+    .about-app-section__wrapp::-webkit-scrollbar-thumb:hover {
+      background: #7c7c7c; }
+  .about-app-section__button-cls {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    width: 3%;
+    cursor: pointer; }
+    .about-app-section__button-cls img {
+      width: 100%;
+      height: auto; }
+  .about-app-section__title {
+    font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3.5vh; }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .about-app-section__title {
+        font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .about-app-section__title {
+        font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .about-app-section__title {
+        font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .about-app-section__title {
+        font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .about-app-section__title {
+        font-size: calc((18px + 18 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .about-app-section__content {
+    font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 1); }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .about-app-section__content {
+        font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .about-app-section__content {
+        font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .about-app-section__content {
+        font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .about-app-section__content {
+        font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .about-app-section__content {
+        font-size: calc((12px + 6 * ((100vw - 320px) / 1120)) * 0.7); } }
+    .about-app-section__content p {
+      margin-bottom: 1vh;
+      line-height: 130%; }
+    .about-app-section__content a {
+      color: #abb2bf;
+      text-decoration: underline; }
+      .about-app-section__content a:hover {
+        color: #919fb9; }
+  .about-app-section .content-interaction__title {
+    margin: 3vh 0 1vh 0;
+    color: #919fb9;
+    font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 1); }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .about-app-section .content-interaction__title {
+        font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .about-app-section .content-interaction__title {
+        font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .about-app-section .content-interaction__title {
+        font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .about-app-section .content-interaction__title {
+        font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .about-app-section .content-interaction__title {
+        font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .about-app-section .content-interaction__content li {
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 1vh; }
+  .about-app-section .content-interaction__content li:before {
+    content: "🞄";
+    position: absolute;
+    left: 0; }
+  .about-app-section .content-interaction__content-uplist li:before {
+    display: none; }
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
+  color: #abb2bf;
+  padding: 10vh 0;
+  position: relative; }
+  .about::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1.5px;
+    background-color: #abb2bf;
+    top: 0;
+    right: 15%; }
+  .about__title {
+    width: 100%;
+    text-align: center;
+    font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1);
+    margin-bottom: 6.5vh; }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .about__title {
+        font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .about__title {
+        font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .about__title {
+        font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .about__title {
+        font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .about__title {
+        font-size: calc((28px + 20 * ((100vw - 320px) / 1120)) * 0.7); } }
+  .about__content {
+    width: 60%;
+    margin: 0 auto;
+    font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1);
+    text-shadow: 2px 2px 1px black; }
+    @media all and (max-height: 820px) and (max-width: 1400px) and (min-width: 980px) {
+      .about__content {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.8); } }
+    @media all and (max-width: 779px) and (min-height: 844px) {
+      .about__content {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1.3); } }
+    @media all and (max-width: 600px) {
+      .about__content {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 1); } }
+    @media all and (orientation: landscape) and (max-width: 993px) and (max-height: 720px) {
+      .about__content {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.7); } }
+    @media all and (max-width: 420px) {
+      .about__content {
+        font-size: calc((14px + 8 * ((100vw - 320px) / 1120)) * 0.7); } }
+    .about__content p {
+      margin-bottom: 2vh;
+      line-height: 130%; }
+
+/*!************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./app/apps/WeatherForecast/styles/weather-styles.scss ***!
+  \************************************************************************************************************************************************/
+@charset "UTF-8";
+.weather {
+  width: 80vw;
+  height: 35vw;
+  margin: 0 auto; }
+
+.weather-app {
+  color: EDEDED;
+  max-width: 100%;
+  height: 100%;
+  background: #1a182d;
+  border: 1px solid #f68e00;
+  border-radius: 1.4rem;
+  padding: 0% 4% 3% 4%;
+  position: relative;
+  overflow: hidden; }
+  .weather-app__header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4%; }
+  .weather-app__header-img {
+    height: 150%; }
+  .weather-app__search-bar {
+    padding-left: 2.5%;
+    width: 24%;
+    height: 100%;
+    background-color: #22212F;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; }
+    .weather-app__search-bar img {
+      width: 33%;
+      height: 101%; }
+    .weather-app__search-bar input {
+      background-color: #22212F;
+      font-size: calc((8px + 18 * ((100vw - 320px) / 1120)) * 1);
+      font-weight: bold;
+      color: #cecece;
+      height: 100%;
+      min-width: 60%;
+      display: inline-block;
+      padding-left: 6.5%; }
+  .weather-app__title {
+    width: 24%;
+    height: 100%;
+    background-color: #22212F;
+    border-radius: 20px;
+    font-size: calc((8px + 18 * ((100vw - 320px) / 1120)) * 1);
+    color: #cecece;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .weather-app__title h2 {
+      font-weight: bold; }
+  .weather-app__weather-today-container {
+    width: 100%;
+    height: 42%;
+    background: #22212F;
+    border: 1px solid #f68e00;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden; }
+  .weather-app__weather-today-carousel-container {
+    height: 100%;
+    width: 200%;
+    display: flex; }
+  .weather-app__carousel-content {
+    width: 50%;
+    height: 100%; }
+  .weather-app__weather-today-title {
+    color: #cecece;
+    font-size: calc((8px + 12 * ((100vw - 320px) / 1120)) * 1);
+    padding: 1.5% 3.5% 0 3.5%;
+    display: flex;
+    justify-content: space-between; }
+  .weather-app__weather-today-city {
+    font-weight: bold;
+    text-align: center; }
+  .weather-app__weather-today {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    padding: 0 3%; }
+    .weather-app__weather-today .weather-hour {
+      height: 70%;
+      width: 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
+      padding: 0.5% 0;
+      color: #cecece;
+      position: relative; }
+      .weather-app__weather-today .weather-hour__status-img {
+        width: 60%; }
+        .weather-app__weather-today .weather-hour__status-img img {
+          width: 100%;
+          height: auto; }
+      .weather-app__weather-today .weather-hour__line {
+        width: 0.6%;
+        height: 70%;
+        border-radius: 15px;
+        background-color: #1a182d; }
+      .weather-app__weather-today .weather-hour__line--small {
+        height: 35%; }
+    .weather-app__weather-today .weather-hour:hover :after {
+      position: absolute;
+      content: '';
+      height: 1%;
+      width: 100%;
+      background-color: #f68e00;
+      opacity: 1;
+      bottom: -10%;
+      left: 0; }
+  .weather-app__weather-week {
+    margin-top: 2%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 31%;
+    width: 100%; }
+    .weather-app__weather-week .weather-day-card-animation {
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.5s; }
+    .weather-app__weather-week .weather-day-card-animation.opacity {
+      opacity: 0; }
+    .weather-app__weather-week .weather-day-card {
+      width: 20%;
+      height: 100%;
+      background-color: #22212F;
+      border: 1px solid #f68e00;
+      border-radius: 0.8rem;
+      color: #cecece;
+      font-size: calc((6px + 8 * ((100vw - 320px) / 1120)) * 1);
+      padding: 1.5% 1% 1.5% 1.5%; }
+      .weather-app__weather-week .weather-day-card__status {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center; }
+      .weather-app__weather-week .weather-day-card__status-img {
+        width: 25%; }
+        .weather-app__weather-week .weather-day-card__status-img img {
+          width: 100%;
+          height: auto; }
+      .weather-app__weather-week .weather-day-card__title {
+        font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
+        padding-right: 10px; }
+    .weather-app__weather-week .weather-day-card:hover {
+      padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
+      border: 2px solid #f68e00; }
+    .weather-app__weather-week .weather-day-card.select-border {
+      padding: calc(1.5% - 1px) calc(1% - 1px) calc(1.5% - 1px) calc(1.5% - 1px);
+      border: 2px solid #cecece; }
+
+.weather-hour-detail {
+  height: 100%;
+  color: #cecece;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .weather-hour-detail__detail {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-wrap: wrap;
+    font-size: calc((5px + 9 * ((100vw - 320px) / 1120)) * 1);
+    align-items: center; }
+  .weather-hour-detail__line {
+    width: 0.6%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #1a182d;
+    margin: 0 2%; }
+  .weather-hour-detail__image {
+    float: left;
+    margin-right: 5%;
+    width: 20%; }
+    .weather-hour-detail__image img {
+      width: 100%;
+      height: auto; }
+  .weather-hour-detail__title {
+    margin-bottom: 2.5%; }
+  .weather-hour-detail__header-container {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between; }
+  .weather-hour-detail__header {
+    height: 35%;
+    width: 100%;
+    font-size: calc((3px + 17 * ((100vw - 320px) / 1120)) * 1);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .weather-hour-detail__img-status {
+    height: 60%;
+    align-self: center; }
+  .weather-hour-detail__img {
+    height: 100%; }
+    .weather-hour-detail__img img {
+      height: 100%;
+      width: auto; }
+
+.detail-p {
+  width: 33.3%; }
+
+.detail-p:nth-child(-n+3) {
+  margin-bottom: 2%; }
+
+.incard {
+  height: 20%;
+  margin-bottom: 5%;
+  width: 50%;
+  display: inline-flex;
+  align-items: center; }
+
+.card-img-container {
+  display: inline-block;
+  height: 100%;
+  margin-right: 7px; }
+  .card-img-container img {
+    width: auto;
+    height: 100%; }
+
+.city-​​not-found {
+  width: 20%;
+  color: #cecece;
+  font-size: calc((6px + 12 * ((100vw - 320px) / 1120)) * 1);
+  text-align: center;
+  height: 3.5%;
+  margin-bottom: 1.5rem;
+  margin-left: 15%;
+  padding-top: 0.5rem; }
+
+.slideSource {
+  height: 25px;
+  line-height: 25px;
+  padding: 0.7% 0;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: #22212F; }
+
+.slideSource.red {
+  border: 1px solid #f60000; }
+
+.slideSource.fade {
+  opacity: 1; }
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: opacity 0.5s; }
+
+.close:hover {
+  opacity: 1; }
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #f68e00; }
+
+.close:before {
+  transform: rotate(45deg); }
+
+.close:after {
+  transform: rotate(-45deg); }
+
+@media (max-width: 1920px) {
+  .weather-app {
+    padding: 0 4% 4% 4%; } }
+
+@media (max-width: 992px) {
+  .weather {
+    width: 85vw;
+    height: 85vh; }
+  .weather-app {
+    padding: 1.5%; }
+    .weather-app__weather-week {
+      margin-top: 3%;
+      flex-wrap: wrap;
+      height: 42%;
+      width: 100%; }
+      .weather-app__weather-week .weather-day-card {
+        width: 49%;
+        margin-bottom: 2%;
+        height: 46%;
+        padding: 2% 5% 1% 5%;
+        font-size: calc((12px + 2 * ((100vw - 320px) / 1120)) * 1); }
+        .weather-app__weather-week .weather-day-card__status {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-self: flex-start; }
+        .weather-app__weather-week .weather-day-card__status-img {
+          width: 25%;
+          margin-bottom: 0; }
+        .weather-app__weather-week .weather-day-card__title {
+          width: 50%;
+          padding-left: 12%;
+          padding-right: 0;
+          font-size: calc((16px + 4 * ((100vw - 320px) / 1120)) * 1); }
+      .weather-app__weather-week .weather-day-card-animation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center; }
+      .weather-app__weather-week .weather-day-card:hover {
+        padding: calc(2% - 1px) calc(5% - 1px) calc(1% - 1px) calc(5% - 1px); }
+      .weather-app__weather-week .weather-day-card.select-border {
+        padding: calc(2% - 1px) calc(5% - 1px) calc(1% - 1px) calc(5% - 1px); }
+    .weather-app__header {
+      height: 5.5%;
+      margin-bottom: 5%; }
+    .weather-app__search-bar, .weather-app__title {
+      width: 33%;
+      font-size: calc((18px + 8 * ((100vw - 320px) / 1120)) * 1); }
+    .weather-app input {
+      font-size: calc((18px + 8 * ((100vw - 320px) / 1120)) * 1); }
+    .weather-app__weather-today-title {
+      font-size: calc((20px + 0 * ((100vw - 320px) / 1120)) * 1);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      height: 10%;
+      margin-top: 2%; }
+    .weather-app__weather-today-title * {
+      width: 33.3%;
+      text-align: center; }
+    .weather-app__weather-today {
+      height: 85%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: space-between;
+      margin-bottom: 2%;
+      padding: 0 3%; }
+      .weather-app__weather-today .weather-hour {
+        height: 40%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: calc((15px + 1 * ((100vw - 320px) / 1120)) * 1); }
+        .weather-app__weather-today .weather-hour__time {
+          order: 2;
+          margin-bottom: 0.1rem; }
+        .weather-app__weather-today .weather-hour__status-img {
+          order: 1;
+          height: 55%;
+          width: auto;
+          margin-bottom: 7%; }
+          .weather-app__weather-today .weather-hour__status-img img {
+            height: 100%;
+            width: auto; }
+        .weather-app__weather-today .weather-hour__temperature {
+          order: 3; }
+        .weather-app__weather-today .weather-hour__line {
+          display: none; }
+      .weather-app__weather-today .weather-hour:hover :after {
+        height: 2%;
+        width: 50%;
+        bottom: -10%;
+        left: 25%; }
+  .city-​​not-found {
+    height: 2%; }
+  .weather-hour-detail {
+    flex-wrap: wrap; }
+    .weather-hour-detail__detail {
+      width: 75%;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      font-size: calc((12px + 2 * ((100vw - 320px) / 1120)) * 1);
+      line-height: 1.2rem; }
+    .weather-hour-detail__image {
+      margin-bottom: 10%; }
+    .weather-hour-detail__line {
+      display: none; }
+    .weather-hour-detail__title {
+      font-size: calc((14px + 4 * ((100vw - 320px) / 1120)) * 1);
+      margin-bottom: 2.5%; }
+    .weather-hour-detail__header-container {
+      width: 25%;
+      justify-content: space-between;
+      padding-right: 3%; }
+    .weather-hour-detail__header {
+      height: 45%;
+      padding: 1% 0;
+      font-size: calc((14px + 4 * ((100vw - 320px) / 1120)) * 1);
+      display: flex;
+      justify-content: space-around; }
+    .weather-hour-detail__img-status {
+      height: 50%; }
+    .weather-hour-detail__img {
+      height: 75%; }
+      .weather-hour-detail__img img {
+        height: 100%;
+        width: auto; }
+  .detail-p {
+    width: 50%;
+    height: 33%; }
+  .incard {
+    width: 50%;
+    height: 20%;
+    margin-bottom: 0;
+    font-size: calc((11px + 5 * ((100vw - 320px) / 1120)) * 1); }
+  .card-img-container {
+    display: inline-block;
+    height: 100%;
+    margin-right: 7%; }
+    .card-img-container img {
+      width: auto;
+      height: 100%; } }
+
+@media (max-width: 480px) {
+  .weather-app__weather-today-title {
+    font-size: calc((14px + 6 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app__weather-today .weather-hour {
+    font-size: calc((11px + 5 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app .weather-hour-detail__title {
+    font-size: calc((12px + 4 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app .weather-hour-detail .detail-p {
+    font-size: calc((8px + 8 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app .weather-hour-detail__header {
+    font-size: calc((12px + 4 * ((100vw - 320px) / 1120)) * 1); } }
+
+/* Iphone 5 */
+@media (max-width: 360px) {
+  .weather-app__weather-today-title {
+    font-size: calc((11px + 9 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app__weather-week {
+    margin-top: 3%; }
+    .weather-app__weather-week .weather-day-card {
+      padding: 2% 5% 1% 5%; }
+      .weather-app__weather-week .weather-day-card__title {
+        font-size: calc((12px + 4 * ((100vw - 320px) / 1120)) * 1); }
+    .weather-app__weather-week .incard {
+      font-size: calc((8px + 8 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app input {
+    font-size: calc((12px + 4 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app__title {
+    font-size: calc((12px + 4 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app__weather-today .weather-hour {
+    font-size: calc((8px + 8 * ((100vw - 320px) / 1120)) * 1); }
+  .weather-app .weather-hour-detail {
+    padding: 3.5% 1.5%; }
+    .weather-app .weather-hour-detail__header-container {
+      justify-content: space-around; }
+    .weather-app .weather-hour-detail__detail {
+      line-height: 0.8rem; }
+    .weather-app .weather-hour-detail__title {
+      font-size: calc((10px + 6 * ((100vw - 320px) / 1120)) * 1);
+      margin-bottom: 0.7%; }
+    .weather-app .weather-hour-detail .detail-p {
+      font-size: calc((8px + 8 * ((100vw - 320px) / 1120)) * 1); }
+    .weather-app .weather-hour-detail__img-status {
+      height: 30%; }
+    .weather-app .weather-hour-detail__header {
+      font-size: calc((10px + 6 * ((100vw - 320px) / 1120)) * 1); }
+  .close {
+    position: absolute;
+    right: 30px;
+    top: 7.5px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    transition: opacity 0.5s; } }
+
+/*!******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./app/apps/ToDoList/styles/todolist-styles.scss ***!
+  \******************************************************************************************************************************************/
+.todolist-container {
+  width: 35%;
+  height: 90%;
+  margin: 0 auto; }
+
+.todo-app {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(140.6deg, #1b1a26 0.77%, #171623 0.78%, #283143 100%);
+  border: 1px solid #abb2bf;
+  border-radius: 24px;
+  font-family: Consolas;
+  color: #abb2bf; }
+  .todo-app__header {
+    color: #e06c75;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 9%;
+    font-size: 2.5vw; }
+    .todo-app__header h2 {
+      text-align: center; }
+  .todo-app__header::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #abb2bf;
+    position: absolute;
+    bottom: 0;
+    left: 35%; }
+  .todo-app__todos {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    padding: 0 0 2vw 5vw;
+    height: 73%;
+    position: relative; }
+  .todo-app__todos::-webkit-scrollbar {
+    width: 5px; }
+  .todo-app__todos::-webkit-scrollbar-track {
+    border-bottom: 2px solid #7c7c7c;
+    border-top: 2px solid #7c7c7c; }
+  .todo-app__todos::-webkit-scrollbar-thumb {
+    background: #939393; }
+  .todo-app__todos::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c; }
+  .todo-app__menu {
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    position: relative; }
+  .todo-app__menu::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    top: 0;
+    left: 5%;
+    background-color: #abb2bf; }
+  .todo-app .menu__container {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: margin-left 1s; }
+  .todo-app .menu__main-item-container {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
+    padding: 0.9em 2.5em; }
+  .todo-app .menu__forlders {
+    position: relative; }
+  .todo-app .menu__button {
+    height: 100%;
+    width: 33.3%;
+    cursor: pointer; }
+  .todo-app .menu__filter-container {
+    height: 200%;
+    width: 100%;
+    transition: margin-top 0.25s ease; }
+  .todo-app .menu__filter {
+    height: 100%;
+    cursor: auto;
+    align-self: flex-start;
+    overflow-y: hidden; }
+    .todo-app .menu__filter .filter__container {
+      width: 90%;
+      height: 50%;
+      margin: 0 auto;
+      position: relative; }
+    .todo-app .menu__filter .filter__input {
+      width: 85%;
+      height: 50%;
+      padding: 1% 15% 1% 3%;
+      background-color: transparent;
+      border: 2px solid #e06c75;
+      border-radius: 0.5em;
+      color: #abb2bf;
+      font-size: 0.8vw; }
+    .todo-app .menu__filter .filter__submit {
+      cursor: pointer;
+      height: 50%;
+      padding: 4px 0;
+      margin: 0 4px;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      right: 16%; }
+      .todo-app .menu__filter .filter__submit img {
+        height: 100%;
+        width: auto; }
+    .todo-app .menu__filter .filter__clear {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 5%;
+      width: 10%; }
+      .todo-app .menu__filter .filter__clear img {
+        width: 100%;
+        height: auto; }
+    .todo-app .menu__filter .filter__close {
+      height: 35%;
+      width: 100%;
+      text-align: center;
+      margin-top: 5%; }
+      .todo-app .menu__filter .filter__close img {
+        height: 100%;
+        width: auto;
+        cursor: pointer; }
+  .todo-app .menu__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    cursor: pointer; }
+  .todo-app .menu__content > img {
+    height: 100%;
+    width: auto; }
+  .todo-app .menu__filter-content {
+    height: 50%; }
+  .todo-app .menu__button:nth-child(1) {
+    border-right: 1px solid #abb2bf; }
+  .todo-app .menu__button:nth-child(3) {
+    border-left: 1px solid #abb2bf; }
+  .todo-app .menu__content:hover {
+    color: #e4b7bb; }
+  .todo-app .menu__del-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    height: 70%;
+    padding: 0.1em; }
+    .todo-app .menu__del-buttons img {
+      width: auto;
+      height: 100%; }
+  .todo-app .menu__add {
+    height: 100%;
+    width: 50%;
+    padding: 1em 2em; }
+    .todo-app .menu__add__main-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative; }
+    .todo-app .menu__add__form {
+      width: 60%;
+      height: 80%;
+      position: relative; }
+    .todo-app .menu__add__form::before {
+      content: "";
+      position: absolute;
+      height: 35%;
+      width: 2px;
+      right: 15%;
+      top: 32.5%;
+      background-color: #e06c75; }
+    .todo-app .menu__add__npt {
+      background-color: transparent;
+      color: #abb2bf;
+      font-size: 1vw; }
+    .todo-app .menu__add__input {
+      border: 2px solid #e06c75;
+      border-radius: 0.5em;
+      padding-left: 0.8em;
+      padding-right: 17%;
+      width: 100%;
+      height: 100%; }
+    .todo-app .menu__add__submit {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 15%;
+      text-align: center; }
+    .todo-app .menu__add__submit:hover .menu__add__marks-title, .todo-app .menu__add__submit:focus .menu__add__marks-title, .todo-app .menu__add__marks:hover .menu__add__marks-title, .todo-app .menu__add__marks:focus .menu__add__marks-title {
+      color: #e4e4e4; }
+    .todo-app .menu__add__marks {
+      height: 80%;
+      width: 20%;
+      display: inline-block;
+      border: 2px solid #e06c75;
+      padding-bottom: -5px;
+      border-radius: 0.5em;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .todo-app .menu__add__close {
+      cursor: pointer;
+      border: 2px solid #e06c75;
+      border-radius: 5px;
+      padding: 0.8%;
+      height: 65%; }
+      .todo-app .menu__add__close img {
+        height: 100%;
+        width: auto; }
+  .todo-app .todos-do {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 200%;
+    display: flex; }
+    .todo-app .todos-do__container {
+      padding-left: 2px;
+      width: 50%;
+      min-height: 6.5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      flex-wrap: wrap;
+      padding-right: 5vw; }
+    .todo-app .todos-do__checkbox-label {
+      margin-left: 0.3em; }
+    .todo-app .todos-do__btn-down {
+      cursor: pointer;
+      width: 1.3vw; }
+      .todo-app .todos-do__btn-down img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__btn-menu {
+      cursor: pointer;
+      width: 1.3vw;
+      margin-left: 0.5em;
+      position: relative;
+      margin-right: 0.3em; }
+      .todo-app .todos-do__btn-menu img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__popup-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 180px;
+      background-color: #171623;
+      border: 2px solid #e06c75; }
+    .todo-app .todos-do__add-child {
+      position: absolute;
+      top: 2vh;
+      right: 7%;
+      cursor: pointer;
+      width: 1.5vw; }
+      .todo-app .todos-do__add-child img {
+        width: 100%;
+        height: auto; }
+    .todo-app .todos-do__child .todos-do__add-child {
+      right: 7%; }
+    .todo-app .todos-do__add-child.drag-hover {
+      width: 1.7vw;
+      right: calc(7% - 0.1vw); }
+    .todo-app .todos-do__line {
+      width: 100%;
+      height: 1.5px;
+      background-color: #e06c75; }
+    .todo-app .todos-do__child {
+      transition: opacity 0.25s ease;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 5%; }
+      .todo-app .todos-do__child .todos-do__container {
+        padding-right: 0; }
+      .todo-app .todos-do__child .todos-do__sub-menu {
+        padding-right: 0; }
+      .todo-app .todos-do__child .todos-do__sub-menu::after {
+        width: 75%; }
+    .todo-app .todos-do__sub-menu {
+      width: 50%;
+      min-height: 6.5vh;
+      padding: 1em 0 1em 0;
+      padding-right: 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative; }
+    .todo-app .todos-do__sub-menu::after {
+      content: "";
+      width: calc(75% - 5vw);
+      height: 1.5px;
+      background-color: #e06c75;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .todo-app .todos-do__sub-menu-content {
+      width: 70%;
+      position: relative;
+      padding: 0 1vw; }
+    .todo-app .todos-do__sub-menu-without-content {
+      padding-left: 1vw;
+      height: 1em;
+      font-style: italic; }
+    .todo-app .todos-do span {
+      cursor: pointer; }
+    .todo-app .todos-do span:hover {
+      color: #e4b7bb; }
+    .todo-app .todos-do .cls-mark {
+      color: #e06c75; }
+    .todo-app .todos-do__sub-menu-btn {
+      cursor: pointer;
+      width: 6%; }
+      .todo-app .todos-do__sub-menu-btn img {
+        height: auto;
+        width: 100%; }
+    .todo-app .todos-do__sub-menu-btn-cls {
+      transform: rotate(180deg); }
+  .todo-app__depth-cls {
+    position: absolute;
+    z-index: 100;
+    width: 4vw;
+    height: 90%;
+    top: 5%;
+    right: 0;
+    border: 2px dotted #abb2bf; }
+  .todo-app__depth-cls-img {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto; }
+    .todo-app__depth-cls-img img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: auto; }
+
+.marks-list {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 150px;
+  height: 180px;
+  background-color: #171623;
+  border: 2px solid #e06c75;
+  border-radius: 0.5em;
+  padding-bottom: 5%;
+  user-select: none; }
+  .marks-list__marks-list {
+    overflow-y: auto;
+    height: 70%;
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 0 0.5em 0.5em 0.5em; }
+    .marks-list__marks-list li {
+      font-size: 0.85em;
+      padding: 0.2em;
+      display: inline-block; }
+    .marks-list__marks-list li:not(.add-mark):hover {
+      color: #e4b7bb; }
+    .marks-list__marks-list .add-mark {
+      color: #e06c75; }
+  .marks-list__marks-list::-webkit-scrollbar {
+    width: 4px; }
+  .marks-list__marks-list::-webkit-scrollbar-track {
+    border-bottom: 2px solid #e06c75;
+    border-top: 2px solid #e06c75; }
+  .marks-list__marks-list::-webkit-scrollbar-thumb {
+    background: #939393; }
+  .marks-list__marks-list::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c; }
+  .marks-list__btn-close {
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 5px;
+    width: 14%; }
+    .marks-list__btn-close img {
+      width: 100%;
+      height: auto; }
+  .marks-list__title {
+    font-size: 1vw;
+    font-family: Consolas;
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+    line-height: 1em; }
+  .marks-list__mark-add {
+    width: 85%;
+    height: 10%;
+    margin: 0 auto;
+    padding-right: 10%;
+    position: relative; }
+  .marks-list__mark-add-npt {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #e4b7bb;
+    border-radius: 2px;
+    color: #abb2bf;
+    font-size: 0.8em;
+    padding-left: 5%;
+    padding-right: 25%; }
+  .marks-list__mark-add-btn {
+    background-color: transparent;
+    position: absolute;
+    color: #e06c75;
+    right: 15%;
+    height: 100%;
+    font-size: 0.8em; }
+  .marks-list__mark-add-btn:hover {
+    color: #e4b7bb; }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
+
+.todo-del-selected {
+  opacity: 0.3; }
+
+.checkbox-label {
+  width: 80%;
+  padding: 1em 0 1em 1.3em;
+  font-size: 1.2vw;
+  position: relative; }
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.checkbox-fake {
+  position: absolute;
+  margin-left: -1.3em;
+  margin-top: 0.1em;
+  width: 0.8em;
+  height: 0.8em;
+  box-shadow: 0 0 0 0.1em #e06c75;
+  border-radius: 0.2em; }
+
+.checkbox:checked + .checkbox-fake {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95% auto;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version=%271.0%27%3F%3E%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 xmlns:xlink=%27http://www.w3.org/1999/xlink%27 xmlns:svgjs=%27http://svgjs.com/svgjs%27 version=%271.1%27 width=%27512%27 height=%27512%27 x=%270%27 y=%270%27 viewBox=%270 0 45.701 45.7%27 style=%27enable-background:new 0 0 512 512%27 xml:space=%27preserve%27 class=%27%27%3E%3Cg%3E%3Cg xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%3E%3Cpath d=%27M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504 c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0 c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z%27 fill=%27%2398c389%27 data-original=%27%23000000%27 style=%27%27 class=%27%27/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A"); }
+
+
+/*# sourceMappingURL=main.a874d5e7a9dd2eaa393b.css.map*/
