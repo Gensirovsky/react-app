@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --mode development --watch",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "predeploy": "npm run build",
@@ -33,6 +33,7 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
+    "image-webpack-loader": "^7.0.1",
     "lint-staged": "^11.1.1",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",

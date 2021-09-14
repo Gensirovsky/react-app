@@ -52,6 +52,7 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: "public/index.html",
+            publicPath: "./",
             filename: "index.html",
             minify: {
                 collapseWhitespace: isProd,
@@ -66,7 +67,10 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/,
-                use: "html-loader",
+                loader: "html-loader",
+                options: {
+                    esModule: false,
+                },
             },
             { test: /\.css$/, use: ["style-loader", "css-loader"] },
             {
@@ -79,6 +83,7 @@ module.exports = {
                     "sass-loader",
                 ],
             },
+
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: [
