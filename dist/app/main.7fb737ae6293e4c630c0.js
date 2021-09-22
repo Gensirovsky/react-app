@@ -47,15 +47,63 @@ function TodoApp() {
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
     id: 1631222044156,
-    name: "Купити продукти",
+    name: "Піти в магазин",
     depth: 1,
-    children: null,
-    mark: null,
+    mark: ["shop "],
     child: false,
-    filtered: false
+    filtered: false,
+    children: [{
+      id: 1631222051647,
+      name: "Купити чай",
+      depth: 2,
+      mark: null,
+      children: null,
+      child: true,
+      filtered: false
+    }, {
+      id: 1631222051617,
+      name: "Купити цукор",
+      depth: 2,
+      mark: null,
+      children: null,
+      child: true,
+      filtered: false
+    }, {
+      id: 1631222052215,
+      name: "Купити ПРОФЕСІЙНІ інструменти для приготування чаю",
+      depth: 2,
+      mark: ["shop "],
+      child: true,
+      filtered: false,
+      children: [{
+        id: 1631222052812,
+        mark: null,
+        name: "Чайник",
+        depth: 3,
+        child: true,
+        children: null,
+        filtered: false
+      }, {
+        id: 1631222053345,
+        name: "Чайна чашку",
+        depth: 3,
+        mark: null,
+        child: true,
+        children: null,
+        filtered: false
+      }, {
+        id: 1631222053347,
+        name: "Кружка",
+        depth: 3,
+        mark: null,
+        child: true,
+        children: null,
+        filtered: false
+      }]
+    }]
   }, {
     id: 1631222046008,
-    name: "Донести продукти додому",
+    name: "Закип'ятити воду у чайнику",
     depth: 1,
     mark: ["main "],
     children: null,
@@ -63,7 +111,7 @@ function TodoApp() {
     filtered: false
   }, {
     id: 1631222046983,
-    name: "Приготувати продукти",
+    name: "Посмістити чай у чашку",
     depth: 1,
     mark: ["main "],
     children: null,
@@ -71,7 +119,7 @@ function TodoApp() {
     filtered: false
   }, {
     id: 1631222048185,
-    name: "Поїсти",
+    name: "Насипати цукор у чашку",
     depth: 1,
     mark: ["main "],
     children: null,
@@ -79,7 +127,7 @@ function TodoApp() {
     filtered: false
   }, {
     id: 1631222049905,
-    name: "Помити посуд",
+    name: "Залити чай окропом",
     depth: 1,
     mark: ["secondary "],
     children: null,
@@ -87,44 +135,20 @@ function TodoApp() {
     filtered: false
   }, {
     id: 1631222050975,
-    name: "Помити посуд",
+    name: "Не обпектися",
     depth: 1,
     mark: ["main "],
     child: false,
     filtered: false,
-    children: [{
-      id: 1631222051643,
-      name: "gg",
-      depth: 2,
-      mark: ["main "],
-      children: null,
-      child: true,
-      filtered: false
-    }, {
-      id: 1631222052275,
-      name: "ff",
-      depth: 2,
-      mark: ["secondary ", "main "],
-      child: true,
-      filtered: false,
-      children: [{
-        id: 1631222052812,
-        mark: ["secondary "],
-        name: "Донести продукти додому kdjshdnvnslkvkskcxzlk jekghke eg egne gengeng ergner g",
-        depth: 3,
-        child: true,
-        children: null,
-        filtered: false
-      }, {
-        id: 1631222053345,
-        name: "Приготувати продукти",
-        depth: 3,
-        mark: ["secondary "],
-        child: true,
-        children: null,
-        filtered: false
-      }]
-    }]
+    children: false
+  }, {
+    id: 1631222050976,
+    name: "Насолоджуватися чаєм",
+    depth: 1,
+    mark: ["main "],
+    child: false,
+    filtered: false,
+    children: false
   }]),
       _useState4 = _slicedToArray(_useState3, 2),
       listToDo = _useState4[0],
@@ -918,7 +942,7 @@ function ListItem(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "todos-do__checkbox-fake checkbox-fake"
-  }), item.name), children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, item.name)), children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "todos-do__btn-down",
     onClick: function onClick(e) {
       return listOpenHandler(e);
@@ -2548,4 +2572,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.360bef18ec6d843cd777.js.map
+//# sourceMappingURL=main.7fb737ae6293e4c630c0.js.map
